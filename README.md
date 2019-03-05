@@ -12,7 +12,7 @@ quasar ext add @quasar/qflashcard
 ```
 
 # Test Project
-Can be found [here](https://github.com/hawkeye64/quasar-app-extension-qflashcard-test).
+Can be found [here](https://github.com/hawkeye64/quasar-app-extension-qflashcard).
 
 # Demo
 Can be found [here](https://confident-wescoff-fb9e2c.netlify.com/#/).
