@@ -46,14 +46,23 @@
     .fc-spin-out 
       transform rotate(720deg) scale(0)
       opacity 0
-    .fc-flip-right 
-      transform perspective(400px) rotate3d(0, 1, 0, 180deg)
-    .fc-flip-left 
-      transform perspective(400px) rotate3d(0, 1, 0, -180deg)
-    .fc-flip-up 
-      transform perspective(400px) rotate3d(1, 0, 0, 180deg)
-    .fc-flip-down 
-      transform perspective(400px) rotate3d(1, 0, 0, -180deg)
+    .fc-flip-right-in 
+      transform perspective(400px) rotateY(0)
+      backface-visibility hidden
+    .fc-flip-right-out
+      transform perspective(400px) rotateY(180deg)
+    .fc-flip-left-in
+      transform perspective(400px) rotateY(0)
+    .fc-flip-left-out
+      transform perspective(400px) rotateY(-180deg)
+    .fc-flip-up-in
+      transform perspective(400px) rotateX(0)
+    .fc-flip-up-out
+      transform perspective(400px) rotateX(180deg)
+    .fc-flip-down-in
+      transform perspective(400px) rotateX(0)
+    .fc-flip-down-out
+      transform perspective(400px) rotateX(-180deg)
     .fc-shake-down 
       opacity 1
       top 0px
@@ -125,16 +134,32 @@
   .fc-spin-out 
     transition all 0.5s ease-out
     opacity 1
-  .fc-flip-right 
+  .fc-flip-right-in
     transition all 0.5s ease-out
     backface-visibility hidden
-  .fc-flip-left 
+    transform perspective(400px) rotateY(-180deg)
+  .fc-flip-right-out
     transition all 0.5s ease-out
     backface-visibility hidden
-  .fc-flip-up 
+  .fc-flip-left-in
     transition all 0.5s ease-out
     backface-visibility hidden
-  .fc-flip-down 
+    transform perspective(400px) rotateY(180deg)
+  .fc-flip-left-out
+    transition all 0.5s ease-out
+    backface-visibility hidden
+  .fc-flip-up-in
+    transition all 0.5s ease-out
+    backface-visibility hidden
+    transform perspective(400px) rotateX(-180deg)
+  .fc-flip-up-out
+    transition all 0.5s ease-out
+    backface-visibility hidden
+  .fc-flip-down-in
+    transition all 0.5s ease-out
+    backface-visibility hidden
+    transform perspective(400px) rotateX(180deg)
+  .fc-flip-down-out
     transition all 0.5s ease-out
     backface-visibility hidden
   .fc-shake-down 
