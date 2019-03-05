@@ -62,7 +62,7 @@ QFlashcard has no properties, events or methods. It has a single "default" slot.
 # QFlashcardSection Vue Properties
 | Vue&nbsp;Property | Type	| Description |
 |---|---|---|
-| type | String | The type of transition to use (listed below) |
+| type | String | [optional] The type of transition to use (listed below) |
 
 QFlashcardSection has no events or methods. It has a single "default" slot. You can put anything into this slot.
 
@@ -73,10 +73,14 @@ The list of currently available transitions are as follows:
 |---|
 | fade-in |
 | fade-out |
-| flip-left |
-| flip-right |
-| flip-down |
-| flip-up |
+| flip-left-in |
+| flip-left-out |
+| flip-right-in |
+| flip-rightout |
+| flip-down-in |
+| flip-down-out |
+| flip-up-in |
+| flip-up-out |
 | nudge |
 | shake-left |
 | shake-right |
