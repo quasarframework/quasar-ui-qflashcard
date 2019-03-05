@@ -13,4 +13,10 @@ module.exports = function (api) {
     fs.unlinkSync(qflashcardBootFile)
     console.log(`App Extension (qflashcard) Info: 'qflashcard boot file removed'`)
   }
+  let qflashcardStylFile = path.resolve(process.cwd(), './src/css/flashcard.styl')
+  if (fs.existsSync(qflashcardStylFile)) {
+    fs.unlinkSync(qflashcardStylFile)
+    console.log(`App Extension (qflashcard) Info: 'qflashcard.styl css file removed'`)
+  }
+
 }
