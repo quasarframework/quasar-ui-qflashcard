@@ -1,0 +1,37 @@
+{
+  "name": "@quasar/quasar-app-extension-qflashcard",
+  "version": "0.0.1-alpha.1",
+  "description": "QFlashcard is an app extension for Quasar",
+  "author": "Hawkeye64 <jeff@quasar-framework.org>",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": "https://github.com/hawkeye64/app-extension-qflashcard/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawkeye64/app-extension-qflashcard.git"
+  },
+  "homepage": "https://github.com/hawkeye64/app-extension-qflashcard",
+  "license": "MIT",
+  "keywords": [
+    "quasar",
+    "app",
+    "app extension",
+    "extension",
+    "animations",
+    "css"
+  ],
+  "devDependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

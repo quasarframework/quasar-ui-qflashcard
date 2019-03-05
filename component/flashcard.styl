@@ -1,0 +1,213 @@
+.q-flashcard 
+  position relative
+  overflow hidden
+  .q-flashcard--section 
+    position absolute
+    top 0
+    left 0
+    overflow hidden
+  .fc-fade-in 
+    opacity 0
+    transition all 0.4s ease-in-out
+  &:hover 
+    .fc-fade-in 
+      opacity 1
+    .fc-fade-out 
+      opacity 0
+    .fc-zoom-in 
+      opacity 1
+      transform scale(1)
+      transition-delay 0s
+    .fc-zoom-out 
+      transform scale(0)
+      opacity 0
+      transition-delay 0s
+    .fc-slide-out-left 
+      transform translateX(-100%)
+    .fc-slide-in-left 
+      transform translateX(0px)
+    .fc-slide-out-right 
+      transform translateX(100%)
+    .fc-slide-in-right 
+      transform translateX(0px)
+    .fc-slide-in-down 
+      transform translateY(0px)
+    .fc-slide-out-down 
+      transform translateY(100%)
+    .fc-slide-in-up 
+      transform translateY(0px)
+    .fc-slide-out-up 
+      transform translateY(-100%)
+    .fc-nudge 
+      transform scale(1.1,1.1)
+    .fc-spin-in 
+      transform rotate(0deg) scale(1)
+      opacity 1
+    .fc-spin-out 
+      transform rotate(720deg) scale(0)
+      opacity 0
+    .fc-flip-right 
+      transform perspective(400px) rotate3d(0, 1, 0, 180deg)
+    .fc-flip-left 
+      transform perspective(400px) rotate3d(0, 1, 0, -180deg)
+    .fc-flip-up 
+      transform perspective(400px) rotate3d(1, 0, 0, 180deg)
+    .fc-flip-down 
+      transform perspective(400px) rotate3d(1, 0, 0, -180deg)
+    .fc-shake-down 
+      opacity 1
+      top 0px
+      transition-delay 0s
+      animation shakeFromTop 0.9s linear
+    .fc-shake-up 
+      opacity 1
+      top 0px
+      transition-delay 0s
+      animation shakeFromBottom 0.9s linear
+    .fc-shake-left 
+      opacity 1
+      left 0px
+      transition-delay 0s
+      animation shakeFromRight 0.9s linear
+    .fc-shake-right 
+      opacity 1
+      left 0px
+      transition-delay 0s
+      animation shakeFromLeft 0.9s linear
+  .fc-fade-out 
+    opacity 1
+    transition all 0.4s ease-in-out
+  .fc-zoom-in 
+    transition all 0.4s ease-in-out 0.2s
+    transform scale(0)
+    opacity 0
+  .fc-zoom-out 
+    transition all 0.4s ease-in-out 0.2s
+    opacity 1
+  .fc-slide-out-left 
+    transform translateX(0px)
+    opacity 1
+    transition all 0.3s ease-in-out
+  .fc-slide-in-left 
+    transform translateX(-100%)
+    opacity 1
+    transition all 0.3s ease-in-out
+  .fc-slide-out-right 
+    transform translateX(0px)
+    opacity 1
+    transition all 0.3s ease-in-out
+  .fc-slide-in-right 
+    transform translateX(100%)
+    opacity 1
+    transition all 0.3s ease-in-out
+  .fc-slide-in-down 
+    transform translateY(-100%)
+    opacity 1
+    transition all 0.3s ease-in-out
+  .fc-slide-out-down 
+    transform translateY(0px)
+    opacity 1
+    transition all 0.3s ease-in-out
+  .fc-slide-in-up 
+    transform translateY(100%)
+    opacity 1
+    transition all 0.3s ease-in-out
+  .fc-slide-out-up 
+    transform translateY(0)
+    opacity 1
+    transition all 0.3s ease-in-out
+  .fc-nudge 
+    transition all 0.2s linear
+  .fc-spin-in 
+    transition all 0.5s ease-out
+    transform rotate(720deg) scale(0)
+    opacity 0
+  .fc-spin-out 
+    transition all 0.5s ease-out
+    opacity 1
+  .fc-flip-right 
+    transition all 0.5s ease-out
+    backface-visibility hidden
+  .fc-flip-left 
+    transition all 0.5s ease-out
+    backface-visibility hidden
+  .fc-flip-up 
+    transition all 0.5s ease-out
+    backface-visibility hidden
+  .fc-flip-down 
+    transition all 0.5s ease-out
+    backface-visibility hidden
+  .fc-shake-down 
+    top -100%
+    opacity 0
+    transition all 0.3s ease-out 0.5s
+  .fc-shake-up 
+    top 100%
+    opacity 0
+    transition all 0.3s ease-out 0.5s
+  .fc-shake-left 
+    left 100%
+    opacity 0
+    transition all 0.3s ease-out 0.5s
+  .fc-shake-right 
+    left -100%
+    opacity 0
+    transition all 0.3s ease-out 0.5s
+
+
+@keyframes shakeFromTop
+  0%
+    transform translateY(-100%)
+  40%
+    transform translateY(-50%)
+  65%
+    transform translateY(-25%)
+  82%
+    transform translateY(-12.5%)
+  92%
+    transform translateY(-6.25%)
+  55%, 75%, 87%, 97%, 100%
+    transform translateY(0px)
+
+
+@keyframes shakeFromBottom
+  0%
+    transform translateY(100%)
+  40%
+    transform translateY(50%)
+  65%
+    transform translateY(25%)
+  82%
+    transform translateY(12.5%)
+  92%
+    transform translateY(6.25%)
+  55%, 75%, 87%, 97%, 100%
+    transform translateY(0px)
+
+@keyframes shakeFromRight
+  0%
+    transform translateX(-00%)
+  40%
+    transform translateX(50%)
+  65%
+    transform translateX(25%)
+  82%
+    transform translateX(12.5%)
+  92%
+    transform translateX(6.25%)
+  55%, 75%, 87%, 97%, 100%
+    transform translateY(0px)
+
+@keyframes shakeFromLeft
+  0%
+    transform translateX(-100%)
+  40%
+    transform translateX(-50%)
+  65%
+    transform translateX(-25%)
+  82%
+    transform translateX(-12.5%)
+  92%
+    transform translateX(-6.25%)
+  55%, 75%, 87%, 97%, 100%
+    transform translateY(0px)
