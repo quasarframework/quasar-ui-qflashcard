@@ -24,8 +24,8 @@ const extendWithFlashcard = function (api, conf) {
   let css = conf.css
 
   // make sure qmediaplayer css goes through webpack to avoid ssr issues
-  if (!css.includes('flashcard.styl')) {
-    css.push('flashcard.styl')
+  if (!css.includes('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')) {
+    css.push('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')
     console.log(` App Extension (flashcard.styl) Info: 'Adding flashcard.styl css reference to your quasar.conf.js'`)
   }
 }
