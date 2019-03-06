@@ -47,10 +47,34 @@
     transform translateY(100%)
     opacity 1
     transition all 0.3s ease-in-out
-  .fc-slide-out-up 
+  .fc-slide-out-up
     transform translateY(0)
     opacity 1
     transition all 0.3s ease-in-out
+  .fc-roll-out-left
+    transform: translateX(0px) rotate(0deg)
+    transition all 0.4s ease-in-out
+  .fc-roll-in-left
+    transform translateX(100%) rotate(360deg)
+    transition all 0.4s ease-in-out
+  .fc-roll-out-right
+    transform: translateX(0px) rotate(0deg)
+    transition all 0.4s ease-in-out
+  .fc-roll-in-right
+    transform translateX(-100%) rotate(-360deg)
+    transition all 0.4s ease-in-out
+  .fc-roll-out-top
+    transform: translateY(0px) rotate(0deg)
+    transition all 0.4s ease-in-out
+  .fc-roll-in-top
+    transform translateY(100%) rotate(360deg)
+    transition all 0.4s ease-in-out
+  .fc-roll-out-bottom
+    transform: translateY(0px) rotate(0deg)
+    transition all 0.4s ease-in-out
+  .fc-roll-in-bottom
+    transform translateY(-100%) rotate(-360deg)
+    transition all 0.4s ease-in-out
   .fc-nudge-in
     transition all 0.2s linear
   .fc-nudge-out
@@ -136,6 +160,22 @@
       transform translateY(0px)
     .fc-slide-out-up 
       transform translateY(-100%)
+    .fc-roll-out-left
+      transform translateX(-100%) rotate(-360deg)
+    .fc-roll-in-left
+      transform: translateX(0px) rotate(0deg)
+    .fc-roll-out-right
+      transform translateX(100%) rotate(360deg)
+    .fc-roll-in-right
+      transform: translateX(0px) rotate(0deg)
+    .fc-roll-out-top
+      transform translateY(-100%) rotate(360deg)
+    .fc-roll-in-top
+      transform: translateY(0px) rotate(0deg)
+    .fc-roll-out-bottom
+      transform translateY(100%) rotate(-360deg)
+    .fc-roll-in-bottom
+      transform: translateY(0px) rotate(0deg)
     .fc-nudge-in
       transform scale(1.1,1.1)
     .fc-nudge-out
