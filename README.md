@@ -62,7 +62,7 @@ QFlashcard has no properties, events or methods. It has a single "default" slot.
 # QFlashcardSection Vue Properties
 | Vue&nbsp;Property | Type	| Description |
 |---|---|---|
-| type | String | [optional] The type of transition to use (listed below) |
+| type | String,Array | [optional] The type of transition to use (listed below) |
 
 QFlashcardSection has no events or methods. It has a single "default" slot. You can put anything into this slot.
 
@@ -76,13 +76,21 @@ The list of currently available transitions are as follows:
 | flip-left-in |
 | flip-left-out |
 | flip-right-in |
-| flip-rightout |
+| flip-right-out |
 | flip-down-in |
 | flip-down-out |
 | flip-up-in |
 | flip-up-out |
 | nudge-in |
 | nudge-out |
+| roll-in-left |
+| roll-in-right |
+| roll-in-down |
+| roll-in-up |
+| roll-out-left |
+| roll-out-right |
+| roll-out-down |
+| roll-out-up |
 | shake-left |
 | shake-right |
 | shake-down |
@@ -95,19 +103,20 @@ The list of currently available transitions are as follows:
 | slide-out-right |
 | slide-out-down |
 | slide-out-up |
-| roll-in-left |
-| roll-in-right |
-| roll-in-down |
-| roll-in-up |
-| roll-out-left |
-| roll-out-right |
-| roll-out-down |
-| roll-out-up |
 | spin-in |
 | spin-out |
 | zoom-in |
 | zoom-out |
 
+# Combining Transitions
+It is important to note that you have the ability to combine different transitions on the same `QFlashcardSection`. For instance, both of these examples are acceptable:
+```
+<q-flashcard-section transition="nudge-out fade-out">
+
+<q-flashcard-section transition="['nudge-out', 'fade-out']">
+">
+```
+Also be aware, some transitions do not work well with each other and it is up to you to find something that is pleasing.
 
 # Questions
 - Q. Can I use my own transitions?
