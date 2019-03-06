@@ -81,7 +81,8 @@ The list of currently available transitions are as follows:
 | flip-down-out |
 | flip-up-in |
 | flip-up-out |
-| nudge |
+| nudge-in |
+| nudge-out |
 | shake-left |
 | shake-right |
 | shake-down |
@@ -94,6 +95,14 @@ The list of currently available transitions are as follows:
 | slide-out-right |
 | slide-out-down |
 | slide-out-up |
+| roll-in-left |
+| roll-in-right |
+| roll-in-down |
+| roll-in-up |
+| roll-out-left |
+| roll-out-right |
+| roll-out-down |
+| roll-out-up |
 | spin-in |
 | spin-out |
 | zoom-in |
