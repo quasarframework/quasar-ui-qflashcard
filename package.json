@@ -5,6 +5,8 @@
   "author": "Hawkeye64 <jeff@quasar-framework.org>",
   "main": "src/index.js",
   "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "lint-fix": "eslint --ext .js,.vue src --fix",
     "test": "echo \"No test specified\" && exit 0"
   },
   "engines": {
@@ -31,6 +33,11 @@
     "css"
   ],
   "devDependencies": {
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-vue": "^5.2.2",
     "fs": "^0.0.1-security",
     "path": "^0.12.7"
   }
