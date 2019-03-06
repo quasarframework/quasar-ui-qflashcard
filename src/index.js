@@ -14,7 +14,7 @@ const extendWithFlashcard = function (api, conf) {
   // for brevity
   let boot = conf.boot
 
-  // make sure qmediaplayer boot file is registered
+  // make sure qflashcard boot file is registered
   if (!boot.includes('qflashcard')) {
     boot.push('qflashcard')
     console.log(` App Extension (qflashcard) Info: 'Adding qflashcard boot reference to your quasar.conf.js'`)
@@ -23,10 +23,10 @@ const extendWithFlashcard = function (api, conf) {
   // for brevity
   let css = conf.css
 
-  // make sure qmediaplayer css goes through webpack to avoid ssr issues
+  // make sure qflashcard css goes through webpack to avoid ssr issues
   if (!css.includes('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')) {
     css.push('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')
-    console.log(` App Extension (flashcard.styl) Info: 'Adding flashcard.styl css reference to your quasar.conf.js'`)
+    console.log(` App Extension (qflashcard) Info: 'Adding flashcard.styl css reference to your quasar.conf.js'`)
   }
 }
 
