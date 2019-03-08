@@ -13,20 +13,20 @@ export default Vue.extend({
         return null
       }
       let transition = this.transition
-      if (typeof this.transition === 'string') {
-        if (this.transition.includes(' ')) {
+      if (typeof transition === 'string') {
+        if (transition.includes(' ')) {
           transition = this.transition.split(' ')
-        }
-        else {
-          return this.transitionName(this.transition)
+        } else {
+          return this.transitionName(transition)
         }
       }
 
-      if (Array.isArray(this.transition)) {
-        return this.transition.map(t => {
-          return this.transitionName(this.transition)
+      if (Array.isArray(transition)) {
+        return transition.map(t => {
+          return this.transitionName(t)
         }).join(' ')
       }
+      return null
     }
   },
 
