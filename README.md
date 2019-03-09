@@ -18,21 +18,22 @@ Can be found [here](https://github.com/hawkeye64/quasar-app-extension-qflashcard
 Can be found [here](https://confident-wescoff-fb9e2c.netlify.com/#/).
 
 # Example Code
-This example mashes up the **nudge**, **fade-in**, **drop-down** and **drop-up** transitions.
+This example mashes up the **nudge-in**, **fade-in**, and **slide-up-in** transitions.
 
 ```html
 <q-flashcard :style="style">
-  <q-flashcard-section transition="nudge">
+  <q-flashcard-section transition="nudge-in">
     <img src="statics/2.jpg" width=300 height=200>
   </q-flashcard-section>
-  <q-flashcard-section transition="fade-in" style="width:100%;bottom:20px;top:0;background-color: rgba(219,127,8, 0.7);">
+  <q-flashcard-section transition="fade-in" class="fit">
+    <div class="fit" style="background-color: rgba(219,127,8, 0.7);" />
     <q-flashcard-section transition="drop-down" class="text-center my-header">
-      Combo Demo #1
+      Mashup Demo #1
     </q-flashcard-section>
-    <q-flashcard-section transition="drop-up" class="my-text">
+    <q-flashcard-section transition="slide-up-in" class="my-text">
       For beautiful eyes, look for the good in others; for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.
     </q-flashcard-section>
-    <q-flashcard-section transition="fade-in" class="my-button-container">
+    <q-flashcard-section transition="fade-in" class="fit flex justify-center items-end">
       <a href="#" class="my-button">Learn More</a>
     </q-flashcard-section>
   </q-flashcard-section>
