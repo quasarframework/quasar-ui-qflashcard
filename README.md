@@ -1,6 +1,8 @@
 QFlashcard
 ===
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/030677bc-74ca-445d-af9c-34d1437d741b/deploy-status)](https://app.netlify.com/sites/qflashcard/deploys)
+
 QFlashcard is an `app extension` for [Quasar Framework v1](https://v1.quasar-framework.org/). It will not work with legacy versions of Quasar Framework.
 
 This work is currently in `alpha` and there are expected changes while things get worked out.
