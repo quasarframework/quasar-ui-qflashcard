@@ -20,7 +20,7 @@ Can be found [here](https://confident-wescoff-fb9e2c.netlify.com/#/).
 # Example Code
 This example mashes up the **nudge**, **fade-in**, **drop-down** and **drop-up** transitions.
 
-```
+```html
 <q-flashcard :style="style">
   <q-flashcard-section transition="nudge">
     <img src="statics/2.jpg" width=300 height=200>
@@ -40,7 +40,7 @@ This example mashes up the **nudge**, **fade-in**, **drop-down** and **drop-up**
 
 ```
 where **style** for the QFlashcard is defined as:
-```
+```js
 computed: {
   style () {
     return {
@@ -110,7 +110,7 @@ The list of currently available transitions are as follows:
 
 # Combining Transitions
 It is important to note that you have the ability to combine different transitions on the same `QFlashcardSection`. For instance, both of these examples are acceptable:
-```
+```html
 <q-flashcard-section transition="nudge-out fade-out">
 
 <q-flashcard-section transition="['nudge-out', 'fade-out']">
@@ -120,14 +120,14 @@ Also be aware, some transitions do not work well with each other and it is up to
 
 # Overriding CSS Transition
 Say you want a different `transition-duration` or `transition-timing-function` all you need to do is override it in the `style` for the `QFlashcardSection`. For example, the `slide-*` transitions have a default time of `.3s`. If you wanted to change it to 1 second, you would do it like this:
-```
+```html
 <q-flashcard-section transition="slide-up-in" style="transition: all 1s ease-in-out !important;">
 ```
 
 # Questions
 - Q. Can I use my own transitions?
 - A. Yes, you can! Make your transition and the styling must be prefixed with `fc-`, for example `.fc-my-transition` and then for the `transition` property of `QFlashcardSection` call it like this: `transition="my-transition"`. The `fc-` is automatically prefixed to the tansition name. However, it must fall under the `.q-flashcard` namespace, as in:
-  ```
+  ```stylus
   .q-flashcard .fc-my-transition {
     /* attribuutes */
   }
