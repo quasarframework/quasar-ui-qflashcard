@@ -15,7 +15,7 @@ quasar ext add @quasar/qflashcard
 Can be found [here](https://github.com/hawkeye64/quasar-app-extension-qflashcard).
 
 # Demo
-Can be found [here](https://confident-wescoff-fb9e2c.netlify.com/#/).
+Can be found [here](https://qflashcard.netlify.com/#/).
 
 # Example Code
 This example mashes up the **nudge-in**, **fade-in**, and **slide-up-in** transitions.
