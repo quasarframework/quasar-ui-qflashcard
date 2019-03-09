@@ -1,8 +1,6 @@
 QFlashcard
 ===
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/030677bc-74ca-445d-af9c-34d1437d741b/deploy-status)](https://app.netlify.com/sites/qflashcard/deploys)
-
 QFlashcard is an `app extension` for [Quasar Framework v1](https://v1.quasar-framework.org/). It will not work with legacy versions of Quasar Framework.
 
 This work is currently in `alpha` and there are expected changes while things get worked out.
@@ -18,6 +16,8 @@ Can be found [here](https://github.com/hawkeye64/quasar-app-extension-qflashcard
 
 # Demo
 Can be found [here](https://qflashcard.netlify.com/#/).
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/030677bc-74ca-445d-af9c-34d1437d741b/deploy-status)](https://app.netlify.com/sites/qflashcard/deploys)
 
 # Example Code
 This example mashes up the **nudge-in**, **fade-in**, and **slide-up-in** transitions.
@@ -65,7 +65,7 @@ QFlashcard has no properties, events or methods. It has a single "default" slot.
 # QFlashcardSection Vue Properties
 | Vue&nbsp;Property | Type	| Description |
 |---|---|---|
-| type | String,Array | [optional] The type of transition to use (listed below) |
+| transition | String,Array | [optional] The type of transition to use (listed below) |
 
 QFlashcardSection has no events or methods. It has a single "default" slot. You can put anything into this slot.
 
