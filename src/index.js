@@ -15,9 +15,16 @@ const extendWithFlashcard = function (api, conf) {
   let boot = conf.boot
 
   // make sure qflashcard boot file is registered
-  if (!boot.includes('qflashcard')) {
-    boot.push('qflashcard')
+  if (!boot.includes('~@quasar/quasar-app-extension-qflashcard/boot/qflashcard.js')) {
+    boot.push('~@quasar/quasar-app-extension-qflashcard/boot/qflashcard.js')
+    // make sure boot file transpiles
+    conf.build.transpileDependencies.push(/quasar-app-extension-qflashcard[\\/]src[\\/]boot/)
     console.log(` App Extension (qflashcard) Info: 'Adding qflashcard boot reference to your quasar.conf.js'`)
+  }
+
+  // make sure there is a css array
+  if (!conf.css) {
+    conf.css = []
   }
 
   // for brevity
@@ -31,7 +38,17 @@ const extendWithFlashcard = function (api, conf) {
 }
 
 module.exports = function (api, ctx) {
+  api.registerDescribeApi('QFlashcard', '../component/QFlashcard.json')
+  api.registerDescribeApi('QFlashcardSection', '../component/QFlashcardSection.json')
+
   api.extendQuasarConf((conf) => {
-    extendWithFlashcard(api, conf)
+    return new Promise((resolve, reject) => {
+      console.log('QFlashcard boot before:', conf.boot)
+      console.log('QFlashcard css before:', conf.css)
+      extendWithFlashcard(api, conf)
+      console.log('QFlashcard boot after:', conf.boot)
+      console.log('QFlashcard css after:', conf.css)
+      resolve()
+    })
   })
 }
