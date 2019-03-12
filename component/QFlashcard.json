@@ -1,0 +1,8 @@
+{
+  "type": "component",
+  "slots": {
+    "default": {
+      "desc": "Anything can go into this slot, but one or more QFlashcardSection components are expected"
+    }
+  }
+}
