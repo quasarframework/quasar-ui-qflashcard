@@ -16,6 +16,9 @@ In your Quasar project:
 quasar ext add @quasar/qflashcard
 ```
 
+# Describe
+You can use `quasar describe QFlashcard` or `quasar describe QFlashcardSection`
+
 # Test Project
 Can be found [here](https://github.com/hawkeye64/quasar-app-extension-qflashcard).
 
