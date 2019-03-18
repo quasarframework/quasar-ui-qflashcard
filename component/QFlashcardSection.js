@@ -5,7 +5,7 @@ export default Vue.extend({
   name: 'QFlashcardSection',
 
   props: {
-    transition: [String,Array]
+    transition: [String, Array]
   },
   computed: {
     classes () {
