@@ -1,17 +1,18 @@
-QFlashcard
+QFlashcard (quasar-app-extension-qflashcard)
 ===
 
 ![official icon](https://img.shields.io/badge/Quasar%201.0-Official%20UI%20App%20Extension-blue.svg)
+![npm (scoped)](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qflashcard.svg?style=plastic)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/app-extension-qflashcard.svg)]()
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/app-extension-qflashcard.svg)]()
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-qflashcard.svg)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qflashcard)
 
-QFlashcard is an `app extension` for [Quasar Framework v1](https://v1.quasar-framework.org/). It will not work with legacy versions of Quasar Framework.
+QFlashcard is an `UI App Extension` for [Quasar Framework v1](https://v1.quasar-framework.org/). It will not work with legacy versions of Quasar Framework.
 
-This work is currently in `alpha` and there are expected changes while things get worked out.
+This work is currently in `beta` and there are expected changes while things get worked out. Your help with testing is greatly appreciated.
 
 # Installation
-In your Quasar project:
+To add this App Extension to your Quasar application, run the following (in your Quasar app folder):
 ```
 quasar ext add @quasar/qflashcard
 ```
