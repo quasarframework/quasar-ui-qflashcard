@@ -38,17 +38,12 @@ const extendWithFlashcard = function (api, conf) {
 }
 
 module.exports = function (api, ctx) {
+  // register JSON api
   api.registerDescribeApi('QFlashcard', '../component/QFlashcard.json')
   api.registerDescribeApi('QFlashcardSection', '../component/QFlashcardSection.json')
 
+  // extend quasar.conf
   api.extendQuasarConf((conf) => {
-    return new Promise((resolve, reject) => {
-      console.log('QFlashcard boot before:', conf.boot)
-      console.log('QFlashcard css before:', conf.css)
-      extendWithFlashcard(api, conf)
-      console.log('QFlashcard boot after:', conf.boot)
-      console.log('QFlashcard css after:', conf.css)
-      resolve()
-    })
+    extendWithFlashcard(api, conf)
   })
 }
