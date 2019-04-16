@@ -427,7 +427,7 @@ export default {
       return {
         width: '320px',
         height: '220px',
-        backgroundImage: 'url(../statics/bgimg.jpg)',
+        backgroundImage: `url('statics/bgimg.jpg')`,
         padding: '10px',
         border: '10px solid #fff',
         textAlign: 'center',
@@ -438,7 +438,7 @@ export default {
       return {
         width: '620px',
         height: '420px',
-        backgroundImage: 'url(../statics/bgimg.jpg)',
+        backgroundImage: `url('statics/bgimg.jpg')`,
         padding: '10px',
         border: '10px solid #fff',
         textAlign: 'center',
