@@ -6,28 +6,21 @@
  */
 
 const extendWithFlashcard = function (api, conf) {
-  // for brevity
-  let boot = conf.boot
 
   // make sure qflashcard boot file is registered
-  if (!boot.includes('~@quasar/quasar-app-extension-qflashcard/boot/qflashcard.js')) {
-    boot.push('~@quasar/quasar-app-extension-qflashcard/boot/qflashcard.js')
-    // make sure boot file transpiles
-    conf.build.transpileDependencies.push(/quasar-app-extension-qflashcard[\\/]src[\\/]boot/)
-    console.log(` App Extension (qflashcard) Info: 'Adding qflashcard boot reference to your quasar.conf.js'`)
-  }
+  conf.boot.push('~@quasar/quasar-app-extension-qflashcard/boot/qflashcard.js')
+  console.log(` App Extension (qflashcard) Info: 'Adding qflashcard boot reference to your quasar.conf.js'`)
 
-  // for brevity
-  let css = conf.css
+  // make sure boot & component files transpile
+  conf.build.transpileDependencies.push(/quasar-app-extension-qflashcard[\\/]src[\\/]boot/)
 
-  // make sure qflashcard css goes through webpack to avoid ssr issues
-  if (!css.includes('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')) {
-    css.push('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')
-    console.log(` App Extension (qflashcard) Info: 'Adding flashcard.styl css reference to your quasar.conf.js'`)
-  }
+  css.push('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')
+  console.log(` App Extension (qflashcard) Info: 'Adding flashcard.styl css reference to your quasar.conf.js'`)
 }
 
-module.exports = function (api, ctx) {
+module.exports = function (api) {
+  api.compatibleWith('@quasar/app', '^1.0.0-beta.18')
+
   // register JSON api
   api.registerDescribeApi('QFlashcard', '../component/QFlashcard.json')
   api.registerDescribeApi('QFlashcardSection', '../component/QFlashcardSection.json')
