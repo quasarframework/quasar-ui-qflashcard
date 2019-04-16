@@ -13,7 +13,7 @@ const extendWithFlashcard = function (api, conf) {
   // make sure boot & component files transpile
   conf.build.transpileDependencies.push(/quasar-app-extension-qflashcard[\\/]src[\\/]boot/)
 
-  css.push('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')
+  conf.css.push('~@quasar/quasar-app-extension-qflashcard/component/flashcard.styl')
   console.log(` App Extension (qflashcard) Info: 'Adding flashcard.styl css reference to your quasar.conf.js'`)
 }
 
