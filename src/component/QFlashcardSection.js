@@ -7,41 +7,41 @@ export default Vue.extend({
   props: {
     transition: [String, Array]
   },
+
   computed: {
     classes () {
       if (this.transition === void 0) {
-        return null
+        return
       }
       let transition = this.transition
       if (typeof transition === 'string') {
         if (transition.includes(' ')) {
           transition = this.transition.split(' ')
-        } else {
+        }
+        else {
           return this.transitionName(transition)
         }
       }
 
       if (Array.isArray(transition)) {
-        return transition.map(t => {
-          return this.transitionName(t)
-        }).join(' ')
+        return transition
+          .map(t => this.transitionName(t))
+          .join(' ')
       }
-      return null
     }
   },
 
   methods: {
     transitionName (transition) {
-      if (transition.startsWith('fc-')) {
-        return transition
-      }
-      return 'fc-' + transition
+      return transition.startsWith('fc-')
+        ? transition
+        : 'fc-' + transition
     }
   },
 
   render (h) {
     return h('div', {
-      staticClass: 'q-flashcard--section',
+      staticClass: 'q-flashcard__section',
       class: this.classes
     }, slot(this, 'default'))
   }
