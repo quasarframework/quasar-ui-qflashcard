@@ -21,12 +21,10 @@ quasar ext add @quasar/qflashcard
 You can use `quasar describe QFlashcard` or `quasar describe QFlashcardSection`
 
 # Test Project
-Can be found [here](https://github.com/hawkeye64/quasar-app-extension-qflashcard).
+In **demo** folder of **app-extension-qflashcard**.
 
 # Demo
-Can be found [here](https://qflashcard.netlify.com/#/).
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/030677bc-74ca-445d-af9c-34d1437d741b/deploy-status)](https://app.netlify.com/sites/qflashcard/deploys)
+Can be found [here](https://quasarframework.github.io/app-extension-qflashcard/demo/dist/spa/#/).
 
 # Example Code
 This example mashes up the **nudge-in**, **fade-in**, and **slide-up-in** transitions.
