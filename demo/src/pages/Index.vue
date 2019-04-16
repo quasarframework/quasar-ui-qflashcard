@@ -14,13 +14,13 @@
     </div>
 
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
     <div class="row q-pa-xs justify-center text-h4" style="width:100%;">
       QFlashcard Combo Demos
     </div>
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
 
     <div class="row justify-around" style="width:100%;">
@@ -188,13 +188,13 @@
       </div>
 
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
     <div class="row q-pa-xs justify-center text-h4" style="width:100%;">
       QFlashcard Mashup Demos
     </div>
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
 
       <div class="q-pa-sm">
@@ -205,7 +205,7 @@
               <img src="statics/2.jpg" width=300 height=200>
             </q-flashcard-section>
             <q-flashcard-section transition="fade-in" class="fit">
-              <div class="fit" style="background-color: rgba(219,127,8, 0.7);" />
+              <div class="fit" style="background-color: rgba(219,127,8, 0.7);"></div>
               <q-flashcard-section transition="drop-down" class="text-center my-header">
                 Mashup Demo #1
               </q-flashcard-section>
@@ -228,7 +228,7 @@
             <q-flashcard-section transition="['nudge-out', 'fade-out']">
               <img src="statics/1.jpg" width=300 height=200>
             </q-flashcard-section>
-            <q-flashcard-section transition="fade-in" class="fit" style="top:0;background-color: rgba(219,127,8, 0.7);" />
+            <q-flashcard-section transition="fade-in" class="fit" style="top:0;background-color: rgba(219,127,8, 0.7);"></q-flashcard-section>
             <q-flashcard-section transition="shake-down" class="fit">
               <div class="text-center my-header">
                 Mashup Demo #2
@@ -248,13 +248,13 @@
       </div>
 
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
     <div class="row q-pa-xs justify-center text-h4" style="width:100%;">
       QFlashcard Quasar Component Demos
     </div>
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
 
       <div class="q-pa-sm">
@@ -264,12 +264,10 @@
             <q-flashcard-section transition="slide-left-out">
               <div class="row full-width">
                 <div class="col-6">
-                  <p>
-                    <img
-                      src="statics/wspa-logo.svg"
-                      style="width:100%;max-width:100px;"
-                    >
-                  </p>
+                  <img
+                    src="statics/wspa-logo.svg"
+                    style="width:100%;max-width:100px;"
+                  >
                 </div>
                 <div class="text-center text-black col-6">
                   By signing up, you are joining a community of people who are moving the world to protect animals. Join our mailing list to receive email updates about our latest news.
@@ -281,9 +279,9 @@
             </q-flashcard-section>
             <q-flashcard-section transition="slide-left-in" class="fit">
               <div class="q-pa-md q-gutter-sm">
-                <q-input v-model="email" filled type="email" hint="Email" />
+                <q-input v-model="email" filled type="email" hint="Email"></q-input>
                 <q-flashcard-section transition="roll-left-in" style="top:60%">
-                  <q-btn color="white" text-color="black" label="Submit" class="q-mr-sm" />
+                  <q-btn color="white" text-color="black" label="Submit" class="q-mr-sm"></q-btn>
                   <a href="https://www.worldanimalprotection.ca" target="_blank" class="my-button">Learn More</a>
                 </q-flashcard-section>
               </div>
@@ -304,7 +302,7 @@
               <div style="margin-top: 50%; opacity:0.65">
                   <q-toolbar class="bg-white text-black q-my-md shadow-2">
 
-                    <q-space />
+                    <q-space></q-space>
 
                     <q-btn-toggle
                       v-model="model"
@@ -315,7 +313,7 @@
                         {label: 'Task#2', value: 'two'},
                         {label: 'Task#3', value: 'three'}
                       ]"
-                    />
+                    ></q-btn-toggle>
                   </q-toolbar>
                 </div>
             </q-flashcard-section>
@@ -326,13 +324,13 @@
 
     </div>
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
     <div class="row q-pa-xs justify-center text-h4" style="width:100%;">
       Transitions
     </div>
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
 
     <!-- Transitions -->
@@ -351,7 +349,7 @@
     </div>
 
     <div class="row q-pa-xs" style="width:100%;">
-      <q-separator  />
+      <q-separator></q-separator>
     </div>
 
     <div class="row q-pt-md flex justify-center items-end">
@@ -370,6 +368,8 @@ export default {
 
   data () {
     return {
+      email: '',
+      model: false,
       transitions: [
         'nudge-in',
         'nudge-out',

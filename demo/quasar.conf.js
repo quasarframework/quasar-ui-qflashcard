@@ -41,7 +41,8 @@ module.exports = function (ctx) {
         'QCardSection',
         'QCardActions',
         'QInput',
-        'QBtnToggle'
+        'QBtnToggle',
+        'QSpace'
       ],
 
       directives: [
