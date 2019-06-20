@@ -24,7 +24,7 @@ You can use `quasar describe QFlashcard` or `quasar describe QFlashcardSection`
 In **demo** folder of **app-extension-qflashcard**.
 
 # Demo
-Can be found [here](https://quasarframework.github.io/app-extension-qflashcard/demo/dist/spa/#/).
+Can be found [here](https://quasarframework.github.io/app-extension-qflashcard/).
 
 # Example Code
 This example mashes up the **nudge-in**, **fade-in**, and **slide-up-in** transitions.
