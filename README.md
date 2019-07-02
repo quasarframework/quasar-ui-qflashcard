@@ -24,7 +24,7 @@ You can use `quasar describe QFlashcard` or `quasar describe QFlashcardSection`
 In **demo** folder of **app-extension-qflashcard**.
 
 # Demo
-Can be found [here](https://quasarframework.github.io/app-extension-qflashcard/demo/dist/spa/#/).
+Can be found [here](https://quasarframework.github.io/app-extension-qflashcard/).
 
 # Example Code
 This example mashes up the **nudge-in**, **fade-in**, and **slide-up-in** transitions.
@@ -146,5 +146,5 @@ Say you want a different `transition-duration` or `transition-timing-function` a
 - Q. Why prefix with `'fc-'`?
 - A. This is to avoid name style collisions. Having a transition called `.slide-out` would be too generic. Having `.fc-slide-out` is more deterministic.
 
-# Patreon
-If you like (and use) this App Extension, please consider becoming a Quasar [Patreon](https://www.patreon.com/quasarframework).
+# Donate
+If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
