@@ -2,7 +2,7 @@
   "name": "@quasar/quasar-app-extension-qflashcard",
   "version": "1.0.0-beta.6",
   "description": "QFlashcard is an app extension for Quasar for making flashy cards",
-  "author": "Hawkeye64 <jeff@quasar-framework.org>",
+  "author": "Jeff Galbraith <jeff@quasar-framework.org>",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
@@ -35,10 +35,10 @@
   ],
   "devDependencies": {
     "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-loader": "^2.1.2",
-    "eslint-plugin-vue": "^5.2.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "fs": "^0.0.2",
     "path": "^0.12.7"
   }
