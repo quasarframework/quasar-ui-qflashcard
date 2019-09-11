@@ -138,9 +138,9 @@ Say you want a different `transition-duration` or `transition-timing-function` a
 - Q. Can I use my own transitions?
 - A. Yes, you can! Make your transition and the styling must be prefixed with `fc-`, for example `.fc-my-transition` and then for the `transition` property of `QFlashcardSection` call it like this: `transition="my-transition"`. The `fc-` is automatically prefixed to the tansition name. However, it must fall under the `.q-flashcard` namespace, as in:
   ```stylus
-  .q-flashcard .fc-my-transition {
-    /* attribuutes */
-  }
+  .q-flashcard .fc-my-transition
+    /* css attributes */
+
   ```
   This is so the transition only works while in a QFlashcard area as these transitons should not be used with other elements/compnents.
 - Q. Why prefix with `'fc-'`?

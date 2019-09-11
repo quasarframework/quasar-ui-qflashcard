@@ -11,14 +11,14 @@ export default Vue.extend({
   computed: {
     classes () {
       if (this.transition === void 0) {
-        return
+        return ''
       }
       let transition = this.transition
       if (typeof transition === 'string') {
         if (transition.includes(' ')) {
+          // now transition is an array and handled below...
           transition = this.transition.split(' ')
-        }
-        else {
+        } else {
           return this.transitionName(transition)
         }
       }
@@ -28,6 +28,8 @@ export default Vue.extend({
           .map(t => this.transitionName(t))
           .join(' ')
       }
+
+      return ''
     }
   },
 

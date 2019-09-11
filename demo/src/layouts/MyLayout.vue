@@ -13,7 +13,7 @@
         </q-btn>
 
         <q-toolbar-title>
-          Quasar App
+          QFlashcard <span class="text-subtitle2">v{{ version }}</span>
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -91,17 +91,15 @@
 </template>
 
 <script>
-import { openURL } from 'quasar'
+import { version } from '@quasar/quasar-app-extension-qflashcard/package.json'
 
 export default {
   name: 'MyLayout',
   data () {
     return {
+      version: version,
       leftDrawerOpen: this.$q.platform.is.desktop
     }
-  },
-  methods: {
-    openURL
   }
 }
 </script>
