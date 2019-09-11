@@ -21,8 +21,8 @@ module.exports = function (api) {
   api.compatibleWith('@quasar/app', '^1.0.0')
 
   // register JSON api
-  api.registerDescribeApi('QFlashcard', '../component/QFlashcard.json')
-  api.registerDescribeApi('QFlashcardSection', '../component/QFlashcardSection.json')
+  api.registerDescribeApi('QFlashcard', './component/QFlashcard.json')
+  api.registerDescribeApi('QFlashcardSection', './component/QFlashcardSection.json')
 
   // extend quasar.conf
   api.extendQuasarConf(extendQuasarConf)
