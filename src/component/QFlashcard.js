@@ -1,7 +1,6 @@
-import Vue from 'vue'
-import slot from 'quasar/src/utils/slot.js'
+import { slot } from 'quasar/src/utils/slot.js'
 
-export default Vue.extend({
+export default {
   name: 'QFlashcard',
 
   render (h) {
@@ -9,4 +8,4 @@ export default Vue.extend({
       staticClass: 'q-flashcard'
     }, slot(this, 'default'))
   }
-})
+}
