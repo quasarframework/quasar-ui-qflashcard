@@ -1,7 +1,6 @@
-import Vue from 'vue'
-import slot from 'quasar/src/utils/slot.js'
+import { slot } from 'quasar/src/utils/slot.js'
 
-export default Vue.extend({
+export default {
   name: 'QFlashcardSection',
 
   props: {
@@ -47,4 +46,4 @@ export default Vue.extend({
       class: this.classes
     }, slot(this, 'default'))
   }
-})
+}
