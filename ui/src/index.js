@@ -1,23 +1,20 @@
 import { version } from '../package.json'
-
-import Component from './components/Component'
-
+import QFlashcard from './components/QFlashcard'
+import QFlashcardSection from './components/QFlashcardSection'
 
 export {
   version,
-
-  Component
-  
+  QFlashcard,
+  QFlashcardSection
 }
 
 export default {
   version,
-
-  Component,
-  
+  QFlashcard,
+  QFlashcardSection,
 
   install (Vue) {
-    Vue.component(Component.name, Component)
-    
+    Vue.component(QFlashcard.name, QFlashcard)
+    Vue.component(QFlashcardSection.name, QFlashcardSection)
   }
 }

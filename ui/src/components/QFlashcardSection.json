@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "docsUrl": "https://quasarframework.github.io/quasar-ui-qflashcard/docs"
+  },
+  "props": {
+    "transition": {
+      "type": [ "String", "Array" ],
+      "desc": "One or more transitions to be used",
+      "examples": [ "fade-in", "fade-in flip-left-in", "['fade-in', 'flip-left-in']" ],
+      "category": "behavior"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Anything can go into this slot"
+    }
+  }
+}

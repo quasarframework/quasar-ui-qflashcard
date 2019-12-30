@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "docsUrl": "https://quasarframework.github.io/quasar-ui-qflashcard/docs"
+  },
+  "slots": {
+    "default": {
+      "desc": "Anything can go into this slot, but one or more QFlashcardSection components are expected"
+    }
+  }
+}

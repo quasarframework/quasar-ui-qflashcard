@@ -1,10 +1,12 @@
 # Component QFlashcard
 
-[![npm](https://img.shields.io/npm/v/quasar-ui-qflashcard.svg?label=quasar-ui-qflashcard)](https://www.npmjs.com/package/quasar-ui-qflashcard)
-[![npm](https://img.shields.io/npm/dt/quasar-ui-qflashcard.svg)](https://www.npmjs.com/package/quasar-ui-qflashcard)
+[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard.svg?label=quasar-ui-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
+[![npm](https://img.shields.io/npm/dt/@quasar/quasar-ui-qflashcard.svg)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
 
-# Component QFlashcard
-> Short description of the component
+QFlashcard is a [Quasar](https://quasar.dev) component. It allows you to add css mashups and transitions to your Quasar app.
+
+# Examples and Documentation
+Can be found [here](https://quasarframework.github.io/quasar-ui-qflashcard)
 
 
 # Usage
@@ -19,8 +21,8 @@ Create and register a boot file:
 
 ```js
 import Vue from 'vue'
-import Plugin from 'quasar-ui-qflashcard'
-import 'quasar-ui-qflashcard/dist/index.css'
+import Plugin from '@quasar/quasar-ui-qflashcard'
+import '@quasar/quasar-ui-qflashcard/dist/index.css'
 
 Vue.use(Plugin)
 ```
@@ -28,10 +30,10 @@ Vue.use(Plugin)
 **OR**:
 
 ```html
-<style src="quasar-ui-qflashcard/dist/index.css"></style>
+<style src="@quasar/quasar-ui-qflashcard/dist/index.css"></style>
 
 <script>
-import { Component as QFlashcard } from 'quasar-ui-qflashcard'
+import { QFlashcard } from '@quasar/quasar-ui-qflashcard'
 
 export default {
   components: {
@@ -45,8 +47,8 @@ export default {
 
 ```js
 import Vue from 'vue'
-import Plugin from 'quasar-ui-qflashcard'
-import 'quasar-ui-qflashcard/dist/index.css'
+import Plugin from '@quasar/quasar-ui-qflashcard'
+import '@quasar/quasar-ui-qflashcard/dist/index.css'
 
 Vue.use(Plugin)
 ```
@@ -54,10 +56,10 @@ Vue.use(Plugin)
 **OR**:
 
 ```html
-<style src="quasar-ui-qflashcard/dist/index.css"></style>
+<style src="@quasar/quasar-ui-qflashcard/dist/index.css"></style>
 
 <script>
-import { Component as QFlashcard } from 'quasar-ui-qflashcard'
+import { QFlashcard } from '@quasar/quasar-ui-qflashcard'
 
 export default {
   components: {
@@ -76,24 +78,34 @@ Add the following tag(s) after the Quasar ones:
 ```html
 <head>
   <!-- AFTER the Quasar stylesheet tags: -->
-  <link href="https://cdn.jsdelivr.net/npm/quasar-ui-qflashcard/dist/index.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard/dist/index.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
   <!-- at end of body, AFTER Quasar script(s): -->
-  <script src="https://cdn.jsdelivr.net/npm/quasar-ui-qflashcard/dist/index.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard/dist/index.umd.min.js"></script>
 </body>
 ```
 If you need the RTL variant of the CSS, then go for the following (instead of the above stylesheet link):
 ```html
-<link href="https://cdn.jsdelivr.net/npm/quasar-ui-qflashcard/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
 ```
 
-# Setup
+[UMD example on Codepen](https://codepen.io/Hawkeye64/pen/wvBKVNB)
+
+# Building the Projects
+
+## Setup
+
+In both the `ui` and `ui/dev` folders:
+
 ```bash
 $ yarn
 ```
 
-# Developing
+## Developing
+
+In the `ui` folder
+
 ```bash
 # start dev in SPA mode
 $ yarn dev
@@ -114,19 +126,13 @@ $ yarn dev:android
 $ yarn dev:electron
 ```
 
-# Building package
+## Building package
 ```bash
 $ yarn build
 ```
 
-# Adding Testing Components
-in the `ui/dev/src/pages` you can add Vue files to test your component/directive. When using `yarn dev` to build the UI, any pages in that location will automatically be picked up by dynamic routing and added to the test page.
-
-# Adding Assets
-If you have a component that has assets, like language or icon-sets, you will need to provide these for UMD. In the `ui/build/script.javascript.js` file, you will find a couple of commented out commands that call `addAssets`. Uncomment what you need and add your assets to have them be built and put into the `ui/dist` folder.
-
 # Donate
-If you appreciate the work that went into this, please consider [donating to Quasar](https://donate.quasar.dev).
+If you appreciate the work that went into this, please consider donating to [Quasar](https://donate.quasar.dev) or [Jeff](https://github.com/sponsors/hawkeye64).
 
 # License
 MIT (c) Jeff Galbraith <jeff@quasar.dev>

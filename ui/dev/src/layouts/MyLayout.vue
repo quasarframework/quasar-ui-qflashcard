@@ -11,7 +11,7 @@
         />
 
         <q-toolbar-title>
-          quasar-ui-qflashcard v{{ version }}
+          QFlashcard <span class="text-subtitle2">v{{ version }}</span>
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
