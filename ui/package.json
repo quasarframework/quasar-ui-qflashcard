@@ -1,0 +1,48 @@
+{
+  "name": "quasar-ui-qflashcard",
+  "version": "0.0.1",
+  "author": "Jeff Galbraith <jeff@quasar.dev>",
+  "description": "My awesome component",
+  "license": "MIT",
+  "module": "dist/index.esm.js",
+  "main": "dist/index.common.js",
+  "scripts": {
+    "dev": "cd dev; yarn dev; cd ..",
+    "dev:umd": "yarn build && node build/script.open-umd.js",
+    "dev:ssr": "cd dev; yarn 'dev:ssr'; cd ..",
+    "dev:ios": "cd dev; yarn 'dev:ios'; cd ..",
+    "dev:android": "cd dev; yarn 'dev:android'; cd ..",
+    "dev:electron": "cd dev; yarn 'dev:electron'; cd ..",
+    "build": "node build/index.js",
+    "build:js": "node build/script.javascript.js",
+    "build:css": "node build/script.css.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "homepage": "",
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.0",
+    "@rollup/plugin-json": "^4.0.1",
+    "@rollup/plugin-node-resolve": "^6.0.0",
+    "autoprefixer": "^9.7.3",
+    "chalk": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "fs-extra": "^8.1.0",
+    "node-sass": "^4.13.0",
+    "open": "^7.0.0",
+    "postcss": "^7.0.25",
+    "postcss-rtl": "^1.5.0",
+    "quasar": "^1.5.11",
+    "quasar-json-api": "^0.0.13",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.14",
+    "uglify-es": "^3.3.9",
+    "zlib": "^1.0.5"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
+}
