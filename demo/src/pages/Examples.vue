@@ -1,10 +1,19 @@
 <template>
   <hero>
     <div class="q-markdown">
-      <q-markdown>
-      </q-markdown>
       <example-title title="Transitions" />
-      <example-viewer title="Basic" file="Basic" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <q-markdown>
+By default, all the transitions are mouse hover aware. This can be changed by using the `no-hover` and `active` proerties together to give more control.
+
+For the examples in the Transitions section, either hover with your mouse or if on a touch screen tap.
+      </q-markdown>
+      <example-viewer title="Nudge" file="Nudge" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Fade" file="Fade" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Zoom" file="Zoom" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Roll (Left/Right)" file="RollLeftRight" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Roll (Up/Down)" file="RollUpDown" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Slide (Left/Right)" file="SlideLeftRight" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Slide (Up/Down)" file="SlideUpDown" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
       <example-title title="Combos" />
 

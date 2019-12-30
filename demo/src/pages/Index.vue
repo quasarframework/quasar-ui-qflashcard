@@ -4,6 +4,7 @@
     <json-api-viewer
       title="QFlashcard API"
       :json="json"
+      starting-tab="slots"
     />
     <json-api-viewer
       title="QFlashcardSection API"
@@ -64,6 +65,7 @@ export default {
     onToc (toc) {
       // add the manual ones
       toc.push({ id: 'QFlashcard-API', label: 'QFlashcard API', level: 1, children: Array(0) })
+      toc.push({ id: 'QFlashcardSection-API', label: 'QFlashcardSection API', level: 1, children: Array(0) })
       toc.push({ id: 'Donate', label: 'Donate', level: 1, children: Array(0) })
 
       this.toc = toc
