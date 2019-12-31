@@ -4,7 +4,6 @@ export default {
   name: 'QFlashcardSection',
 
   props: {
-    noHover: Boolean,
     active: Boolean,
     transition: [String, Array]
   },
@@ -36,9 +35,10 @@ export default {
 
   methods: {
     __transitionName (transition) {
-      return transition.startsWith('fc-')
+      const postfix = this.active === true ? '--active' : ''
+      return (transition.startsWith('fc-')
         ? transition
-        : 'fc-' + transition
+        : 'fc-' + transition) + postfix
     }
   },
 
