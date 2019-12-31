@@ -21,7 +21,7 @@
             </div>
           </div>
           <div class="row">
-            <a href="www.worldanimalprotection.ca" target="_blank" class="my-button">Learn More</a>
+            <a href="https://www.worldanimalprotection.ca/" target="_blank" class="my-button">Learn More</a>
           </div>
         </q-flashcard-section>
         <q-flashcard-section transition="slide-left-in" class="fit" :active="active">
