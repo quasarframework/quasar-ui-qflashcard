@@ -1,6 +1,12 @@
 <template>
   <hero>
     <div class="q-markdown">
+      <q-markdown>
+::: info
+All images courtesy of [ANDREY YAKOVLEV & LILI ALEEVA](https://www.behance.net/gallery/53029631/AGEof-RUINS)
+:::
+      </q-markdown>
+
       <example-title title="Transitions" />
       <q-markdown>
 By default, all the transitions are mouse hover/touch aware. This can be changed by using the `no-hover` and `active` proerties together to give more control.
