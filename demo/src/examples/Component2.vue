@@ -1,26 +1,37 @@
 <template>
   <div class="q-ma-md row justify-evenly" style="max-width: 700px; width: 100%;">
 
-    <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="zoom-in" no-hover :active="active">
-          <img :src="getImage(0)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="zoom-in"</div>
-    </div>
-
-    <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="zoom-out" no-hover :active="active">
-          <img :src="getImage(1)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="zoom-out"</div>
-    </div>
-
-    <div class="q-ma-md row justify-center items-center">
+    <div class="q-ma-md row justify-center items-center full-width">
+      <q-toggle v-model="hover" label="Toggle Hover" />
       <q-toggle v-model="active" label="Toggle Transitions" />
+    </div>
+
+    <div class="description text-center rounded-borders">
+      <q-flashcard :no-hover="hover" :style="style">
+        <q-flashcard-section transition="nudge-out" :active="active">
+          <img src="statics/1.jpg" width=300 height=200>
+        </q-flashcard-section>
+        <q-flashcard-section transition="slide-up-in" class="fit" :active="active">
+          <div style="margin-top: 50%; opacity:0.65">
+              <q-toolbar class="bg-white text-black q-my-md shadow-2">
+
+                <q-space></q-space>
+
+                <q-btn-toggle
+                  v-model="model"
+                  flat stretch
+                  toggle-color="yellow"
+                  :options="[
+                    {label: 'Task#1', value: 'one'},
+                    {label: 'Task#2', value: 'two'},
+                    {label: 'Task#3', value: 'three'}
+                  ]"
+                ></q-btn-toggle>
+              </q-toolbar>
+            </div>
+        </q-flashcard-section>
+      </q-flashcard>
+      <div class="text-h5 q-pt-sm">Component Demo #2</div>
     </div>
 
   </div>
@@ -30,6 +41,8 @@
 export default {
   data () {
     return {
+      model: false,
+      hover: false,
       active: false
     }
   },

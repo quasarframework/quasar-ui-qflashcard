@@ -3,13 +3,14 @@
     <div class="q-markdown">
       <example-title title="Transitions" />
       <q-markdown>
-By default, all the transitions are mouse hover aware. This can be changed by using the `no-hover` and `active` proerties together to give more control.
+By default, all the transitions are mouse hover/touch aware. This can be changed by using the `no-hover` and `active` proerties together to give more control.
 
-For the examples in the Transitions section, either hover with your mouse or if on a touch screen tap.
+For the examples below, play with mouse hover/touch, then turn on `no-hover` (Toggle hover) and turn on `active` (Toggle Transitions) to see the difference.
       </q-markdown>
       <example-viewer title="Nudge" file="Nudge" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="Fade" file="Fade" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="Zoom" file="Zoom" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Spin" file="Spin" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="Roll (Left/Right)" file="RollLeftRight" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="Roll (Up/Down)" file="RollUpDown" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="Slide (Left/Right)" file="SlideLeftRight" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
@@ -18,27 +19,31 @@ For the examples in the Transitions section, either hover with your mouse or if 
       <example-viewer title="Flip (Up/Down)" file="FlipUpDown" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="Shake" file="Shake" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
-      <example-title title="Manual Transitions" />
-      <q-markdown>
-By default, all the transitions are mouse hover aware. This can be changed by using the `no-hover` and `active` properties together to give more control.
-
-For the examples in the Transitions section, either hover with your mouse or if on a touch screen tap.
-      </q-markdown>
-      <example-viewer title="Nudge (Manual)" file="NudgeManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Fade (Manual)" file="FadeManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Zoom (Manual)" file="ZoomManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Roll (Left/Right) (Manual)" file="RollLeftRightManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Roll (Up/Down) (Manual)" file="RollUpDownManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Slide (Left/Right) (Manual)" file="SlideLeftRightManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Slide (Up/Down) (Manual)" file="SlideUpDownManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Flip (Left/Right) (Manual)" file="FlipLeftRightManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Flip (Up/Down) (Manual)" file="FlipUpDownManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-      <example-viewer title="Shake (Manual)" file="ShakeManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
-
       <example-title title="Combos" />
+      <q-markdown>
+Combos are when you have two main transitions.
+      </q-markdown>
+      <example-viewer title="Demo #1" file="Demo1" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Demo #2" file="Demo2" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Demo #3" file="Demo3" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Demo #4" file="Demo4" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Demo #5" file="Demo5" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Demo #6" file="Demo6" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Demo #7" file="Demo7" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
       <example-title title="Mashups" />
+      <q-markdown>
+Mashups are when you have more than two transitions that work together.
+      </q-markdown>
+      <example-viewer title="Mashup #1" file="Mashup1" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Mashup #2" file="Mashup2" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
+      <example-title title="Quasar Components" />
+      <q-markdown>
+The examples below show how you can use Quasar components with QFlashcard animations.
+      </q-markdown>
+      <example-viewer title="Component Demo #1" file="Component1" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Component Demo #2" file="Component2" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
     </div>
   </hero>
 </template>
@@ -77,6 +82,7 @@ export default {
     this.addToToc('Nudge', 2)
     this.addToToc('Fade', 2)
     this.addToToc('Zoom', 2)
+    this.addToToc('Spin', 2)
     this.addToToc('Roll (Left/Right)', 2)
     this.addToToc('Roll (Up/Down)', 2)
     this.addToToc('Slide (Left/Right)', 2)
@@ -85,23 +91,22 @@ export default {
     this.addToToc('Flip (Up/Down)', 2)
     this.addToToc('Shake', 2)
 
-    this.addToToc('Manual Transitions')
-    this.addToToc('Nudge (Manual)', 2)
-    this.addToToc('Fade (Manual)', 2)
-    this.addToToc('Zoom (Manual)', 2)
-    this.addToToc('Roll (Left/Right) (Manual)', 2)
-    this.addToToc('Roll (Up/Down) (Manual)', 2)
-    this.addToToc('Slide (Left/Right) (Manual)', 2)
-    this.addToToc('Slide (Up/Down) (Manual)', 2)
-    this.addToToc('Flip (Left/Right) (Manual)', 2)
-    this.addToToc('Flip (Up/Down) (Manual)', 2)
-    this.addToToc('Shake (Manual)', 2)
+    this.addToToc('Combos')
+    this.addToToc('Demo #1', 2)
+    this.addToToc('Demo #2', 2)
+    this.addToToc('Demo #3', 2)
+    this.addToToc('Demo #4', 2)
+    this.addToToc('Demo #5', 2)
+    this.addToToc('Demo #6', 2)
+    this.addToToc('Demo #7', 2)
 
     this.addToToc('Mashups')
+    this.addToToc('Mashup #1', 2)
+    this.addToToc('Mashup #2', 2)
 
-    // this.addToToc('On Component', 2)
-    // this.addToToc('Theme Selection', 2)
-    // this.addToToc('Theme Quasar Components', 2)
+    this.addToToc('Quasar Components')
+    this.addToToc('Component Demo #1', 2)
+    this.addToToc('Component Demo #2', 2)
 
     this.toc = this.tempToc
   },

@@ -1,9 +1,14 @@
 <template>
   <div class="q-ma-md row justify-evenly" style="max-width: 700px; width: 100%;">
 
+    <div class="q-ma-md row justify-center items-center full-width">
+      <q-toggle v-model="hover" label="Toggle Hover" />
+      <q-toggle v-model="active" label="Toggle Transitions" />
+    </div>
+
     <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-up-in">
+      <q-flashcard :no-hover="hover" :style="style">
+        <q-flashcard-section transition="slide-up-in" :active="active">
           <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
@@ -11,8 +16,8 @@
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-up-out">
+      <q-flashcard :no-hover="hover" :style="style">
+        <q-flashcard-section transition="slide-up-out" :active="active">
           <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
@@ -20,8 +25,8 @@
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-down-in">
+      <q-flashcard :no-hover="hover" :style="style">
+        <q-flashcard-section transition="slide-down-in" :active="active">
           <img :src="getImage(1)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
@@ -29,8 +34,8 @@
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-down-out">
+      <q-flashcard :no-hover="hover" :style="style">
+        <q-flashcard-section transition="slide-down-out" :active="active">
           <img :src="getImage(1)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
@@ -44,6 +49,8 @@
 export default {
   data () {
     return {
+      hover: false,
+      active: false
     }
   },
 

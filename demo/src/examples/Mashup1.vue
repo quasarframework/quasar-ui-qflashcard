@@ -1,44 +1,30 @@
 <template>
   <div class="q-ma-md row justify-evenly" style="max-width: 700px; width: 100%;">
 
-    <div class="description text-center rounded-borders">
-      <q-flashcard no-hover :style="style">
-        <q-flashcard-section transition="flip-left-in" :active="active">
-          <img :src="getImage(0)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="flip-left-in"</div>
-    </div>
-
-    <div class="description text-center rounded-borders">
-      <q-flashcard no-hover :style="style">
-        <q-flashcard-section transition="flip-left-out" :active="active">
-          <img :src="getImage(0)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="flip-left-out"</div>
-    </div>
-
-    <div class="description text-center rounded-borders">
-      <q-flashcard no-hover :style="style">
-        <q-flashcard-section transition="flip-right-in" :active="active">
-          <img :src="getImage(1)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="flip-right-in"</div>
-    </div>
-
-    <div class="description text-center rounded-borders">
-      <q-flashcard no-hover :style="style">
-        <q-flashcard-section transition="flip-right-out" :active="active">
-          <img :src="getImage(1)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="flip-right-out"</div>
-    </div>
-
-    <div class="q-ma-md row justify-center items-center">
+    <div class="q-ma-md row justify-center items-center full-width">
+      <q-toggle v-model="hover" label="Toggle Hover" />
       <q-toggle v-model="active" label="Toggle Transitions" />
+    </div>
+
+    <div class="description text-center rounded-borders">
+      <q-flashcard :no-hover="hover" :style="style">
+        <q-flashcard-section transition="nudge-in" :active="active">
+          <img src="statics/2.jpg" width=300 height=200>
+        </q-flashcard-section>
+        <q-flashcard-section transition="fade-in" class="fit" :active="active">
+          <div class="fit" style="background-color: rgba(219,127,8, 0.7);"></div>
+          <q-flashcard-section transition="drop-down" class="text-center my-header" :active="active">
+            Mashup Demo #1
+          </q-flashcard-section>
+          <q-flashcard-section transition="slide-up-in" class="my-text" :active="active">
+            For beautiful eyes, look for the good in others; for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.
+          </q-flashcard-section>
+          <q-flashcard-section transition="fade-in" class="fit flex justify-center items-end" :active="active">
+            <a href="#" class="my-button">Learn More</a>
+          </q-flashcard-section>
+        </q-flashcard-section>
+      </q-flashcard>
+      <div class="text-h5 q-pt-sm">Mashup Demo #1</div>
     </div>
 
   </div>
@@ -48,6 +34,7 @@
 export default {
   data () {
     return {
+      hover: false,
       active: false
     }
   },

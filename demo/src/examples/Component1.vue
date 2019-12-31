@@ -1,26 +1,40 @@
 <template>
   <div class="q-ma-md row justify-evenly" style="max-width: 700px; width: 100%;">
 
-    <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="fade-in" no-hover :active="active">
-          <img :src="getImage(0)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="fade-in"</div>
-    </div>
-
-    <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="fade-out" no-hover :active="active">
-          <img :src="getImage(1)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="fade-out"</div>
-    </div>
-
-    <div class="q-ma-md row justify-center items-center">
+    <div class="q-ma-md row justify-center items-center full-width">
+      <q-toggle v-model="hover" label="Toggle Hover" />
       <q-toggle v-model="active" label="Toggle Transitions" />
+    </div>
+
+    <div class="description text-center rounded-borders">
+      <q-flashcard :no-hover="hover" :style="style">
+        <q-flashcard-section transition="slide-left-out" :active="active">
+          <div class="row full-width">
+            <div class="col-6">
+              <img
+                src="statics/wspa-logo.svg"
+                style="width:100%;max-width:100px;"
+              >
+            </div>
+            <div class="text-center text-black col-6">
+              By signing up, you are joining a community of people who are moving the world to protect animals. Join our mailing list to receive email updates about our latest news.
+            </div>
+          </div>
+          <div class="row">
+            <a href="www.worldanimalprotection.ca" target="_blank" class="my-button">Learn More</a>
+          </div>
+        </q-flashcard-section>
+        <q-flashcard-section transition="slide-left-in" class="fit" :active="active">
+          <div class="q-pa-md q-gutter-sm">
+            <q-input v-model="email" filled type="email" hint="Email"></q-input>
+            <q-flashcard-section transition="roll-left-in" style="top:60%" :active="active">
+              <q-btn color="white" text-color="black" label="Submit" class="q-mr-sm"></q-btn>
+              <a href="https://www.worldanimalprotection.ca" target="_blank" class="my-button">Learn More</a>
+            </q-flashcard-section>
+          </div>
+        </q-flashcard-section>
+      </q-flashcard>
+      <div class="text-h5 q-pt-sm">Component Demo #1</div>
     </div>
 
   </div>
@@ -30,6 +44,8 @@
 export default {
   data () {
     return {
+      email: '',
+      hover: false,
       active: false
     }
   },
