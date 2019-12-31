@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-qflashcard",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Quasar App Extension",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
   "license": "MIT",
@@ -12,7 +12,7 @@
   "bugs": "",
   "homepage": "",
   "dependencies": {
-    "@quasar/quasar-ui-qflashcard": "^0.0.1"
+    "@quasar/quasar-ui-qflashcard": "^1.0.0"
   },
   "engines": {
     "node": ">= 8.9.0",
