@@ -53,9 +53,9 @@ export default {
   methods: {
     getImage (index) {
       if (index % 2) {
-        return 'statics/1.jpg'
+        return 'https://raw.githubusercontent.com/quasarframework/app-extension-qflashcard/dev/demo/src/statics/1.jpg'
       }
-      return 'statics/2.jpg'
+      return 'https://raw.githubusercontent.com/quasarframework/app-extension-qflashcard/dev/demo/src/statics/2.jpg'
     }
   }
 }
