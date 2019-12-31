@@ -90,7 +90,7 @@ If you need the RTL variant of the CSS, then go for the following (instead of th
 <link href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard/dist/index.rtl.min.css" rel="stylesheet" type="text/css">
 ```
 
-[UMD example on Codepen](https://codepen.io/Hawkeye64/pen/wvBKVNB)
+[UMD example on Codepen](https://codepen.io/Hawkeye64/pen/qBEPVEG)
 
 # Building the Projects
 

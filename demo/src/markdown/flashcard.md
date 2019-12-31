@@ -1,13 +1,12 @@
 QFlashcard
 ===
 
-**QFlashcard** adds css mashups and transitions in your Quasar application.
+**QFlashcard** adds css mashups and transitions to your Quasar apps.
 
 # Features
-- Show fullscreen overlays
-- Show component-level overlays
-- Turn off scrollbars
-- Put a component/element on top of the overlay
+- Loads of transitions
+- Combine transitions for combos and mashups
+- Easily modifiable
 
 # Installation Types
 
@@ -120,7 +119,7 @@ If you need the RTL variant of the CSS, then go for the following (instead of th
 :::
 
 ## Testing on Codepen
-[UMD Example on Codepen](https://codepen.io/Hawkeye64/pen/wvBKVNB)
+[UMD Example on Codepen](https://codepen.io/Hawkeye64/pen/qBEPVEG)
 
 # Docs
 Can be found [here](https://quasarframework.github.io/quasar-ui-qflashcard).

@@ -2,8 +2,8 @@
 
 The QFlashcard app extension (@quasar/quasar-app-extension-qflashcard) installs and manages the [QFlashcard UI](https://github.com/quasarframework/quasar-ui-qflashcard/tree/dev/ui) component.
 
-[![npm](https://img.shields.io/npm/v/quasar-app-extension-qflashcard.svg?label=quasar-app-extension-qflashcard)](https://www.npmjs.com/package/quasar-app-extension-qflashcard)
-[![npm](https://img.shields.io/npm/dt/quasar-app-extension-qflashcard.svg)](https://www.npmjs.com/package/quasar-app-extension-qflashcard)
+[![npm](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qflashcard.svg?label=@quasar/quasar-app-extension-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qflashcard)
+[![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-qflashcard.svg)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qflashcard)
 
 # Install
 ```bash
