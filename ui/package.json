@@ -27,7 +27,7 @@
     "url": "git+https://github.com/quasarframework/quasar-ui-qflashcard.git"
   },
   "bugs": "https://github.com/quasarframework/quasar-ui-qflashcard/issues",
-  "homepage": "https://github.com/quasarframework/quasar-ui-qoverlay",
+  "homepage": "https://github.com/quasarframework/quasar-ui-qflashcard",
   "keywords": [
     "quasar",
     "app",
