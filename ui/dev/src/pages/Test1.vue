@@ -47,6 +47,7 @@ export default {
         'slide-left-in',
         'slide-right-out',
         'slide-right-in',
+
         'slide-down-in',
         'slide-down-out',
         'slide-up-in',
@@ -59,6 +60,7 @@ export default {
         'flip-right-out',
         'flip-left-in',
         'flip-left-out',
+
         'flip-up-in',
         'flip-up-out',
         'flip-down-in',

@@ -4,7 +4,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :style="style">
         <q-flashcard-section transition="nudge-in">
-          <img :src="getImage(index)" width=300 height=200>
+          <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h5 q-pt-sm">transition="nudge-in"</div>
@@ -13,7 +13,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :style="style">
         <q-flashcard-section transition="nudge-out">
-          <img :src="getImage(index)" width=300 height=200>
+          <img :src="getImage(1)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h5 q-pt-sm">transition="nudge-out"</div>

@@ -4,7 +4,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :style="style">
         <q-flashcard-section transition="roll-left-in">
-          <img :src="getImage(index)" width=300 height=200>
+          <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h5 q-pt-sm">transition="roll-left-in"</div>
@@ -13,7 +13,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :style="style">
         <q-flashcard-section transition="roll-left-out">
-          <img :src="getImage(index)" width=300 height=200>
+          <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h5 q-pt-sm">transition="roll-left-out"</div>
@@ -22,7 +22,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :style="style">
         <q-flashcard-section transition="roll-right-in">
-          <img :src="getImage(index)" width=300 height=200>
+          <img :src="getImage(1)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h5 q-pt-sm">transition="roll-right-in"</div>
@@ -31,7 +31,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :style="style">
         <q-flashcard-section transition="roll-right-out">
-          <img :src="getImage(index)" width=300 height=200>
+          <img :src="getImage(1)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h5 q-pt-sm">transition="roll-right-out"</div>

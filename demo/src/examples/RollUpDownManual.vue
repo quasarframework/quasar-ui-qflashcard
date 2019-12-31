@@ -2,39 +2,43 @@
   <div class="q-ma-md row justify-evenly" style="max-width: 700px; width: 100%;">
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-up-in">
+      <q-flashcard no-hover :style="style">
+        <q-flashcard-section transition="roll-top-in" :active="active">
           <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="slide-up-in"</div>
+      <div class="text-h5 q-pt-sm">transition="roll-top-in"</div>
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-up-out">
+      <q-flashcard no-hover :style="style">
+        <q-flashcard-section transition="roll-top-out" :active="active">
           <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="slide-up-out"</div>
+      <div class="text-h5 q-pt-sm">transition="roll-top-out"</div>
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-down-in">
+      <q-flashcard no-hover :style="style">
+        <q-flashcard-section transition="roll-bottom-in" :active="active">
           <img :src="getImage(1)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="slide-down-in"</div>
+      <div class="text-h5 q-pt-sm">transition="roll-bottom-in"</div>
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-down-out">
+      <q-flashcard no-hover :style="style">
+        <q-flashcard-section transition="roll-bottom-out" :active="active">
           <img :src="getImage(1)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="slide-down-out"</div>
+      <div class="text-h5 q-pt-sm">transition="roll-bottom-out"</div>
+    </div>
+
+    <div class="q-ma-md row justify-center items-center">
+      <q-toggle v-model="active" label="Toggle Transitions" />
     </div>
 
   </div>
@@ -44,6 +48,7 @@
 export default {
   data () {
     return {
+      active: false
     }
   },
 

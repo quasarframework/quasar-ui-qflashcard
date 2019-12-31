@@ -14,6 +14,26 @@ For the examples in the Transitions section, either hover with your mouse or if 
       <example-viewer title="Roll (Up/Down)" file="RollUpDown" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="Slide (Left/Right)" file="SlideLeftRight" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
       <example-viewer title="Slide (Up/Down)" file="SlideUpDown" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Flip (Left/Right)" file="FlipLeftRight" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Flip (Up/Down)" file="FlipUpDown" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Shake" file="Shake" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+
+      <example-title title="Manual Transitions" />
+      <q-markdown>
+By default, all the transitions are mouse hover aware. This can be changed by using the `no-hover` and `active` properties together to give more control.
+
+For the examples in the Transitions section, either hover with your mouse or if on a touch screen tap.
+      </q-markdown>
+      <example-viewer title="Nudge (Manual)" file="NudgeManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Fade (Manual)" file="FadeManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Zoom (Manual)" file="ZoomManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Roll (Left/Right) (Manual)" file="RollLeftRightManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Roll (Up/Down) (Manual)" file="RollUpDownManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Slide (Left/Right) (Manual)" file="SlideLeftRightManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Slide (Up/Down) (Manual)" file="SlideUpDownManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Flip (Left/Right) (Manual)" file="FlipLeftRightManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Flip (Up/Down) (Manual)" file="FlipUpDownManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
+      <example-viewer title="Shake (Manual)" file="ShakeManual" :location-url="locationUrl" :js-paths="jsPaths" :css-paths="cssPaths" />
 
       <example-title title="Combos" />
 
@@ -54,9 +74,28 @@ export default {
     this.toc = []
     this.tempToc = []
     this.addToToc('Transitions')
-    this.addToToc('Basic', 2)
+    this.addToToc('Nudge', 2)
+    this.addToToc('Fade', 2)
+    this.addToToc('Zoom', 2)
+    this.addToToc('Roll (Left/Right)', 2)
+    this.addToToc('Roll (Up/Down)', 2)
+    this.addToToc('Slide (Left/Right)', 2)
+    this.addToToc('Slide (Up/Down)', 2)
+    this.addToToc('Flip (Left/Right)', 2)
+    this.addToToc('Flip (Up/Down)', 2)
+    this.addToToc('Shake', 2)
 
-    this.addToToc('Combos')
+    this.addToToc('Manual Transitions')
+    this.addToToc('Nudge (Manual)', 2)
+    this.addToToc('Fade (Manual)', 2)
+    this.addToToc('Zoom (Manual)', 2)
+    this.addToToc('Roll (Left/Right) (Manual)', 2)
+    this.addToToc('Roll (Up/Down) (Manual)', 2)
+    this.addToToc('Slide (Left/Right) (Manual)', 2)
+    this.addToToc('Slide (Up/Down) (Manual)', 2)
+    this.addToToc('Flip (Left/Right) (Manual)', 2)
+    this.addToToc('Flip (Up/Down) (Manual)', 2)
+    this.addToToc('Shake (Manual)', 2)
 
     this.addToToc('Mashups')
 

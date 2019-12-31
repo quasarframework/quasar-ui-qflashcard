@@ -3,38 +3,24 @@
 
     <div class="description text-center rounded-borders">
       <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-up-in">
+        <q-flashcard-section transition="zoom-in" no-hover :active="active">
           <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="slide-up-in"</div>
+      <div class="text-h5 q-pt-sm">transition="zoom-in"</div>
     </div>
 
     <div class="description text-center rounded-borders">
       <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-up-out">
-          <img :src="getImage(0)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="slide-up-out"</div>
-    </div>
-
-    <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-down-in">
+        <q-flashcard-section transition="zoom-out" no-hover :active="active">
           <img :src="getImage(1)" width=300 height=200>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="slide-down-in"</div>
+      <div class="text-h5 q-pt-sm">transition="zoom-out"</div>
     </div>
 
-    <div class="description text-center rounded-borders">
-      <q-flashcard :style="style">
-        <q-flashcard-section transition="slide-down-out">
-          <img :src="getImage(1)" width=300 height=200>
-        </q-flashcard-section>
-      </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="slide-down-out"</div>
+    <div class="q-ma-md row justify-center items-center">
+      <q-toggle v-model="active" label="Toggle Transitions" />
     </div>
 
   </div>
@@ -44,6 +30,7 @@
 export default {
   data () {
     return {
+      active: false
     }
   },
 
