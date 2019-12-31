@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "docsUrl": "https://quasarframework.github.io/quasar-ui-qflashcard/docs"
+  },
+  "props": {
+    "no-hover": {
+      "type": "Boolean",
+      "desc": "Turns off mouse hover/touch support. In this case, use the `active` property to control resting/active state",
+      "category": "behavior"
+    }
+  },
+  "slots": {
+    "default": {
+      "desc": "Anything can go into this slot, but one or more QFlashcardSection components are expected"
+    }
+  }
+}

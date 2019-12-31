@@ -1,9 +1,0 @@
-demo
-docs
-.git
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-_redirects
-.editorconfig
-.eslintrc.js
