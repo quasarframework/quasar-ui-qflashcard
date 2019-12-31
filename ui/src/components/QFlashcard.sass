@@ -278,30 +278,37 @@
 
   .fc-flip-right-out--active
     transform: perspective(400px) rotateY(180deg)
+    backface-visibility: hidden
     transition: all 0.5s ease-out
 
   .fc-flip-left-in--active
     transform: perspective(400px) rotateY(0)
+    backface-visibility: hidden
     transition: all 0.5s ease-out
 
   .fc-flip-left-out--active
     transform: perspective(400px) rotateY(-180deg)
+    backface-visibility: hidden
     transition: all 0.5s ease-out
 
   .fc-flip-up-in--active
     transform: perspective(400px) rotateX(0)
+    backface-visibility: hidden
     transition: all 0.5s ease-out
 
   .fc-flip-up-out--active
     transform: perspective(400px) rotateX(180deg)
+    backface-visibility: hidden
     transition: all 0.5s ease-out
 
   .fc-flip-down-in--active
     transform: perspective(400px) rotateX(0)
+    backface-visibility: hidden
     transition: all 0.5s ease-out
 
   .fc-flip-down-out--active
     transform: perspective(400px) rotateX(-180deg)
+    backface-visibility: hidden
     transition: all 0.5s ease-out
 
   .fc-shake-down--active
