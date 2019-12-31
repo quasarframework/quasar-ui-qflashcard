@@ -9,7 +9,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="slide-right-out" :active="active">
-          <img src="statics/1.jpg" width=300 height=200>
+          <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
         <q-flashcard-section transition="slide-right-in" class="fit" style="top:0;background-color: rgba(219,127,8, 0.7);" :active="active">
           <q-flashcard-section class="text-center my-header" :active="active">

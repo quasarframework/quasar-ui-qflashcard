@@ -12,7 +12,7 @@
           <div class="row full-width">
             <div class="col-6">
               <img
-                src="https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/wspa-logo.svg"
+                src="statics/wspa-logo.svg"
                 style="width:100%;max-width:100px;"
               >
             </div>

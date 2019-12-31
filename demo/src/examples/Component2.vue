@@ -9,7 +9,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="nudge-out" :active="active">
-          <img src="statics/1.jpg" width=300 height=200>
+          <img :src="getImage(0)" width=300 height=200>
         </q-flashcard-section>
         <q-flashcard-section transition="slide-up-in" class="fit" :active="active">
           <div style="margin-top: 50%; opacity:0.65">
