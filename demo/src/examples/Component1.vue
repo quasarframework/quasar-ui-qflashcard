@@ -12,7 +12,7 @@
           <div class="row full-width">
             <div class="col-6">
               <img
-                src="statics/wspa-logo.svg"
+                src="https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/wspa-logo.svg"
                 style="width:100%;max-width:100px;"
               >
             </div>
@@ -55,7 +55,7 @@ export default {
       return {
         width: '320px',
         height: '220px',
-        backgroundImage: `url('statics/bgimg.jpg')`, // eslint-disable-line
+        backgroundImage: `url('https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/bgimg.jpg')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',
         textAlign: 'center',
@@ -67,9 +67,9 @@ export default {
   methods: {
     getImage (index) {
       if (index % 2) {
-        return 'statics/1.jpg'
+        return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/1.jpg'
       }
-      return 'statics/2.jpg'
+      return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/2.jpg'
     }
   }
 }
