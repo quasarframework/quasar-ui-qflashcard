@@ -1,6 +1,6 @@
 # Component QFlashcard
 
-[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard.svg?label=quasar-ui-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
+[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard.svg?label=@quasar/quasar-ui-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-ui-qflashcard.svg)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
 
 QFlashcard is a [Quasar](https://quasar.dev) component. It allows you to add css mashups and transitions to your Quasar app.
