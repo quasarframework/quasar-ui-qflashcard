@@ -9,7 +9,7 @@ All images courtesy of [ANDREY YAKOVLEV & LILI ALEEVA](https://www.behance.net/g
 
       <example-title title="Transitions" />
       <q-markdown>
-By default, all the transitions are mouse hover/touch aware. This can be changed by using the `no-hover` and `active` proerties together to give more control.
+By default, all the transitions are mouse hover/touch aware. This can be changed by using the `no-hover` and `active` properties together to give more control.
 
 For the examples below, play with mouse hover/touch, then turn on `no-hover` (Toggle hover) and turn on `active` (Toggle Transitions) to see the difference.
       </q-markdown>
