@@ -35,6 +35,10 @@
     "extension",
     "overlay"
   ],
+  "vetur": {
+    "tags": "dist/vetur/tags.json",
+    "attributes": "dist/vetur/attributes.json"
+  },
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.0",
     "@rollup/plugin-commonjs": "^11.0.1",
