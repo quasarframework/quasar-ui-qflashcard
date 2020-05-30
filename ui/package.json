@@ -17,7 +17,12 @@
     "dev:electron": "cd dev && yarn 'dev:electron' && cd ..",
     "build": "node build/index.js",
     "build:js": "node build/script.javascript.js",
-    "build:css": "node build/script.css.js"
+    "build:css": "node build/script.css.js",
+    "build:api": "node build/build.api.js"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/hawkeye64"
   },
   "publishConfig": {
     "access": "public"
