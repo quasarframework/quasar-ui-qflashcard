@@ -1,4 +1,5 @@
-# Component QFlashcard
+QFlashcard
+===
 
 [![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard.svg?label=@quasar/quasar-ui-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-ui-qflashcard.svg)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
@@ -127,11 +128,18 @@ $ yarn dev:electron
 ```
 
 ## Building package
+
 ```bash
 $ yarn build
 ```
 
+# build just the JSON API
+```bash
+$ yarn build:api
+```
+
 # Donate
+
 If you appreciate the work that went into this, please consider donating to [Quasar](https://donate.quasar.dev) or [Jeff](https://github.com/sponsors/hawkeye64).
 
 # License

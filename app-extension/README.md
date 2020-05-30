@@ -1,4 +1,4 @@
-# Quasar App Extension qflashcard
+# Quasar App Extension Qflashcard
 
 The QFlashcard app extension (@quasar/quasar-app-extension-qflashcard) installs and manages the [QFlashcard UI](https://github.com/quasarframework/quasar-ui-qflashcard/tree/dev/ui) component.
 

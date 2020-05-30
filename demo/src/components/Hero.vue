@@ -30,7 +30,7 @@ export default {
   data () {
     return {
       title: 'QFlashcard',
-      tagline: 'Add css mashups and transitions for your Quasar App',
+      tagline: 'Add css mashups and transitions to your Quasar App',
       byline: 'Created and maintained by Jeff Galbraith',
       bylineTwitter: 'https://twitter.com/jgalbraith64',
       quasarDesc: 'A Quasar Framework Component and App Extension',

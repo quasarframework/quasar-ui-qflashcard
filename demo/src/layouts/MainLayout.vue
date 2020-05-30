@@ -76,7 +76,9 @@
     </q-drawer>
 
     <q-page-container>
+      <transition name="fade">
       <router-view />
+      </transition>
     </q-page-container>
   </q-layout>
 </template>
