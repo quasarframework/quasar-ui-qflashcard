@@ -1,5 +1,3 @@
-import { slot } from 'quasar/src/utils/slot.js'
-
 export default {
   name: 'QFlashcard',
 
@@ -8,8 +6,10 @@ export default {
   },
 
   render (h) {
+    const slot = this.$slots.default
+
     return h('div', {
       staticClass: 'q-flashcard' + (this.noHover === true ? ' no-hover' : '')
-    }, slot(this, 'default'))
+    }, slot)
   }
 }
