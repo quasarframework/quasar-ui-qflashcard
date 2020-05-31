@@ -46,6 +46,6 @@ export default {
     return h('div', {
       staticClass: 'q-flashcard__section',
       class: this.classes
-    }, slot(this, 'default'))
+    }, slot)
   }
 }
