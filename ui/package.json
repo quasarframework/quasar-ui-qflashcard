@@ -1,8 +1,8 @@
 {
   "name": "@quasar/quasar-ui-qflashcard",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
-  "description": "QFlashcard is an app extension for Quasar for making css mashups and transitions",
+  "description": "QFlashcard is used for making css mashups and transitions",
   "license": "MIT",
   "module": "dist/index.esm.js",
   "main": "dist/index.common.js",
