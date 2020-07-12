@@ -9,7 +9,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="flip-left-out" :active="active">
-          <img src="statics/1.jpg" width=300 height=200>
+          <img src="1.jpg" width=300 height=200>
         </q-flashcard-section>
         <q-flashcard-section transition="flip-left-in" class="fit" style="top:0;background-color: rgba(219,127,8, 0.7);" :active="active">
           <q-flashcard-section class="text-center my-header" :active="active">
@@ -43,7 +43,7 @@ export default {
       return {
         width: '320px',
         height: '220px',
-        backgroundImage: `url('https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/bgimg.jpg')`, // eslint-disable-line
+        backgroundImage: `url('https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/public/bgimg.jpg')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',
         textAlign: 'center',
@@ -55,9 +55,9 @@ export default {
   methods: {
     getImage (index) {
       if (index % 2) {
-        return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/1.jpg'
+        return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/public/1.jpg'
       }
-      return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/src/statics/2.jpg'
+      return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/dev/demo/public/2.jpg'
     }
   }
 }
