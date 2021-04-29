@@ -1,0 +1,99 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/ui"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: postcss
+    versions:
+    - 8.2.10
+    - 8.2.12
+    - 8.2.4
+    - 8.2.5
+    - 8.2.6
+    - 8.2.7
+    - 8.2.8
+    - 8.2.9
+  - dependency-name: open
+    versions:
+    - 8.0.1
+    - 8.0.2
+    - 8.0.3
+    - 8.0.4
+    - 8.0.5
+    - 8.0.6
+  - dependency-name: eslint-plugin-vue
+    versions:
+    - 7.5.0
+    - 7.6.0
+    - 7.7.0
+    - 7.8.0
+  - dependency-name: autoprefixer
+    versions:
+    - 10.2.4
+  - dependency-name: "@rollup/plugin-node-resolve"
+    versions:
+    - 11.1.0
+    - 11.1.1
+    - 11.2.0
+  - dependency-name: quasar-json-api
+    versions:
+    - 1.2.4
+    - 1.2.5
+  - dependency-name: "@rollup/plugin-commonjs"
+    versions:
+    - 17.0.0
+    - 17.1.0
+- package-ecosystem: npm
+  directory: "/app-extension"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: eslint-plugin-vue
+    versions:
+    - 7.5.0
+    - 7.6.0
+    - 7.7.0
+    - 7.8.0
+- package-ecosystem: npm
+  directory: "/ui/dev"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/demo"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: electron
+    versions:
+    - 11.2.1
+    - 11.2.2
+    - 11.2.3
+    - 11.3.0
+    - 12.0.0
+    - 12.0.1
+    - 12.0.2
+    - 12.0.4
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
+    - 7.20.0
+    - 7.21.0
+    - 7.22.0
+    - 7.23.0
+    - 7.24.0
+  - dependency-name: eslint-plugin-vue
+    versions:
+    - 7.5.0
+    - 7.6.0
+    - 7.7.0
+    - 7.8.0
+  - dependency-name: quasar-app-extension-example-viewer
+    versions:
+    - 1.1.0
