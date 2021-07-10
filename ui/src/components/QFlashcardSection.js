@@ -1,51 +1,44 @@
-export default {
-  name: 'QFlashcardSection',
+import {h, defineComponent, computed} from 'vue'
 
+export default defineComponent({
+  name: 'QFlashcardSection',
   props: {
     active: Boolean,
     transition: [String, Array]
   },
+  setup(props, {slots}) {
 
-  computed: {
-    classes () {
-      if (this.transition === void 0) {
+    const __transitionName = (transition) => {
+      const postfix = props.active === true ? '--active' : ''
+      return (transition.startsWith('fc-')
+        ? transition
+        : 'fc-' + transition) + postfix
+    }
+
+    const classes = computed(() => {
+      if (props.transition === void 0) {
         return ''
       }
-      let transition = this.transition
+      let transition = props.transition
       if (typeof transition === 'string') {
         if (transition.includes(' ')) {
           // now transition is an array and handled below...
-          transition = this.transition.split(' ')
+          transition = props.transition.split(' ')
         } else {
-          return this.__transitionName(transition)
+          return __transitionName(transition)
         }
       }
 
       if (Array.isArray(transition)) {
         return transition
-          .map(t => this.__transitionName(t))
+          .map(t => __transitionName(t))
           .join(' ')
       }
-
       return ''
-    }
-  },
+    })
 
-  methods: {
-    __transitionName (transition) {
-      const postfix = this.active === true ? '--active' : ''
-      return (transition.startsWith('fc-')
-        ? transition
-        : 'fc-' + transition) + postfix
-    }
-  },
-
-  render (h) {
-    const slot = this.$slots.default
-
-    return h('div', {
-      staticClass: 'q-flashcard__section',
-      class: this.classes
-    }, slot)
+    return () => h('div', {
+      class: ['q-flashcard__section', classes.value]
+    }, (slots.default && slots.default()) || [])
   }
-}
+})

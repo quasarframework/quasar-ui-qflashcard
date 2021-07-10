@@ -10,7 +10,7 @@ QFlashcard (Vue Plugin, UMD and Quasar App Extension)
 
 * [/ui](ui) - standalone npm package
 * [/app-extension](app-extension) - Quasar app extension
-* [/demo](demo) - docs, demo and examples project
+* [/demo](demo.old) - docs, demo and examples project
 * [live demo](https://quasarframework.github.io/quasar-ui-qflashcard/docs) - live docs, demo and examples
 
 # Demo Workflow
