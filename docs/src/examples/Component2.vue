@@ -47,7 +47,8 @@ export default defineComponent({
     const data = reactive({
       email: '',
       hover: false,
-      active: false
+      active: false,
+      model: 'one'
     })
 
     const style = computed(() => {
