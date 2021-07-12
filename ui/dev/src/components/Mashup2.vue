@@ -49,7 +49,7 @@ export default defineComponent({
       return {
         width: '320px',
         height: '220px',
-        backgroundImage: `url('bgimg.jpg')`, // eslint-disable-line
+        backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',
         textAlign: 'center',
@@ -59,9 +59,9 @@ export default defineComponent({
 
     const getImage = (index) => {
       if (index % 2) {
-        return '1.jpg'
+        return '1.webp'
       }
-      return '2.jpg'
+      return '2.webp'
     }
     return {
       getImage,

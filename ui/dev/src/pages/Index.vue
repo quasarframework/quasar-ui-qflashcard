@@ -1,5 +1,6 @@
 <template>
   <q-page class="flex flex-center">
+
     <Component1></Component1>
     <Component2></Component2>
     <Demo1></Demo1>
@@ -9,8 +10,6 @@
     <Demo5></Demo5>
     <Demo6></Demo6>
     <Demo7></Demo7>
-
-
     <FlipLeftRight></FlipLeftRight>
     <FlipUpDown></FlipUpDown>
     <Mashup1></Mashup1>
@@ -23,14 +22,16 @@
     <SlideUpDown></SlideUpDown>
     <Spin></Spin>
     <Zoom></Zoom>
-
-
     <Demo7></Demo7>
+
+    <div>
+      Photo by Jeremy Bishop on Unsplash
+    </div>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 import Component1 from "components/Component1.vue";
 import Component2 from "components/Component2.vue";
 import Demo1 from "components/Demo1.vue";
