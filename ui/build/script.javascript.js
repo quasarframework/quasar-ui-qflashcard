@@ -106,7 +106,7 @@ const builds = [
         input: pathResolve('entry/index.umd.js')
       },
       output: {
-        name: 'QActivity',
+        name: 'QFlashcard',
         file: pathResolve('../dist/index.umd.js'),
         format: 'umd'
       }
@@ -155,7 +155,7 @@ function addAssets (builds, type, injectName) {
           output: {
             file: addExtension(pathResolve(`../dist/${type}/${file}`), 'umd'),
             format: 'umd',
-            name: `QActivity.${injectName}.${name}`
+            name: `QFlashcard.${injectName}.${name}`
           }
         },
         build: {
@@ -199,7 +199,7 @@ function injectVueRequirement (code) {
   }
 
   const checkMe = ` if (Vue === void 0) {
-    console.error('[ QActivity ] Vue is required to run. Please add a script tag for it before loading QCOverlay.')
+    console.error('[ QFlashcard ] Vue is required to run. Please add a script tag for it before loading QFlashcard.')
     return
   }
   `
