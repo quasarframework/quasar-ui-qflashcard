@@ -1,5 +1,5 @@
 <template>
-  <div class="q-ma-md row justify-evenly" style="max-width: 700px; width: 100%;">
+  <div class="q-ma-md row justify-center q-gutter-sm">
 
     <div class="q-ma-md row justify-center items-center full-width">
       <q-toggle v-model="hover" label="Toggle Hover" />
@@ -47,9 +47,15 @@
 
 <script>
 import { computed, defineComponent, reactive, toRefs } from 'vue'
+import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
+import '@quasar/quasar-ui-qflashcard/src/index.sass'
 
 export default defineComponent({
-  name: '',
+  name: 'RollUpDown',
+  components: {
+    QFlashcard,
+    QFlashcardSection
+  },
   setup() {
 
     const data = reactive({
