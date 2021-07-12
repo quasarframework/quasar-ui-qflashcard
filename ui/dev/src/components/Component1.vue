@@ -17,8 +17,7 @@
               >
             </div>
             <div class="text-center text-black col-6">
-              By signing up, you are joining a community of people who are moving the world to protect animals. Join our mailing list to receive email updates about our latest
-              news.
+              By signing up, you are joining a community of people who are moving the world to protect animals. Join our mailing list to receive email updates about our latest news.
             </div>
           </div>
           <div class="row">
