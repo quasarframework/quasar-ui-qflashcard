@@ -6,12 +6,9 @@ export default defineComponent({
     active: Boolean,
     transition: [String, Array]
   },
-  setup(props, {slots}) {
+  setup(props, { slots }) {
 
     const __transitionName = (transition, active) => {
-      if (active === true) {
-        debugger
-      }
       const postfix = active === true ? '--active' : ''
       return (transition.startsWith('fc-')
         ? transition + postfix

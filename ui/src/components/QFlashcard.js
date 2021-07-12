@@ -5,7 +5,7 @@ export default defineComponent({
   props: {
     noHover: Boolean
   },
-  setup(props, {slots}) {
+  setup(props, { slots }) {
     return () => h('div', {
       class: 'q-flashcard' + (props.noHover === true ? ' no-hover' : '')
     }, (slots.default && slots.default()) || [])
