@@ -71,7 +71,8 @@
     "quasar-json-api": "^0.0.21",
     "rimraf": "^3.0.2",
     "rollup": "^2.21.0",
-    "uglify-es": "^3.3.9",
+    "sass": "^1.35.1",
+    "uglify-js": "^3.13.9",
     "zlib": "^1.0.5"
   },
   "browserslist": [
