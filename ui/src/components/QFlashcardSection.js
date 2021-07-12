@@ -1,4 +1,4 @@
-import {h, defineComponent, computed} from 'vue'
+import {h, defineComponent, computed } from 'vue'
 
 export default defineComponent({
   name: 'QFlashcardSection',
@@ -8,30 +8,43 @@ export default defineComponent({
   },
   setup(props, {slots}) {
 
-    const __transitionName = (transition) => {
-      const postfix = props.active === true ? '--active' : ''
+    const __transitionName = (transition, active) => {
+      if (active === true) {
+        debugger
+      }
+      const postfix = active === true ? '--active' : ''
       return (transition.startsWith('fc-')
-        ? transition
+        ? transition + postfix
         : 'fc-' + transition) + postfix
     }
 
     const classes = computed(() => {
       if (props.transition === void 0) {
+        // no transition specified
         return ''
       }
+
       let transition = props.transition
+      const active = props.active
+
+      // is transiton a string?
       if (typeof transition === 'string') {
+
+        // are we dealing with multiple transitions
         if (transition.includes(' ')) {
-          // now transition is an array and handled below...
+          // transition is an array and handled below...
           transition = props.transition.split(' ')
         } else {
-          return __transitionName(transition)
+          // return transition name
+          return __transitionName(transition, active)
         }
       }
 
       if (Array.isArray(transition)) {
+        // for each transtion, get name and then
+        // combine them all back to a string
         return transition
-          .map(t => __transitionName(t))
+          .map(t => __transitionName(t, active))
           .join(' ')
       }
       return ''
