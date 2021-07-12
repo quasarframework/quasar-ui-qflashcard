@@ -1,6 +1,7 @@
-import { version } from '../package.json'
 import QFlashcard from './components/QFlashcard'
 import QFlashcardSection from './components/QFlashcardSection'
+import pkg from '../package.json'
+const { version } = pkg
 
 export {
   version,
