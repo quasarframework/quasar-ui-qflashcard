@@ -1,51 +1,54 @@
-export default {
-  name: 'QFlashcardSection',
+import {h, defineComponent, computed } from 'vue'
 
+export default defineComponent({
+  name: 'QFlashcardSection',
   props: {
     active: Boolean,
     transition: [String, Array]
   },
+  setup(props, { slots }) {
 
-  computed: {
-    classes () {
-      if (this.transition === void 0) {
+    const __transitionName = (transition, active) => {
+      const postfix = active === true ? '--active' : ''
+      return (transition.startsWith('fc-')
+        ? transition + postfix
+        : 'fc-' + transition) + postfix
+    }
+
+    const classes = computed(() => {
+      if (props.transition === void 0) {
+        // no transition specified
         return ''
       }
-      let transition = this.transition
+
+      let transition = props.transition
+      const active = props.active
+
+      // is transiton a string?
       if (typeof transition === 'string') {
+
+        // are we dealing with multiple transitions
         if (transition.includes(' ')) {
-          // now transition is an array and handled below...
-          transition = this.transition.split(' ')
+          // transition is an array and handled below...
+          transition = props.transition.split(' ')
         } else {
-          return this.__transitionName(transition)
+          // return transition name
+          return __transitionName(transition, active)
         }
       }
 
       if (Array.isArray(transition)) {
+        // for each transtion, get name and then
+        // combine them all back to a string
         return transition
-          .map(t => this.__transitionName(t))
+          .map(t => __transitionName(t, active))
           .join(' ')
       }
-
       return ''
-    }
-  },
+    })
 
-  methods: {
-    __transitionName (transition) {
-      const postfix = this.active === true ? '--active' : ''
-      return (transition.startsWith('fc-')
-        ? transition
-        : 'fc-' + transition) + postfix
-    }
-  },
-
-  render (h) {
-    const slot = this.$slots.default
-
-    return h('div', {
-      staticClass: 'q-flashcard__section',
-      class: this.classes
-    }, slot)
+    return () => h('div', {
+      class: ['q-flashcard__section', classes.value]
+    }, (slots.default && slots.default()) || [])
   }
-}
+})
