@@ -3,6 +3,7 @@ title: What is QFlashcard
 desc: Mashups and transitions
 keys: All about QFlashcard
 related:
+  - /developing/using-qflashcard
   - /contributing/bugs-and-feature-requests
   - /contributing/components
   - /contributing/documentation
@@ -20,5 +21,7 @@ QFlashcard allows you to write mashups and transitions for your Quasar apps.
 
 ## Features
 
-- ...
-- ...
+- Beautiful transitions
+- Ability to create combos (complimentary transitions)
+- Ability to create mashups (two or more transiontions)
+- Ability to turn off hover (`no-hover`) and use `active` property to control the transition state (good for mobile)
