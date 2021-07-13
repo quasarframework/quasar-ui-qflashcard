@@ -165,4 +165,6 @@ file="Component2"
 codepen-title="QFlashcard"
 />
 
+Photos by [Jeremy Bishop](https://unsplash.com/@jeremybishop) on Unsplash
+
 
