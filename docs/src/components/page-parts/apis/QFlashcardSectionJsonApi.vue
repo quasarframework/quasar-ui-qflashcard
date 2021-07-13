@@ -1,18 +1,17 @@
 <template>
   <json-api-viewer
-    title="QFlashcard API"
+    title="QFlashcardSection API"
     :json="json"
-    starting-inner-tab="behavior"
     no-menu
   />
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-import Api from '@quasar/quasar-ui-qflashcard/dist/api/QFlashcard.json'
+import Api from '@quasar/quasar-ui-qflashcard/dist/api/QFlashcardSection.json'
 
 export default defineComponent({
-  name: 'QFlashcardJsonApi',
+  name: 'QFlashcardSectionJsonApi',
   setup () {
     return {
       json: Api
