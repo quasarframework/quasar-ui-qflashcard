@@ -9,37 +9,37 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="roll-top-in" :active="active">
-          <img :src="getImage(0)" width=300 height=200>
+          <img :src="getImage(0)" width=320 height=210>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="roll-top-in"</div>
+      <div class="text-h6 q-pt-sm">transition="roll-top-in"</div>
     </div>
 
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="roll-top-out" :active="active">
-          <img :src="getImage(0)" width=300 height=200>
+          <img :src="getImage(0)" width=320 height=210>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="roll-top-out"</div>
+      <div class="text-h6 q-pt-sm">transition="roll-top-out"</div>
     </div>
 
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="roll-bottom-in" :active="active">
-          <img :src="getImage(1)" width=300 height=200>
+          <img :src="getImage(1)" width=320 height=210>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="roll-bottom-in"</div>
+      <div class="text-h6 q-pt-sm">transition="roll-bottom-in"</div>
     </div>
 
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="roll-bottom-out" :active="active">
-          <img :src="getImage(1)" width=300 height=200>
+          <img :src="getImage(1)" width=320 height=210>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="roll-bottom-out"</div>
+      <div class="text-h6 q-pt-sm">transition="roll-bottom-out"</div>
     </div>
 
   </div>
@@ -66,8 +66,8 @@ export default defineComponent({
 
     const style = computed(() => {
       return {
-        width: '320px',
-        height: '220px',
+        width: '340px',
+        height: '230px',
         backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',

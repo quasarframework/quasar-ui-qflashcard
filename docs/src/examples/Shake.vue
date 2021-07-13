@@ -9,37 +9,37 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="shake-left" :active="active">
-          <img :src="getImage(0)" width=300 height=200>
+          <img :src="getImage(0)" width=320 height=210>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="shake-left"</div>
+      <div class="text-h6 q-pt-sm">transition="shake-left"</div>
     </div>
 
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="shake-right" :active="active">
-          <img :src="getImage(0)" width=300 height=200>
+          <img :src="getImage(0)" width=320 height=210>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="shake-right"</div>
+      <div class="text-h6 q-pt-sm">transition="shake-right"</div>
     </div>
 
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="shake-up" :active="active">
-          <img :src="getImage(1)" width=300 height=200>
+          <img :src="getImage(1)" width=320 height=210>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="shake-up"</div>
+      <div class="text-h6 q-pt-sm">transition="shake-up"</div>
     </div>
 
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="shake-down" :active="active">
-          <img :src="getImage(1)" width=300 height=200>
+          <img :src="getImage(1)" width=320 height=210>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">transition="shake-down"</div>
+      <div class="text-h6 q-pt-sm">transition="shake-down"</div>
     </div>
 
   </div>
@@ -66,8 +66,8 @@ export default defineComponent({
 
     const style = computed(() => {
       return {
-        width: '320px',
-        height: '220px',
+        width: '340px',
+        height: '230px',
         backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',

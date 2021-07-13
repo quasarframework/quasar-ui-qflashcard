@@ -9,7 +9,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="nudge-in" :active="active">
-          <img :src="getImage(1)" width=300 height=200>
+          <img :src="getImage(1)" width=320 height=210>
         </q-flashcard-section>
         <q-flashcard-section transition="fade-in" class="fit" :active="active">
           <div class="fit" style="background-color: rgba(219,127,8, 0.7);"></div>
@@ -24,7 +24,7 @@
           </q-flashcard-section>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">Mashup Demo #1</div>
+      <div class="text-h6 q-pt-sm">Mashup Demo #1</div>
     </div>
 
   </div>
@@ -51,8 +51,8 @@ export default defineComponent({
 
     const style = computed(() => {
       return {
-        width: '320px',
-        height: '220px',
+        width: '340px',
+        height: '230px',
         backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',

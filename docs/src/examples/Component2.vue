@@ -9,7 +9,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="nudge-out" :active="active">
-          <img :src="getImage(0)" width=300 height=200>
+          <img :src="getImage(0)" width=320 height=210>
         </q-flashcard-section>
         <q-flashcard-section transition="slide-up-in" class="fit" :active="active">
           <div style="margin-top: 50%; opacity:0.65">
@@ -20,7 +20,7 @@
                 <q-btn-toggle
                   v-model="model"
                   flat stretch
-                  toggle-color="yellow"
+                  toggle-color="blue"
                   :options="[
                     {label: 'Task#1', value: 'one'},
                     {label: 'Task#2', value: 'two'},
@@ -31,7 +31,7 @@
             </div>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">Component Demo #2</div>
+      <div class="text-h6 q-pt-sm">Component Demo #2</div>
     </div>
 
   </div>
@@ -59,8 +59,8 @@ export default defineComponent({
 
     const style = computed(() => {
       return {
-        width: '320px',
-        height: '220px',
+        width: '340px',
+        height: '230px',
         backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',

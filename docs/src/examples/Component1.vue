@@ -35,7 +35,7 @@
           </div>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">Component Demo #1</div>
+      <div class="text-h6 q-pt-sm">Component Demo #1</div>
     </div>
 
   </div>
@@ -62,8 +62,8 @@ export default defineComponent({
 
     const style = computed(() => {
       return {
-        width: '320px',
-        height: '220px',
+        width: '340px',
+        height: '230px',
         backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',

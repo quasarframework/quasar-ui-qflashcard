@@ -9,7 +9,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="slide-right-out" :active="active">
-          <img :src="getImage(0)" width=300 height=200>
+          <img :src="getImage(0)" width=320 height=210>
         </q-flashcard-section>
         <q-flashcard-section transition="slide-right-in" class="fit" style="top:0;background-color: rgba(219,127,8, 0.7);" :active="active">
           <q-flashcard-section class="text-center my-header" :active="active">
@@ -23,7 +23,7 @@
           </q-flashcard-section>
         </q-flashcard-section>
       </q-flashcard>
-      <div class="text-h5 q-pt-sm">Combo Demo #5</div>
+      <div class="text-h6 q-pt-sm">Combo Demo #5</div>
     </div>
 
   </div>
@@ -50,8 +50,8 @@ export default defineComponent({
 
     const style = computed(() => {
       return {
-        width: '320px',
-        height: '220px',
+        width: '340px',
+        height: '230px',
         backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',
