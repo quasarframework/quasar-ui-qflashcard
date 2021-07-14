@@ -1,5 +1,5 @@
-import QFlashcard from './components/QFlashcard'
-import QFlashcardSection from './components/QFlashcardSection'
+import QFlashcard from './components/QFlashcard.js'
+import QFlashcardSection from './components/QFlashcardSection.js'
 import pkg from '../package.json'
 const { version } = pkg
 
@@ -14,8 +14,8 @@ export default {
   QFlashcard,
   QFlashcardSection,
 
-  install (Vue) {
-    Vue.component(QFlashcard.name, QFlashcard)
-    Vue.component(QFlashcardSection.name, QFlashcardSection)
+  install (app) {
+    app.component(QFlashcard.name, QFlashcard)
+    app.component(QFlashcardSection.name, QFlashcardSection)
   }
 }
