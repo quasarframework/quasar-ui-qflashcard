@@ -71,9 +71,9 @@ export default defineComponent({
 
     const getImage = (index) => {
       if (index % 2) {
-        return '1.webp'
+        return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/next/docs/public/1.webp'
       }
-      return '2.webp'
+      return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/next/docs/public/2.webp'
     }
 
     return {

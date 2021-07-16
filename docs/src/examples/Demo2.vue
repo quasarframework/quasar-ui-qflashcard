@@ -52,7 +52,7 @@ export default defineComponent({
       return {
         width: '340px',
         height: '230px',
-        backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
+        backgroundImage: `url('https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/next/docs/public/bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',
         textAlign: 'center',
@@ -62,10 +62,11 @@ export default defineComponent({
 
     const getImage = (index) => {
       if (index % 2) {
-        return '1.webp'
+        return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/next/docs/public/1.webp'
       }
-      return '2.webp'
+      return 'https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/next/docs/public/2.webp'
     }
+
     return {
       getImage,
       style,

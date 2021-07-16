@@ -9,7 +9,7 @@
     <div class="description text-center rounded-borders">
       <q-flashcard :no-hover="hover" :style="style">
         <q-flashcard-section transition="flip-left-out" :active="active">
-          <img src="1.jpg" width=320 height=210>
+          <img src="https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/next/docs/public/1.jpg" width=320 height=210>
         </q-flashcard-section>
         <q-flashcard-section transition="flip-left-in" class="fit" style="top:0;background-color: rgba(219,127,8, 0.7);" :active="active">
           <q-flashcard-section class="text-center my-header" :active="active">
@@ -52,7 +52,7 @@ export default defineComponent({
       return {
         width: '340px',
         height: '230px',
-        backgroundImage: `url('bgimg.webp')`, // eslint-disable-line
+        backgroundImage: `url('https://raw.githubusercontent.com/quasarframework/quasar-ui-qflashcard/next/docs/public/bgimg.webp')`, // eslint-disable-line
         padding: '10px',
         border: '10px solid #fff',
         textAlign: 'center',
@@ -60,14 +60,7 @@ export default defineComponent({
       }
     })
 
-    const getImage = (index) => {
-      if (index % 2) {
-        return '1.webp'
-      }
-      return '2.webp'
-    }
     return {
-      getImage,
       style,
       ...toRefs(data)
     }
