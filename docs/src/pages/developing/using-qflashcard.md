@@ -21,69 +21,69 @@ If you are on a mobile device, or just want to have better granular control on t
 Check out the available transitions by hovering your mouse over each panel.
 
 <example-viewer
-title="Nudge"
-file="Nudge"
-codepen-title="QFlashcard"
+  title="Nudge"
+  file="Nudge"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Fade"
-file="Fade"
-codepen-title="QFlashcard"
+  title="Fade"
+  file="Fade"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Zoom"
-file="Zoom"
-codepen-title="QFlashcard"
+  title="Zoom"
+  file="Zoom"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Spin"
-file="Spin"
-codepen-title="QFlashcard"
+  title="Spin"
+  file="Spin"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Roll (left/right)"
-file="RollLeftRight"
-codepen-title="QFlashcard"
+  title="Roll (left/right)"
+  file="RollLeftRight"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Roll (up/down)"
-file="RollUpDown"
-codepen-title="QFlashcard"
+  title="Roll (up/down)"
+  file="RollUpDown"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Slide (left/right)"
-file="SlideLeftRight"
-codepen-title="QFlashcard"
+  title="Slide (left/right)"
+  file="SlideLeftRight"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Slide (up/down)"
-file="SlideUpDown"
-codepen-title="QFlashcard"
+  title="Slide (up/down)"
+  file="SlideUpDown"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Flip (left/right)"
-file="FlipLeftRight"
-codepen-title="QFlashcard"
+  title="Flip (left/right)"
+  file="FlipLeftRight"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Flip (up/down)"
-file="FlipUpDown"
-codepen-title="QFlashcard"
+  title="Flip (up/down)"
+  file="FlipUpDown"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Shake"
-file="Shake"
-codepen-title="QFlashcard"
+  title="Shake"
+  file="Shake"
+  codepen-title="QFlashcard"
 />
 
 ### Combos
@@ -91,62 +91,61 @@ codepen-title="QFlashcard"
 Combos (or combinations) are when you combine two transitions, that compliment each other, to create a seamless segue from one QFlashcardSection to another.
 
 <example-viewer
-title="Demo1"
-file="Demo1"
-codepen-title="QFlashcard"
+  title="Demo1"
+  file="Demo1"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Demo2"
-file="Demo2"
-codepen-title="QFlashcard"
+  title="Demo2"
+  file="Demo2"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Demo3"
-file="Demo3"
-codepen-title="QFlashcard"
+  title="Demo3"
+  file="Demo3"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Demo4"
-file="Demo4"
-codepen-title="QFlashcard"
+  title="Demo4"
+  file="Demo4"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Demo5"
-file="Demo5"
-codepen-title="QFlashcard"
+  title="Demo5"
+  file="Demo5"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Demo6"
-file="Demo6"
-codepen-title="QFlashcard"
+  title="Demo6"
+  file="Demo6"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Demo7"
-file="Demo7"
-codepen-title="QFlashcard"
+  title="Demo7"
+  file="Demo7"
+  codepen-title="QFlashcard"
 />
-
 
 ### Mashups
 
 Mashups are when you combine two or more transitions to create spectacular visuals.
 
 <example-viewer
-title="Mashup1"
-file="Mashup1"
-codepen-title="QFlashcard"
+  title="Mashup1"
+  file="Mashup1"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Mashup2"
-file="Mashup2"
-codepen-title="QFlashcard"
+  title="Mashup2"
+  file="Mashup2"
+  codepen-title="QFlashcard"
 />
 
 ### Quasar Components
@@ -154,15 +153,15 @@ codepen-title="QFlashcard"
 You can add any component into your QFlashcards.
 
 <example-viewer
-title="Component1"
-file="Component1"
-codepen-title="QFlashcard"
+  title="Component1"
+  file="Component1"
+  codepen-title="QFlashcard"
 />
 
 <example-viewer
-title="Component2"
-file="Component2"
-codepen-title="QFlashcard"
+  title="Component2"
+  file="Component2"
+  codepen-title="QFlashcard"
 />
 
 Photos by [Jeremy Bishop](https://unsplash.com/@jeremybishop) on Unsplash
