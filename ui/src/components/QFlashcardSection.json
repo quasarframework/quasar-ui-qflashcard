@@ -5,6 +5,7 @@
   "props": {
     "transition": {
       "type": [ "String", "Array" ],
+      "tsType": "String | StringArray",
       "desc": "One or more transitions to be used",
       "examples": [ "fade-in", "fade-in flip-left-in", "['fade-in', 'flip-left-in']" ],
       "category": "behavior"
