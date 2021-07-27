@@ -6,33 +6,36 @@ const uglify = require('uglify-js')
 const buble = require('@rollup/plugin-buble')
 const json = require('@rollup/plugin-json')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
+const replace = require('@rollup/plugin-replace')
+
+const { version } = require('../package.json')
 
 const buildConf = require('./config')
 const buildUtils = require('./utils')
 
 const bubleConfig = {
-  objectAssign: 'Object.assign',
-  transforms: { forOf: false }
+  objectAssign: 'Object.assign'
 }
 
-// const nodeResolveConfig = {
-//   extensions: ['.js'],
-//   preferBuiltins: false
-// }
+const nodeResolveConfig = {
+  extensions: ['.js'],
+  preferBuiltins: false
+}
 
 function pathResolve (_path) {
   return path.resolve(__dirname, _path)
 }
 
-// const rollupPlugins = [
-//   nodeResolve(nodeResolveConfig),
-//   json(),
-//   buble(bubleConfig)
-// ]
-
 const rollupPluginsModern = [
-  nodeResolve(),
-  json()
+  replace({
+    preventAssignment: false,
+    values: {
+      __UI_VERSION__: `'${ version }'`
+    }
+  }),
+  nodeResolve(nodeResolveConfig),
+  json(),
+  buble(bubleConfig)
 ]
 
 const uglifyJsOptions = {
@@ -72,7 +75,7 @@ const uglifyJsOptions = {
 }
 
 const buildEntries = [
-  'index'
+  'QFlashcard'
 ]
 
 function generateBuilds () {
@@ -82,10 +85,10 @@ function generateBuilds () {
     builds.push({
       rollup: {
         input: {
-          input: pathResolve(`entry/${ entry }.esm.js`)
+          input: pathResolve('../src/index.esm.js')
         },
         output: {
-          file: pathResolve(`../dist/${ entry }.esm.js`),
+          file: pathResolve('../dist/index.esm.js'),
           format: 'es',
           exports: 'auto'
         }
@@ -99,10 +102,10 @@ function generateBuilds () {
     builds.push({
       rollup: {
         input: {
-          input: pathResolve(`entry/${ entry }.common.js`)
+          input: pathResolve('../src/index.common.js')
         },
         output: {
-          file: pathResolve(`../dist/${ entry }.common.js`),
+          file: pathResolve('../dist/index.common.js'),
           format: 'cjs',
           exports: 'auto'
         }
@@ -116,11 +119,11 @@ function generateBuilds () {
     builds.push({
       rollup: {
         input: {
-          input: pathResolve(`entry/${ entry }.umd.js`)
+          input: pathResolve('../src/index.umd.js')
         },
         output: {
           name: entry,
-          file: pathResolve(`../dist/${ entry }.umd.js`),
+          file: pathResolve('../dist/index.umd.js'),
           format: 'umd'
         }
       },
@@ -188,12 +191,12 @@ function build (builds) {
 function genConfig (opts) {
   Object.assign(opts.rollup.input, {
     plugins: rollupPluginsModern,
-    external: [ 'vue', 'quasar', 'prismjs' ]
+    external: [ 'vue' ]
   })
 
   Object.assign(opts.rollup.output, {
     banner: buildConf.banner,
-    globals: { vue: 'Vue', quasar: 'Quasar', prismjs: 'Prism' }
+    globals: { vue: 'Vue' }
   })
 
   return opts
