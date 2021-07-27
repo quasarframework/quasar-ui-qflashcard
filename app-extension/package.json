@@ -36,13 +36,6 @@
     "yarn": ">= 1.6.0"
   },
   "dependencies": {
-    "@quasar/quasar-ui-qflashcard": "^2.0.0-alpha.1"
-  },
-  "devDependencies": {
-    "@vue/eslint-config-standard": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.4.0",
-    "eslint-loader": "^4.0.2",
-    "eslint-plugin-vue": "^6.2.2"
+    "@quasar/quasar-ui-qflashcard": "^2.0.0-alpha.2"
   }
 }
