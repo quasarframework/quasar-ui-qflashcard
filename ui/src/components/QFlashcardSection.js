@@ -1,10 +1,10 @@
-import {h, defineComponent, computed } from 'vue'
+import { h, defineComponent, computed } from 'vue'
 
 export default defineComponent({
   name: 'QFlashcardSection',
   props: {
     active: Boolean,
-    transition: [String, Array]
+    transition: [ String, Array ]
   },
   setup(props, { slots }) {
 
@@ -48,7 +48,7 @@ export default defineComponent({
     })
 
     return () => h('div', {
-      class: ['q-flashcard__section', classes.value]
+      class: [ 'q-flashcard__section', classes.value ]
     }, (slots.default && slots.default()) || [])
   }
 })
