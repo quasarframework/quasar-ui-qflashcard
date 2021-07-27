@@ -9,12 +9,21 @@ const { version } = pkg
 
 setDefaults({
   locationUrl: 'https://github.com/quasarframework/quasar-ui-qflashcard/tree/next/docs/src/examples',
-  jsPaths: [`https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@${ version }/dist/index.umd.min.js`],
+  jsPaths: [`https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@${ version }/dist/index.umd.js`],
   cssPaths: [
-    `https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@${ version }/dist/index.min.css`,
-    'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.0/css/all.css'
+    `https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@${ version }/dist/index.min.css`
   ],
-  noEdit: true
+  // noEdit: true,
+  importName: [
+    {
+      from: '@quasar/quasar-ui-qflashcard',
+      to: 'QFlashcard'
+    },
+    {
+      from: '@quasar/quasar-ui-qflashcard',
+      to: 'QFlashcardSection'
+    }
+  ]
 })
 
 export default boot(({ app }) => {
