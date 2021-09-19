@@ -3,6 +3,6 @@ title: Changelog
 desc: The latest QFlashcard releases
 keys: latest-news
 components:
-- releases/QFlashcardReleases
+- releases/Releases
 ---
-<q-flashcard-releases class="q-mt-sm"/>
+<releases class="q-mt-sm"/>
