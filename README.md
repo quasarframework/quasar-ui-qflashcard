@@ -1,3 +1,5 @@
+> For Quasar v2/Vue v2 compatibility, go to the [next branch](https://github.com/quasarframework/quasar-ui-qflashcard/tree/next).
+
 QFlashcard (Vue Plugin, UMD and Quasar App Extension)
 ===
 
