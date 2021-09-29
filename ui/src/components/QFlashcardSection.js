@@ -31,7 +31,8 @@ export default defineComponent({
         if (transition.includes(' ')) {
           // transition is an array and handled below...
           transition = props.transition.split(' ')
-        } else {
+        }
+ else {
           // return transition name
           return __transitionName(transition, active)
         }

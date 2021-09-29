@@ -76,12 +76,13 @@ module.exports = configure(function (ctx) {
         if (ctx.prod) {
           chain.plugin('eslint-webpack-plugin')
             .use(ESLintPlugin, [{
-              extensions: ['js', 'vue'],
+              extensions: [ 'js', 'vue' ],
               exclude: 'node_modules'
             }])
-        } else {
+        }
+ else {
           chain.plugin('eslint-webpack-plugin')
-            .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
+            .use(ESLintPlugin, [{ extensions: [ 'js', 'vue' ] }])
 
           chain.resolve.alias.merge({
             ui: path.resolve(__dirname, '../ui/src/index.js'),
