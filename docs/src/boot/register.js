@@ -13,7 +13,7 @@ setDefaults({
   cssPaths: [
     `https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@${ version }/dist/index.min.css`
   ],
-  // noEdit: true,
+  noEdit: true,
   importName: [
     {
       from: '@quasar/quasar-ui-qflashcard',
