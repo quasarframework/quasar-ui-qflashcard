@@ -1,29 +1,53 @@
 <template>
   <div class="q-ma-md row justify-center q-gutter-sm">
-
     <div class="q-ma-md row justify-center items-center full-width">
-      <q-toggle v-model="hover" label="Toggle Hover" />
-      <q-toggle v-model="active" label="Toggle Transitions" />
+      <q-toggle
+        v-model="hover"
+        label="Toggle Hover"
+      />
+      <q-toggle
+        v-model="active"
+        label="Toggle Transitions"
+      />
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="spin-in" :active="active">
-          <img :src="getImage(0)" width=320 height=210>
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="spin-in"
+          :active="active"
+        >
+          <img
+            :src="getImage(0)"
+            width="320"
+            height="210"
+          >
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">transition="spin-in"</div>
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="spin-out" :active="active">
-          <img :src="getImage(1)" width=320 height=210>
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="spin-out"
+          :active="active"
+        >
+          <img
+            :src="getImage(1)"
+            width="320"
+            height="210"
+          >
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">transition="spin-out"</div>
     </div>
-
   </div>
 </template>
 

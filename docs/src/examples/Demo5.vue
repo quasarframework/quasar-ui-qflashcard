@@ -1,31 +1,62 @@
 <template>
   <div class="q-ma-md row justify-center q-gutter-sm">
-
     <div class="q-ma-md row justify-center items-center full-width">
-      <q-toggle v-model="hover" label="Toggle Hover" />
-      <q-toggle v-model="active" label="Toggle Transitions" />
+      <q-toggle
+        v-model="hover"
+        label="Toggle Hover"
+      />
+      <q-toggle
+        v-model="active"
+        label="Toggle Transitions"
+      />
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="slide-right-out" :active="active">
-          <img :src="getImage(0)" width=320 height=210>
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="slide-right-out"
+          :active="active"
+        >
+          <img
+            :src="getImage(0)"
+            width="320"
+            height="210"
+          >
         </q-flashcard-section>
-        <q-flashcard-section transition="slide-right-in" class="fit" style="top:0;background-color: rgba(219,127,8, 0.7);" :active="active">
-          <q-flashcard-section class="text-center my-header" :active="active">
+        <q-flashcard-section
+          transition="slide-right-in"
+          class="fit"
+          style="top:0;background-color: rgba(219,127,8, 0.7);"
+          :active="active"
+        >
+          <q-flashcard-section
+            class="text-center my-header"
+            :active="active"
+          >
             Combo Demo #5
           </q-flashcard-section>
-          <q-flashcard-section class="my-text" :active="active">
+          <q-flashcard-section
+            class="my-text"
+            :active="active"
+          >
             For beautiful eyes, look for the good in others; for beautiful lips, speak only words of kindness; and for poise, walk with the knowledge that you are never alone.
           </q-flashcard-section>
-          <q-flashcard-section class="fit flex justify-center items-end" :active="active">
-            <a href="#" class="my-button">Learn More</a>
+          <q-flashcard-section
+            class="fit flex justify-center items-end"
+            :active="active"
+          >
+            <a
+              href="#"
+              class="my-button"
+            >Learn More</a>
           </q-flashcard-section>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">Combo Demo #5</div>
     </div>
-
   </div>
 </template>
 

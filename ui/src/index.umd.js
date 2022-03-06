@@ -1,4 +1,3 @@
 
-// import * as VuePlugin from './vue-plugin'
-// export default VuePlugin
-export * from './vue-plugin'
+import * as Plugin from './vue-plugin'
+export default Plugin

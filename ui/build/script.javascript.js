@@ -1,42 +1,34 @@
+process.env.BABEL_ENV = 'production'
+
 const path = require('path')
 const fs = require('fs')
 const fse = require('fs-extra')
 const rollup = require('rollup')
 const uglify = require('uglify-js')
-const buble = require('@rollup/plugin-buble')
+// const buble = require('@rollup/plugin-buble')
 const json = require('@rollup/plugin-json')
 const { nodeResolve } = require('@rollup/plugin-node-resolve')
-const replace = require('@rollup/plugin-replace')
-
-const { version } = require('../package.json')
 
 const buildConf = require('./config')
 const buildUtils = require('./utils')
-
-const bubleConfig = {
-  objectAssign: 'Object.assign'
-}
-
-const nodeResolveConfig = {
-  extensions: ['.js'],
-  preferBuiltins: false
-}
 
 function pathResolve (_path) {
   return path.resolve(__dirname, _path)
 }
 
 const rollupPluginsModern = [
-  replace({
-    preventAssignment: false,
-    values: {
-      __UI_VERSION__: `'${ version }'`
-    }
-  }),
-  nodeResolve(nodeResolveConfig),
-  json(),
-  buble(bubleConfig)
+  nodeResolve(),
+  json()
 ]
+
+// const bubleConfig = {
+//   objectAssign: 'Object.assign'
+// }
+
+// const nodeResolveConfig = {
+//   extensions: ['.js'],
+//   preferBuiltins: false
+// }
 
 const uglifyJsOptions = {
   compress: {
@@ -69,10 +61,13 @@ const uglifyJsOptions = {
     dead_code: true,
     evaluate: true
   }
-  // mangle: {
-  //   safari10: true
-  // }
 }
+
+// const rollupPlugins = [
+//   nodeResolve(nodeResolveConfig),
+//   json(),
+//   buble(bubleConfig)
+// ]
 
 const buildEntries = [
   'QFlashcard'
@@ -252,6 +247,7 @@ function buildEntry (config) {
       const minified = uglify.minify(code, uglifyJsOptions)
 
       if (minified.error) {
+        // eslint-disable-next-line promise/no-return-wrap
         return Promise.reject(minified.error)
       }
 

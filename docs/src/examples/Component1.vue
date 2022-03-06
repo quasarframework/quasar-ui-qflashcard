@@ -1,14 +1,25 @@
 <template>
   <div class="q-ma-md row justify-center q-gutter-sm">
-
     <div class="q-ma-md row justify-center items-center full-width">
-      <q-toggle v-model="hover" label="Toggle Hover"/>
-      <q-toggle v-model="active" label="Toggle Transitions"/>
+      <q-toggle
+        v-model="hover"
+        label="Toggle Hover"
+      />
+      <q-toggle
+        v-model="active"
+        label="Toggle Transitions"
+      />
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="slide-left-out" :active="active">
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="slide-left-out"
+          :active="active"
+        >
           <div class="row full-width">
             <div class="col-6">
               <img
@@ -22,22 +33,47 @@
             </div>
           </div>
           <div class="row">
-            <a href="https://www.worldanimalprotection.ca/" target="_blank" class="my-button">Learn More</a>
+            <a
+              href="https://www.worldanimalprotection.ca/"
+              target="_blank"
+              class="my-button"
+            >Learn More</a>
           </div>
         </q-flashcard-section>
-        <q-flashcard-section transition="slide-left-in" class="fit" :active="active">
+        <q-flashcard-section
+          transition="slide-left-in"
+          class="fit"
+          :active="active"
+        >
           <div class="q-pa-md q-gutter-sm">
-            <q-input v-model="email" filled type="email" hint="Email"></q-input>
-            <q-flashcard-section transition="roll-left-in" style="top:60%" :active="active">
-              <q-btn color="white" text-color="black" label="Submit" class="q-mr-sm"></q-btn>
-              <a href="https://www.worldanimalprotection.ca" target="_blank" class="my-button">Learn More</a>
+            <q-input
+              v-model="email"
+              filled
+              type="email"
+              hint="Email"
+            />
+            <q-flashcard-section
+              transition="roll-left-in"
+              style="top:60%"
+              :active="active"
+            >
+              <q-btn
+                color="white"
+                text-color="black"
+                label="Submit"
+                class="q-mr-sm"
+              />
+              <a
+                href="https://www.worldanimalprotection.ca"
+                target="_blank"
+                class="my-button"
+              >Learn More</a>
             </q-flashcard-section>
           </div>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">Component Demo #1</div>
     </div>
-
   </div>
 </template>
 

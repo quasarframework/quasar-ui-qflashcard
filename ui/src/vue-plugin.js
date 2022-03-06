@@ -1,7 +1,7 @@
 import QFlashcard from './components/QFlashcard'
 import QFlashcardSection from './components/QFlashcardSection'
 
-const version = __UI_VERSION__
+import { version } from './version'
 
 function install (app) {
   app.component(QFlashcard.name, QFlashcard)

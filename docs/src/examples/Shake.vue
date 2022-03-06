@@ -1,47 +1,91 @@
 <template>
   <div class="q-ma-md row justify-center q-gutter-sm">
-
     <div class="q-ma-md row justify-center items-center full-width">
-      <q-toggle v-model="hover" label="Toggle Hover" />
-      <q-toggle v-model="active" label="Toggle Transitions" />
+      <q-toggle
+        v-model="hover"
+        label="Toggle Hover"
+      />
+      <q-toggle
+        v-model="active"
+        label="Toggle Transitions"
+      />
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="shake-left" :active="active">
-          <img :src="getImage(0)" width=320 height=210>
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="shake-left"
+          :active="active"
+        >
+          <img
+            :src="getImage(0)"
+            width="320"
+            height="210"
+          >
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">transition="shake-left"</div>
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="shake-right" :active="active">
-          <img :src="getImage(0)" width=320 height=210>
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="shake-right"
+          :active="active"
+        >
+          <img
+            :src="getImage(0)"
+            width="320"
+            height="210"
+          >
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">transition="shake-right"</div>
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="shake-up" :active="active">
-          <img :src="getImage(1)" width=320 height=210>
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="shake-up"
+          :active="active"
+        >
+          <img
+            :src="getImage(1)"
+            width="320"
+            height="210"
+          >
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">transition="shake-up"</div>
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="shake-down" :active="active">
-          <img :src="getImage(1)" width=320 height=210>
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="shake-down"
+          :active="active"
+        >
+          <img
+            :src="getImage(1)"
+            width="320"
+            height="210"
+          >
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">transition="shake-down"</div>
     </div>
-
   </div>
 </template>
 

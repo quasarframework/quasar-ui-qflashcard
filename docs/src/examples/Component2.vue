@@ -1,39 +1,57 @@
 <template>
   <div class="q-ma-md row justify-center q-gutter-sm">
-
     <div class="q-ma-md row justify-center items-center full-width">
-      <q-toggle v-model="hover" label="Toggle Hover" />
-      <q-toggle v-model="active" label="Toggle Transitions" />
+      <q-toggle
+        v-model="hover"
+        label="Toggle Hover"
+      />
+      <q-toggle
+        v-model="active"
+        label="Toggle Transitions"
+      />
     </div>
 
     <div class="description text-center rounded-borders">
-      <q-flashcard :no-hover="hover" :style="style">
-        <q-flashcard-section transition="nudge-out" :active="active">
-          <img :src="getImage(0)" width=320 height=210>
+      <q-flashcard
+        :no-hover="hover"
+        :style="style"
+      >
+        <q-flashcard-section
+          transition="nudge-out"
+          :active="active"
+        >
+          <img
+            :src="getImage(0)"
+            width="320"
+            height="210"
+          >
         </q-flashcard-section>
-        <q-flashcard-section transition="slide-up-in" class="fit" :active="active">
+        <q-flashcard-section
+          transition="slide-up-in"
+          class="fit"
+          :active="active"
+        >
           <div style="margin-top: 50%; opacity:0.65">
-              <q-toolbar class="bg-white text-black q-my-md shadow-2">
+            <q-toolbar class="bg-white text-black q-my-md shadow-2">
+              <q-space />
 
-                <q-space></q-space>
-
-                <q-btn-toggle
-                  v-model="model"
-                  flat stretch
-                  toggle-color="blue"
-                  :options="[
-                    {label: 'Task#1', value: 'one'},
-                    {label: 'Task#2', value: 'two'},
-                    {label: 'Task#3', value: 'three'}
-                  ]"
-                ></q-btn-toggle>
-              </q-toolbar>
-            </div>
+              <q-btn-toggle
+                v-model="model"
+                flat
+                stretch
+                toggle-color="blue"
+                :options="[
+                  {label: 'Task#1', value: 'one'},
+                  {label: 'Task#2', value: 'two'},
+                  {label: 'Task#3', value: 'three'}
+                ]"
+              />
+            </q-toolbar>
+          </div>
         </q-flashcard-section>
       </q-flashcard>
       <div class="text-h6 q-pt-sm">Component Demo #2</div>
     </div>
-
   </div>
 </template>
 

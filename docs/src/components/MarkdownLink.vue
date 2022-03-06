@@ -4,7 +4,9 @@
     tag="a"
     :to="to"
     class="markdown-link"
-  ><slot></slot></router-link>
+  >
+    <slot />
+  </router-link>
   <a
     v-else
     :href="to"
@@ -12,7 +14,7 @@
     rel="noopener"
     class="markdown-link"
   >
-    <slot></slot>
+    <slot />
     <q-icon :name="mdiLaunch" />
   </a>
 </template>
