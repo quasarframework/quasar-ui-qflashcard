@@ -14,14 +14,17 @@ related:
 #### Install
 
 To add as an App Extension to your Quasar application, run the following (in your Quasar app folder):
-```bash
+
+```
 quasar ext add @quasar/qflashcard@next
 ```
+
 Notice the `@next` at the end.
 
 #### Uninstall
 
 To remove as an App Extension from your Quasar application, run the following (in your Quasar app folder):
+
 ```
 $ quasar ext remove @quasar/qflashcard
 ```
