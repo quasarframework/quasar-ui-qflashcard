@@ -1,7 +1,6 @@
 <template>
   <router-link
     v-if="internal"
-    tag="a"
     :to="to"
     class="markdown-link"
   >

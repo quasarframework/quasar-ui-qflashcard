@@ -14,9 +14,10 @@ related:
 #### Install
 
 To add as an App Extension to your Quasar application, run the following (in your Quasar app folder):
+```bash
+quasar ext add @quasar/qflashcard@next
 ```
-$ quasar ext add @quasar/qflashcard
-```
+Notice the `@next` at the end.
 
 #### Uninstall
 
