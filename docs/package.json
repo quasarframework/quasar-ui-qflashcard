@@ -29,8 +29,8 @@
     "quasar": "^2.5.5",
     "quasar-ui-example-viewer": "^2.0.0-alpha.9",
     "quasar-ui-json-api-viewer": "^2.0.0-alpha.6",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -39,7 +39,7 @@
     "@babel/preset-env": "^7.16.11",
     "@quasar/app": "^3.3.3",
     "babel-loader": "^8.2.3",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
