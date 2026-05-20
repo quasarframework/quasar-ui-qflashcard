@@ -1,0 +1,5 @@
+---
+title: QFlashcard
+---
+
+<LandingPageContent />

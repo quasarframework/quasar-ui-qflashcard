@@ -1,0 +1,4 @@
+packages:
+  - packages/*
+allowBuilds:
+  '@parcel/watcher': true

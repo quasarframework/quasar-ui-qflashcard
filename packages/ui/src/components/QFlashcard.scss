@@ -1,0 +1,549 @@
+.q-flashcard {
+  position: relative;
+  overflow: hidden;
+}
+.q-flashcard__section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.q-flashcard .fc-fade-in {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-fade-out {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-zoom-in {
+  transition: all 0.4s ease-in-out 0.2s;
+  transform: scale(0);
+  opacity: 0;
+}
+.q-flashcard .fc-zoom-out {
+  transition: all 0.4s ease-in-out 0.2s;
+  opacity: 1;
+}
+.q-flashcard .fc-slide-left-out {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-left-in {
+  transform: translateX(100%);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-right-out {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-right-in {
+  transform: translateX(-100%);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-down-in {
+  transform: translateY(-100%);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-down-out {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-up-in {
+  transform: translateY(100%);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-up-out {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-roll-left-out {
+  transform: translateX(0px) rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-left-in {
+  transform: translateX(100%) rotate(360deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-right-out {
+  transform: translateX(0px) rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-right-in {
+  transform: translateX(-100%) rotate(-360deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-top-out {
+  transform: translateY(0px) rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-top-in {
+  transform: translateY(100%) rotate(360deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-bottom-out {
+  transform: translateY(0px) rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-bottom-in {
+  transform: translateY(-100%) rotate(-360deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-nudge-in {
+  transition: all 0.2s linear;
+}
+.q-flashcard .fc-nudge-out {
+  transform: scale(1.1, 1.1);
+  transition: all 0.2s linear;
+}
+.q-flashcard .fc-spin-in {
+  transition: all 0.5s ease-out;
+  transform: rotate(720deg) scale(0);
+  opacity: 0;
+}
+.q-flashcard .fc-spin-out {
+  transition: all 0.5s ease-out;
+  opacity: 1;
+}
+.q-flashcard .fc-flip-right-in {
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+  transform: perspective(400px) rotateY(-180deg);
+}
+.q-flashcard .fc-flip-right-out {
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+}
+.q-flashcard .fc-flip-left-in {
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+  transform: perspective(400px) rotateY(180deg);
+}
+.q-flashcard .fc-flip-left-out {
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+}
+.q-flashcard .fc-flip-up-in {
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+  transform: perspective(400px) rotateX(-180deg);
+}
+.q-flashcard .fc-flip-up-out {
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+}
+.q-flashcard .fc-flip-down-in {
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+  transform: perspective(400px) rotateX(180deg);
+}
+.q-flashcard .fc-flip-down-out {
+  transition: all 0.5s ease-out;
+  backface-visibility: hidden;
+}
+.q-flashcard .fc-shake-down {
+  top: -100%;
+  opacity: 0;
+  transition: all 0.3s ease-out 0.5s;
+}
+.q-flashcard .fc-shake-up {
+  top: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-out 0.5s;
+}
+.q-flashcard .fc-shake-left {
+  left: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-out 0.5s;
+}
+.q-flashcard .fc-shake-right {
+  left: -100%;
+  opacity: 0;
+  transition: all 0.3s ease-out 0.5s;
+}
+.q-flashcard .fc-fade-in--active {
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-fade-out--active {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-zoom-in--active {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0s;
+  transition: all 0.4s ease-in-out 0.2s;
+}
+.q-flashcard .fc-zoom-out--active {
+  transform: scale(0);
+  opacity: 0;
+  transition-delay: 0s;
+  transition: all 0.4s ease-in-out 0.2s;
+}
+.q-flashcard .fc-slide-left-out--active {
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-left-in--active {
+  transform: translateX(0px);
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-right-out--active {
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-right-in--active {
+  transform: translateX(0px);
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-down-in--active {
+  transform: translateY(0px);
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-down-out--active {
+  transform: translateY(100%);
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-up-in--active {
+  transform: translateY(0px);
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-slide-up-out--active {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.q-flashcard .fc-roll-left-out--active {
+  transform: translateX(-100%) rotate(-360deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-left-in--active {
+  transform: translateX(0px) rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-right-out--active {
+  transform: translateX(100%) rotate(360deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-right-in--active {
+  transform: translateX(0px) rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-top-out--active {
+  transform: translateY(-100%) rotate(360deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-top-in--active {
+  transform: translateY(0px) rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-bottom-out--active {
+  transform: translateY(100%) rotate(-360deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-roll-bottom-in--active {
+  transform: translateY(0px) rotate(0deg);
+  transition: all 0.4s ease-in-out;
+}
+.q-flashcard .fc-nudge-in--active {
+  transform: scale(1.1, 1.1);
+  transition: all 0.2s linear;
+}
+.q-flashcard .fc-nudge-out--active {
+  transform: scale(1, 1);
+  transition: all 0.2s linear;
+}
+.q-flashcard .fc-spin-in--active {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-spin-out--active {
+  transform: rotate(720deg) scale(0);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-flip-right-in--active {
+  transform: perspective(400px) rotateY(0);
+  backface-visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-flip-right-out--active {
+  transform: perspective(400px) rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-flip-left-in--active {
+  transform: perspective(400px) rotateY(0);
+  backface-visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-flip-left-out--active {
+  transform: perspective(400px) rotateY(-180deg);
+  backface-visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-flip-up-in--active {
+  transform: perspective(400px) rotateX(0);
+  backface-visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-flip-up-out--active {
+  transform: perspective(400px) rotateX(180deg);
+  backface-visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-flip-down-in--active {
+  transform: perspective(400px) rotateX(0);
+  backface-visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-flip-down-out--active {
+  transform: perspective(400px) rotateX(-180deg);
+  backface-visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+.q-flashcard .fc-shake-down--active {
+  opacity: 1;
+  top: 0px;
+  transition-delay: 0s;
+  animation: shakeFromTop 0.9s linear;
+  transition: all 0.3s ease-out 0.5s;
+}
+.q-flashcard .fc-shake-up--active {
+  opacity: 1;
+  top: 0px;
+  transition-delay: 0s;
+  animation: shakeFromBottom 0.9s linear;
+  transition: all 0.3s ease-out 0.5s;
+}
+.q-flashcard .fc-shake-left--active {
+  opacity: 1;
+  left: 0px;
+  transition-delay: 0s;
+  animation: shakeFromRight 0.9s linear;
+  transition: all 0.3s ease-out 0.5s;
+}
+.q-flashcard .fc-shake-right--active {
+  opacity: 1;
+  left: 0px;
+  transition-delay: 0s;
+  animation: shakeFromLeft 0.9s linear;
+  transition: all 0.3s ease-out 0.5s;
+}
+.q-flashcard:hover:not(.no-hover) .fc-fade-in {
+  opacity: 1;
+}
+.q-flashcard:hover:not(.no-hover) .fc-fade-out {
+  opacity: 0;
+}
+.q-flashcard:hover:not(.no-hover) .fc-zoom-in {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0s;
+}
+.q-flashcard:hover:not(.no-hover) .fc-zoom-out {
+  transform: scale(0);
+  opacity: 0;
+  transition-delay: 0s;
+}
+.q-flashcard:hover:not(.no-hover) .fc-slide-left-out {
+  transform: translateX(-100%);
+}
+.q-flashcard:hover:not(.no-hover) .fc-slide-left-in {
+  transform: translateX(0px);
+}
+.q-flashcard:hover:not(.no-hover) .fc-slide-right-out {
+  transform: translateX(100%);
+}
+.q-flashcard:hover:not(.no-hover) .fc-slide-right-in {
+  transform: translateX(0px);
+}
+.q-flashcard:hover:not(.no-hover) .fc-slide-down-in {
+  transform: translateY(0px);
+}
+.q-flashcard:hover:not(.no-hover) .fc-slide-down-out {
+  transform: translateY(100%);
+}
+.q-flashcard:hover:not(.no-hover) .fc-slide-up-in {
+  transform: translateY(0px);
+}
+.q-flashcard:hover:not(.no-hover) .fc-slide-up-out {
+  transform: translateY(-100%);
+}
+.q-flashcard:hover:not(.no-hover) .fc-roll-left-out {
+  transform: translateX(-100%) rotate(-360deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-roll-left-in {
+  transform: translateX(0px) rotate(0deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-roll-right-out {
+  transform: translateX(100%) rotate(360deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-roll-right-in {
+  transform: translateX(0px) rotate(0deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-roll-top-out {
+  transform: translateY(-100%) rotate(360deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-roll-top-in {
+  transform: translateY(0px) rotate(0deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-roll-bottom-out {
+  transform: translateY(100%) rotate(-360deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-roll-bottom-in {
+  transform: translateY(0px) rotate(0deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-nudge-in {
+  transform: scale(1.1, 1.1);
+}
+.q-flashcard:hover:not(.no-hover) .fc-nudge-out {
+  transform: scale(1, 1);
+}
+.q-flashcard:hover:not(.no-hover) .fc-spin-in {
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+.q-flashcard:hover:not(.no-hover) .fc-spin-out {
+  transform: rotate(720deg) scale(0);
+  opacity: 0;
+}
+.q-flashcard:hover:not(.no-hover) .fc-flip-right-in {
+  transform: perspective(400px) rotateY(0);
+  backface-visibility: hidden;
+}
+.q-flashcard:hover:not(.no-hover) .fc-flip-right-out {
+  transform: perspective(400px) rotateY(180deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-flip-left-in {
+  transform: perspective(400px) rotateY(0);
+}
+.q-flashcard:hover:not(.no-hover) .fc-flip-left-out {
+  transform: perspective(400px) rotateY(-180deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-flip-up-in {
+  transform: perspective(400px) rotateX(0);
+}
+.q-flashcard:hover:not(.no-hover) .fc-flip-up-out {
+  transform: perspective(400px) rotateX(180deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-flip-down-in {
+  transform: perspective(400px) rotateX(0);
+}
+.q-flashcard:hover:not(.no-hover) .fc-flip-down-out {
+  transform: perspective(400px) rotateX(-180deg);
+}
+.q-flashcard:hover:not(.no-hover) .fc-shake-down {
+  opacity: 1;
+  top: 0px;
+  transition-delay: 0s;
+  animation: shakeFromTop 0.9s linear;
+}
+.q-flashcard:hover:not(.no-hover) .fc-shake-up {
+  opacity: 1;
+  top: 0px;
+  transition-delay: 0s;
+  animation: shakeFromBottom 0.9s linear;
+}
+.q-flashcard:hover:not(.no-hover) .fc-shake-left {
+  opacity: 1;
+  left: 0px;
+  transition-delay: 0s;
+  animation: shakeFromRight 0.9s linear;
+}
+.q-flashcard:hover:not(.no-hover) .fc-shake-right {
+  opacity: 1;
+  left: 0px;
+  transition-delay: 0s;
+  animation: shakeFromLeft 0.9s linear;
+}
+
+@keyframes shakeFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  40% {
+    transform: translateY(-50%);
+  }
+  65% {
+    transform: translateY(-25%);
+  }
+  82% {
+    transform: translateY(-12.5%);
+  }
+  92% {
+    transform: translateY(-6.25%);
+  }
+  55%, 75%, 87%, 97%, 100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes shakeFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  40% {
+    transform: translateY(50%);
+  }
+  65% {
+    transform: translateY(25%);
+  }
+  82% {
+    transform: translateY(12.5%);
+  }
+  92% {
+    transform: translateY(6.25%);
+  }
+  55%, 75%, 87%, 97%, 100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes shakeFromRight {
+  0% {
+    transform: translateX(0%);
+  }
+  40% {
+    transform: translateX(50%);
+  }
+  65% {
+    transform: translateX(25%);
+  }
+  82% {
+    transform: translateX(12.5%);
+  }
+  92% {
+    transform: translateX(6.25%);
+  }
+  55%, 75%, 87%, 97%, 100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes shakeFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-50%);
+  }
+  65% {
+    transform: translateX(-25%);
+  }
+  82% {
+    transform: translateX(-12.5%);
+  }
+  92% {
+    transform: translateX(-6.25%);
+  }
+  55%, 75%, 87%, 97%, 100% {
+    transform: translateY(0px);
+  }
+}
