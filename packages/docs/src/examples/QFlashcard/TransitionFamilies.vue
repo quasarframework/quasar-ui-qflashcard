@@ -51,7 +51,7 @@ interface TransitionItem {
 }
 
 const transitionItems: TransitionItem[] = [
-  { label: 'Nudge', caption: 'Small directional movement', front: 'nudge-out', back: 'nudge-in' },
+  { label: 'Nudge', caption: 'Single-panel movement', front: 'nudge-out' },
   { label: 'Fade', caption: 'Opacity in and out', front: 'fade-out', back: 'fade-in' },
   { label: 'Zoom', caption: 'Scale in and out', front: 'zoom-out', back: 'zoom-in' },
   { label: 'Spin', caption: 'Rotational reveal', front: 'spin-out', back: 'spin-in' },

@@ -1,13 +1,8 @@
 <template>
   <div class="q-pa-md column items-center q-gutter-lg">
-    <div class="row items-center justify-center q-gutter-md full-width">
-      <q-toggle v-model="hoverDisabled" label="Disable hover" />
-      <q-toggle v-model="active" label="Active" />
-    </div>
-
     <div class="row justify-center q-gutter-lg full-width">
-      <q-flashcard :no-hover="hoverDisabled" class="component-card">
-        <q-flashcard-section transition="slide-left-out" :active="active">
+      <q-flashcard no-hover class="component-card">
+        <q-flashcard-section transition="slide-left-out" :active="formActive">
           <div class="row fit">
             <div class="col-6">
               <img src="/1.webp" alt="Mountain lake" class="component-image" />
@@ -15,30 +10,42 @@
             <div class="col-6 q-pa-md text-dark">
               <div class="text-h6">Quasar Inside</div>
               <p class="text-caption">Flashcard sections can contain layouts, inputs, buttons, and forms.</p>
-              <q-btn color="primary" label="Open Form" no-caps />
+              <q-btn color="primary" label="Open Form" no-caps @click="formActive = true" />
             </div>
           </div>
         </q-flashcard-section>
 
-        <q-flashcard-section transition="slide-left-in" class="form-panel" :active="active">
-          <q-input v-model="email" filled dense label="Email" type="email" />
-          <div class="row justify-end q-mt-md">
+        <q-flashcard-section transition="slide-left-in" class="form-panel" :active="formActive">
+          <q-input
+            v-model="email"
+            filled
+            dense
+            :dark="false"
+            bg-color="grey-1"
+            color="primary"
+            input-class="text-dark"
+            label="Email"
+            label-color="primary"
+            type="email"
+          />
+          <div class="row justify-between q-mt-md">
+            <q-btn flat color="grey-8" label="Back" no-caps @click="formActive = false" />
             <q-btn color="primary" label="Subscribe" no-caps />
           </div>
         </q-flashcard-section>
       </q-flashcard>
 
-      <q-flashcard :no-hover="hoverDisabled" class="component-card dark-card">
-        <q-flashcard-section transition="nudge-out" :active="active">
+      <q-flashcard no-hover class="component-card dark-card">
+        <q-flashcard-section transition="nudge-out" :active="controlsActive">
           <div class="absolute-center text-center">
             <div class="text-h6">Pick a mode</div>
             <div class="text-caption">Hover or activate to reveal controls</div>
+            <q-btn class="q-mt-md" color="white" text-color="primary" label="Show Controls" no-caps @click="controlsActive = true" />
           </div>
         </q-flashcard-section>
 
-        <q-flashcard-section transition="slide-up-in" class="toggle-panel" :active="active">
+        <q-flashcard-section transition="slide-up-in" class="toggle-panel" :active="controlsActive">
           <q-toolbar class="bg-white text-dark rounded-borders shadow-2">
-            <q-space />
             <q-btn-toggle
               v-model="mode"
               no-caps
@@ -48,6 +55,7 @@
               :options="modeOptions"
             />
             <q-space />
+            <q-btn flat round dense icon="close" @click="controlsActive = false" />
           </q-toolbar>
         </q-flashcard-section>
       </q-flashcard>
@@ -61,8 +69,8 @@ import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
 
 defineOptions({ name: 'QuasarComponents' })
 
-const active = ref(false)
-const hoverDisabled = ref(false)
+const formActive = ref(false)
+const controlsActive = ref(false)
 const email = ref('')
 const mode = ref('preview')
 const modeOptions = [
@@ -97,6 +105,7 @@ const modeOptions = [
 
 .form-panel {
   padding: 28px;
+  color: #263238;
   background: white;
 }
 
