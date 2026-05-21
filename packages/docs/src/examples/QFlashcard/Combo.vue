@@ -7,7 +7,7 @@
 
     <q-flashcard :no-hover="hoverDisabled" class="combo-card">
       <q-flashcard-section transition="flip-left-out" :active="active">
-        <img src="/1.jpg" alt="Mountain lake" class="combo-image" />
+        <img src="/1.webp" alt="Mountain lake" class="combo-image" />
       </q-flashcard-section>
 
       <q-flashcard-section transition="flip-left-in" :active="active" class="combo-back">
@@ -44,7 +44,7 @@ const hoverDisabled = ref(false)
   padding: 10px;
   overflow: hidden;
   border: 10px solid white;
-  background-image: url('/bgimg.jpg');
+  background-image: url('/bgimg.webp');
   background-size: cover;
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
 }

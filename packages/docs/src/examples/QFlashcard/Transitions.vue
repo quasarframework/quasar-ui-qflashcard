@@ -38,14 +38,22 @@ import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
 defineOptions({ name: 'Transitions' })
 
 const transitions = [
+  { label: 'Nudge', front: 'nudge-out', back: 'nudge-in' },
   { label: 'Fade', front: 'fade-out', back: 'fade-in' },
   { label: 'Zoom', front: 'zoom-out', back: 'zoom-in' },
-  { label: 'Flip Left', front: 'flip-left-out', back: 'flip-left-in' },
-  { label: 'Flip Up', front: 'flip-up-out', back: 'flip-up-in' },
-  { label: 'Slide Left', front: 'slide-left-out', back: 'slide-left-in' },
-  { label: 'Slide Up', front: 'slide-up-out', back: 'slide-up-in' },
-  { label: 'Roll Left', front: 'roll-left-out', back: 'roll-left-in' },
   { label: 'Spin', front: 'spin-out', back: 'spin-in' },
+  { label: 'Flip Left', front: 'flip-left-out', back: 'flip-left-in' },
+  { label: 'Flip Right', front: 'flip-right-out', back: 'flip-right-in' },
+  { label: 'Flip Up', front: 'flip-up-out', back: 'flip-up-in' },
+  { label: 'Flip Down', front: 'flip-down-out', back: 'flip-down-in' },
+  { label: 'Slide Left', front: 'slide-left-out', back: 'slide-left-in' },
+  { label: 'Slide Right', front: 'slide-right-out', back: 'slide-right-in' },
+  { label: 'Slide Up', front: 'slide-up-out', back: 'slide-up-in' },
+  { label: 'Slide Down', front: 'slide-down-out', back: 'slide-down-in' },
+  { label: 'Roll Left', front: 'roll-left-out', back: 'roll-left-in' },
+  { label: 'Roll Right', front: 'roll-right-out', back: 'roll-right-in' },
+  { label: 'Roll Top', front: 'roll-top-out', back: 'roll-top-in' },
+  { label: 'Roll Bottom', front: 'roll-bottom-out', back: 'roll-bottom-in' },
 ] as const
 
 const active = ref(false)
