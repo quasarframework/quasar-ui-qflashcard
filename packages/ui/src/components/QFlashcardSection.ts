@@ -1,6 +1,8 @@
-import { computed, defineComponent, h } from "vue";
+import { computed, defineComponent, h, type PropType } from "vue";
 
-function getTransitionName(transition, active) {
+import type { FlashcardTransition } from "../../types/types";
+
+function getTransitionName(transition: string, active: boolean): string {
   const postfix = active === true ? "--active" : "";
   return (transition.startsWith("fc-") ? transition : "fc-" + transition) + postfix;
 }
@@ -10,7 +12,7 @@ export default defineComponent({
 
   props: {
     active: Boolean,
-    transition: [String, Array],
+    transition: [String, Array] as PropType<FlashcardTransition>,
   },
 
   setup(props, { slots }) {
