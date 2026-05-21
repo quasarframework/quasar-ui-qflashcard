@@ -37,11 +37,11 @@
     "@quasar/quasar-ui-qflashcard": "workspace:^"
   },
   "devDependencies": {
-    "@quasar/app-vite": "3.0.0-beta.18",
+    "@quasar/app-vite": "3.0.0-beta.19",
     "vue-router": "^5.0.7"
   },
   "peerDependencies": {
-    "@quasar/app-vite": ">=3.0.0-beta.18"
+    "@quasar/app-vite": ">=3.0.0-beta.19"
   },
   "engines": {
     "node": ">=22.13",
