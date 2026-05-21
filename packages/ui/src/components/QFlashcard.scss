@@ -485,7 +485,11 @@
   92% {
     transform: translateY(-6.25%);
   }
-  55%, 75%, 87%, 97%, 100% {
+  55%,
+  75%,
+  87%,
+  97%,
+  100% {
     transform: translateX(0px);
   }
 }
@@ -505,7 +509,11 @@
   92% {
     transform: translateY(6.25%);
   }
-  55%, 75%, 87%, 97%, 100% {
+  55%,
+  75%,
+  87%,
+  97%,
+  100% {
     transform: translateX(0px);
   }
 }
@@ -525,7 +533,11 @@
   92% {
     transform: translateX(6.25%);
   }
-  55%, 75%, 87%, 97%, 100% {
+  55%,
+  75%,
+  87%,
+  97%,
+  100% {
     transform: translateY(0px);
   }
 }
@@ -545,7 +557,11 @@
   92% {
     transform: translateX(-6.25%);
   }
-  55%, 75%, 87%, 97%, 100% {
+  55%,
+  75%,
+  87%,
+  97%,
+  100% {
     transform: translateY(0px);
   }
 }

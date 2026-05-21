@@ -5,12 +5,8 @@
     "moduleResolution": "Bundler",
     "strict": true,
     "skipLibCheck": false,
-    "types": [
-      "vue"
-    ],
+    "types": ["vue"],
     "noEmit": true
   },
-  "include": [
-    "./*.ts"
-  ]
+  "include": ["./*.ts"]
 }

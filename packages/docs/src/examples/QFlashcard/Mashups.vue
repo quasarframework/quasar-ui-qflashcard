@@ -11,7 +11,11 @@
           <img src="/1.webp" alt="Mountain lake" class="mashup-image" />
         </q-flashcard-section>
 
-        <q-flashcard-section transition="flip-left-in" class="mashup-overlay amber" :active="active">
+        <q-flashcard-section
+          transition="flip-left-in"
+          class="mashup-overlay amber"
+          :active="active"
+        >
           <div class="mashup-content">
             <div class="mashup-header">Combo Demo</div>
             <div class="mashup-copy">
@@ -53,13 +57,18 @@
           <div class="panel-kicker">Layered Reveal</div>
           <div class="panel-title">Scrim plus content panel</div>
           <div class="panel-copy">
-            Keep the base image visible while separate sections fade in the tint and slide in the copy.
+            Keep the base image visible while separate sections fade in the tint and slide in the
+            copy.
           </div>
         </q-flashcard-section>
       </q-flashcard>
 
       <q-flashcard :no-hover="hoverDisabled" class="mashup-card teal-card">
-        <q-flashcard-section :transition="['fade-out', 'zoom-out']" :active="active" class="center-stage">
+        <q-flashcard-section
+          :transition="['fade-out', 'zoom-out']"
+          :active="active"
+          class="center-stage"
+        >
           <q-icon name="touch_app" size="52px" />
           <div class="text-h6 q-mt-sm">Action Card</div>
           <div class="text-caption">Fade and zoom away</div>
@@ -82,13 +91,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
+import { ref } from "vue";
+import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
 
-defineOptions({ name: 'Mashups' })
+defineOptions({ name: "Mashups" });
 
-const active = ref(false)
-const hoverDisabled = ref(false)
+const active = ref(false);
+const hoverDisabled = ref(false);
 </script>
 
 <style scoped>
@@ -98,14 +107,15 @@ const hoverDisabled = ref(false)
   padding: 10px;
   overflow: hidden;
   border: 10px solid white;
-  background-image: url('/bgimg.webp');
+  background-image: url("/bgimg.webp");
   background-size: cover;
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
 }
 
 .teal-card {
   color: white;
-  background: radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.22), transparent 18%),
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.22), transparent 18%),
     linear-gradient(135deg, #18617d, #2faabd);
 }
 

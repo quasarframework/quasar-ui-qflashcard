@@ -11,12 +11,17 @@
           <img src="/1.webp" alt="Mountain lake" class="combo-image" />
         </q-flashcard-section>
 
-        <q-flashcard-section transition="flip-left-in" :active="active" class="combo-back amber-back">
+        <q-flashcard-section
+          transition="flip-left-in"
+          :active="active"
+          class="combo-back amber-back"
+        >
           <div class="combo-back-content">
             <div class="combo-header">Image Flip</div>
 
             <div class="combo-copy">
-              Pair matching `flip-left-out` and `flip-left-in` sections for a classic front/back card.
+              Pair matching `flip-left-out` and `flip-left-in` sections for a classic front/back
+              card.
             </div>
 
             <div class="combo-action">
@@ -27,7 +32,11 @@
       </q-flashcard>
 
       <q-flashcard :no-hover="hoverDisabled" class="combo-card">
-        <q-flashcard-section transition="slide-up-out" :active="active" class="combo-front gradient-front">
+        <q-flashcard-section
+          transition="slide-up-out"
+          :active="active"
+          class="combo-front gradient-front"
+        >
           <q-icon name="style" size="44px" />
           <div class="text-h6 q-mt-sm">Content Card</div>
           <div class="text-caption">Slide the front away</div>
@@ -45,17 +54,26 @@
       </q-flashcard>
 
       <q-flashcard :no-hover="hoverDisabled" class="combo-card">
-        <q-flashcard-section :transition="['fade-out', 'zoom-out']" :active="active" class="combo-front stats-front">
+        <q-flashcard-section
+          :transition="['fade-out', 'zoom-out']"
+          :active="active"
+          class="combo-front stats-front"
+        >
           <div class="text-overline">Status</div>
           <div class="text-h4">86%</div>
           <div class="text-caption">Completion</div>
         </q-flashcard-section>
 
-        <q-flashcard-section :transition="['fade-in', 'zoom-in']" :active="active" class="combo-back dark-back">
+        <q-flashcard-section
+          :transition="['fade-in', 'zoom-in']"
+          :active="active"
+          class="combo-back dark-back"
+        >
           <div class="combo-back-content">
             <div class="combo-header compact">Next Step</div>
             <div class="combo-copy">
-              Array syntax lets you combine transitions, such as fading and zooming the same section.
+              Array syntax lets you combine transitions, such as fading and zooming the same
+              section.
             </div>
             <q-btn outline color="white" label="Review" no-caps />
           </div>
@@ -66,13 +84,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
+import { ref } from "vue";
+import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
 
-defineOptions({ name: 'Combo' })
+defineOptions({ name: "Combo" });
 
-const active = ref(false)
-const hoverDisabled = ref(false)
+const active = ref(false);
+const hoverDisabled = ref(false);
 </script>
 
 <style scoped>
@@ -82,13 +100,13 @@ const hoverDisabled = ref(false)
   padding: 10px;
   overflow: hidden;
   border: 10px solid white;
-  background-image: url('/bgimg.webp');
+  background-image: url("/bgimg.webp");
   background-size: cover;
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
 }
 
 .photo-card {
-  background-image: url('/bgimg.webp');
+  background-image: url("/bgimg.webp");
 }
 
 .combo-image {

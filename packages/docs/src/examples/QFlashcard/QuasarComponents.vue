@@ -9,7 +9,9 @@
             </div>
             <div class="col-6 q-pa-md text-dark">
               <div class="text-h6">Quasar Inside</div>
-              <p class="text-caption">Flashcard sections can contain layouts, inputs, buttons, and forms.</p>
+              <p class="text-caption">
+                Flashcard sections can contain layouts, inputs, buttons, and forms.
+              </p>
               <q-btn color="primary" label="Open Form" no-caps @click="formActive = true" />
             </div>
           </div>
@@ -40,7 +42,14 @@
           <div class="absolute-center text-center">
             <div class="text-h6">Pick a mode</div>
             <div class="text-caption">Hover or activate to reveal controls</div>
-            <q-btn class="q-mt-md" color="white" text-color="primary" label="Show Controls" no-caps @click="controlsActive = true" />
+            <q-btn
+              class="q-mt-md"
+              color="white"
+              text-color="primary"
+              label="Show Controls"
+              no-caps
+              @click="controlsActive = true"
+            />
           </div>
         </q-flashcard-section>
 
@@ -64,20 +73,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
+import { ref } from "vue";
+import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
 
-defineOptions({ name: 'QuasarComponents' })
+defineOptions({ name: "QuasarComponents" });
 
-const formActive = ref(false)
-const controlsActive = ref(false)
-const email = ref('')
-const mode = ref('preview')
+const formActive = ref(false);
+const controlsActive = ref(false);
+const email = ref("");
+const mode = ref("preview");
 const modeOptions = [
-  { label: 'Preview', value: 'preview' },
-  { label: 'Edit', value: 'edit' },
-  { label: 'Share', value: 'share' },
-]
+  { label: "Preview", value: "preview" },
+  { label: "Edit", value: "edit" },
+  { label: "Share", value: "share" },
+];
 </script>
 
 <style scoped>

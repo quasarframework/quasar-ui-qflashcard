@@ -3,11 +3,11 @@
   "version": "3.0.0-beta.0",
   "description": "QFlashcard - Quasar component",
   "keywords": [
-    "flashcard",
     "animation",
-    "transition",
+    "flashcard",
     "quasar",
-    "quasarframework"
+    "quasarframework",
+    "transition"
   ],
   "homepage": "https://github.com/quasarframework/quasar-ui-qflashcard",
   "bugs": "https://github.com/quasarframework/quasar-ui-qflashcard/issues",

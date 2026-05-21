@@ -85,9 +85,9 @@
 </template>
 
 <script setup lang="ts">
-import { fabGithub } from '@quasar/extras/fontawesome-v6'
-import { biArrowRightCircle } from '@quasar/extras/bootstrap-icons'
-import siteConfig from '../../siteConfig'
+import { fabGithub } from "@quasar/extras/fontawesome-v6";
+import { biArrowRightCircle } from "@quasar/extras/bootstrap-icons";
+import siteConfig from "../../siteConfig";
 </script>
 
 <style lang="scss" scoped>

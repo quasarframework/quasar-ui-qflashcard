@@ -41,27 +41,27 @@ pnpm add @quasar/quasar-ui-qflashcard
 Then create and register a boot file:
 
 ```js
-import { defineBoot } from '@quasar/app-vite'
-import Plugin from '@quasar/quasar-ui-qflashcard'
-import '@quasar/quasar-ui-qflashcard/dist/index.css'
+import { defineBoot } from "@quasar/app-vite";
+import Plugin from "@quasar/quasar-ui-qflashcard";
+import "@quasar/quasar-ui-qflashcard/dist/index.css";
 
 export default defineBoot(({ app }) => {
-  app.use(Plugin)
-})
+  app.use(Plugin);
+});
 ```
 
 ## Vue 3 Or Vite
 
 ```js
-import { createApp } from 'vue'
-import Plugin from '@quasar/quasar-ui-qflashcard'
-import '@quasar/quasar-ui-qflashcard/dist/index.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import Plugin from "@quasar/quasar-ui-qflashcard";
+import "@quasar/quasar-ui-qflashcard/dist/index.css";
+import App from "./App.vue";
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(Plugin)
-app.mount('#app')
+app.use(Plugin);
+app.mount("#app");
 ```
 
 ## Component Import
@@ -70,6 +70,6 @@ app.mount('#app')
 <style src="@quasar/quasar-ui-qflashcard/dist/index.css"></style>
 
 <script setup lang="ts">
-import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
+  import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
 </script>
 ```

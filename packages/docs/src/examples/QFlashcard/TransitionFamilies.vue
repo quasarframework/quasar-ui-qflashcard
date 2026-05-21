@@ -6,7 +6,13 @@
     </div>
 
     <div class="transition-grid">
-      <q-card v-for="item in transitionItems" :key="item.label" flat bordered class="transition-demo">
+      <q-card
+        v-for="item in transitionItems"
+        :key="item.label"
+        flat
+        bordered
+        class="transition-demo"
+      >
         <q-card-section>
           <div class="text-subtitle2">{{ item.label }}</div>
           <div class="text-caption text-grey-7">{{ item.caption }}</div>
@@ -35,35 +41,65 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
+import { ref } from "vue";
+import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
 
-defineOptions({ name: 'TransitionFamilies' })
+defineOptions({ name: "TransitionFamilies" });
 
-const active = ref(false)
-const hoverDisabled = ref(false)
+const active = ref(false);
+const hoverDisabled = ref(false);
 
 interface TransitionItem {
-  label: string
-  caption: string
-  front: string
-  back?: string
+  label: string;
+  caption: string;
+  front: string;
+  back?: string;
 }
 
 const transitionItems: TransitionItem[] = [
-  { label: 'Nudge', caption: 'Single-panel movement', front: 'nudge-out' },
-  { label: 'Fade', caption: 'Opacity in and out', front: 'fade-out', back: 'fade-in' },
-  { label: 'Zoom', caption: 'Scale in and out', front: 'zoom-out', back: 'zoom-in' },
-  { label: 'Spin', caption: 'Rotational reveal', front: 'spin-out', back: 'spin-in' },
-  { label: 'Flip left/right', caption: 'Horizontal 3D flip', front: 'flip-left-out', back: 'flip-right-in' },
-  { label: 'Flip up/down', caption: 'Vertical 3D flip', front: 'flip-up-out', back: 'flip-down-in' },
-  { label: 'Slide left/right', caption: 'Horizontal slide', front: 'slide-left-out', back: 'slide-right-in' },
-  { label: 'Slide up/down', caption: 'Vertical slide', front: 'slide-up-out', back: 'slide-down-in' },
-  { label: 'Roll left/right', caption: 'Horizontal roll', front: 'roll-left-out', back: 'roll-right-in' },
-  { label: 'Roll top/bottom', caption: 'Vertical roll', front: 'roll-top-out', back: 'roll-bottom-in' },
-  { label: 'Shake left', caption: 'Attention cue', front: 'shake-left' },
-  { label: 'Shake up', caption: 'Attention cue', front: 'shake-up' },
-]
+  { label: "Nudge", caption: "Single-panel movement", front: "nudge-out" },
+  { label: "Fade", caption: "Opacity in and out", front: "fade-out", back: "fade-in" },
+  { label: "Zoom", caption: "Scale in and out", front: "zoom-out", back: "zoom-in" },
+  { label: "Spin", caption: "Rotational reveal", front: "spin-out", back: "spin-in" },
+  {
+    label: "Flip left/right",
+    caption: "Horizontal 3D flip",
+    front: "flip-left-out",
+    back: "flip-right-in",
+  },
+  {
+    label: "Flip up/down",
+    caption: "Vertical 3D flip",
+    front: "flip-up-out",
+    back: "flip-down-in",
+  },
+  {
+    label: "Slide left/right",
+    caption: "Horizontal slide",
+    front: "slide-left-out",
+    back: "slide-right-in",
+  },
+  {
+    label: "Slide up/down",
+    caption: "Vertical slide",
+    front: "slide-up-out",
+    back: "slide-down-in",
+  },
+  {
+    label: "Roll left/right",
+    caption: "Horizontal roll",
+    front: "roll-left-out",
+    back: "roll-right-in",
+  },
+  {
+    label: "Roll top/bottom",
+    caption: "Vertical roll",
+    front: "roll-top-out",
+    back: "roll-bottom-in",
+  },
+  { label: "Shake left", caption: "Attention cue", front: "shake-left" },
+  { label: "Shake up", caption: "Attention cue", front: "shake-up" },
+];
 </script>
 
 <style scoped>

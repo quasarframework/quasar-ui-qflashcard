@@ -61,74 +61,74 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { mdiMagnify } from '@quasar/extras/mdi-v6'
+import { computed, ref, watch } from "vue";
+import { mdiMagnify } from "@quasar/extras/mdi-v6";
 
-import sanitize from './sanitize'
-import parseMdTable from './md-table-parser'
+import sanitize from "./sanitize";
+import parseMdTable from "./md-table-parser";
 
 export interface ReleaseInfo {
-  version: string
-  date: string
-  body: string
-  label: string
+  version: string;
+  date: string;
+  body: string;
+  label: string;
 }
 
 const props = withDefaults(
   defineProps<{
-    latestVersion?: string
-    releases?: ReleaseInfo[]
+    latestVersion?: string;
+    releases?: ReleaseInfo[];
   }>(),
   {
     releases: () => [],
   },
-)
+);
 
-const search = ref('')
-const selectedVersion = ref<string | undefined>(props.latestVersion)
+const search = ref("");
+const selectedVersion = ref<string | undefined>(props.latestVersion);
 
 watch(
   () => props.latestVersion,
   (val) => {
-    selectedVersion.value = val
+    selectedVersion.value = val;
   },
-)
+);
 
 const filteredReleases = computed(() => {
-  if (search.value !== '') {
-    const val = search.value.toLowerCase()
+  if (search.value !== "") {
+    const val = search.value.toLowerCase();
 
-    return props.releases.filter((release) => release.body.toLowerCase().includes(val))
+    return props.releases.filter((release) => release.body.toLowerCase().includes(val));
   }
 
-  return props.releases
-})
+  return props.releases;
+});
 
 function escapeRegExp(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function parse(body: string): string {
-  let content = sanitize(body) + '\n'
+  let content = sanitize(body) + "\n";
 
-  if (search.value !== '') {
+  if (search.value !== "") {
     content = content.replace(
-      new RegExp(`(${escapeRegExp(search.value)})`, 'gi'),
+      new RegExp(`(${escapeRegExp(search.value)})`, "gi"),
       '<span class="bg-accent text-white">$1</span>',
-    )
+    );
   }
 
   content = content
     .replace(/### ([\S ]+)/g, '<div class="text-h6">$1</div>')
     .replace(/## ([\S ]+)/g, '<div class="text-h5">$1</div>')
     .replace(/# ([\S ]+)/g, '<div class="text-h4">$1</div>')
-    .replace(/\*\*([\S ]*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*([\S ]*?)\*/g, '<em>$1</em>')
+    .replace(/\*\*([\S ]*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*([\S ]*?)\*/g, "<em>$1</em>")
     .replace(
       /```([\S]+)/g,
       '<code class="markdown--code__inner markdown--code__inner--prerendered release__code">',
     )
-    .replace(/```\n/g, '</code>')
+    .replace(/```\n/g, "</code>")
     .replace(/`(.*?)`/g, '<code class="markdown--token">$1</code>')
     .replace(
       /#([\d]+)/g,
@@ -140,18 +140,18 @@ function parse(body: string): string {
       '<a class="markdown-link" href="$2" target="_blank">$1</a>',
     )
     .replace(/^ {2}[-*] ([\S .]+)$/gm, '<li class="q-pl-md">$1</li>')
-    .replace(/^[-*] ([\S .]+)$/gm, '<li>$1</li>')
-    .replace(/<\/li>[\s\n\r]*<li/g, '</li><li')
-    .replace(/\n/g, '<br>')
+    .replace(/^[-*] ([\S .]+)$/gm, "<li>$1</li>")
+    .replace(/<\/li>[\s\n\r]*<li/g, "</li><li")
+    .replace(/\n/g, "<br>");
 
-  return content.includes('| -') ? parseMdTable(content) : content
+  return content.includes("| -") ? parseMdTable(content) : content;
 }
 
 const currentReleaseBody = computed(() => {
-  const release = props.releases.find((entry) => entry.label === selectedVersion.value)
+  const release = props.releases.find((entry) => entry.label === selectedVersion.value);
 
-  return release ? parse(release.body) : ''
-})
+  return release ? parse(release.body) : "";
+});
 </script>
 
 <style lang="scss">

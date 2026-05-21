@@ -3,10 +3,10 @@
   "version": "3.0.0-beta.0",
   "description": "A Quasar App Extension for @quasar/quasar-ui-qflashcard",
   "keywords": [
+    "animation",
     "app",
     "app extension",
     "extension",
-    "animation",
     "flashcard",
     "quasar",
     "quasarframework"
