@@ -1,7 +1,7 @@
 # QFlashcard
 
-![@quasar/quasar-ui-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard?label=@quasar/quasar-ui-qflashcard)
-![@quasar/quasar-app-extension-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qflashcard?label=@quasar/quasar-app-extension-qflashcard)
+![@quasar/quasar-ui-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard/beta?label=@quasar/quasar-ui-qflashcard)
+![@quasar/quasar-app-extension-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qflashcard/beta?label=@quasar/quasar-app-extension-qflashcard)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/quasar-ui-qflashcard)]()
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/quasar-ui-qflashcard)]()
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qflashcard)
