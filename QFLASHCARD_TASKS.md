@@ -74,6 +74,6 @@ Use this file as the per-repo checklist for migrating QFlashcard to the current 
 
 ## Notes
 
-- The UI build now generates ESM, CJS, UMD, CSS, API JSON, Vetur metadata, and TypeScript declarations from the `packages/ui` package.
+- The UI build now generates ESM, UMD, CSS, API JSON, Vetur metadata, and TypeScript declarations from the `packages/ui` package. CJS output was removed for the v3 ESM-only package surface.
 - `quasar-json-api` currently needs a direct `@babel/parser` v7 resolution workaround while its dependency tree can resolve Babel parser v8 RC.
 - The docs app builds through Q-Press and `@md-plugins/q-press`; output is emitted to `packages/docs/dist/spa`.
