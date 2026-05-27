@@ -41,6 +41,26 @@ const defaultJsResources = [
   `https://cdn.jsdelivr.net/npm/quasar@${Quasar.version}/dist/quasar.umd.prod.js`,
 ];
 
+function getAbsolutePublicUrl(path: string) {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+
+  return typeof location === "undefined" ? normalizedPath : `${location.origin}${normalizedPath}`;
+}
+
+function rewriteRootRelativeUrls(content: string) {
+  return content
+    .replace(
+      /\b(src|href|poster)=("|')\/(?!\/)([^"']*)\2/g,
+      (_match: string, attr: string, quote: string, path: string) =>
+        `${attr}=${quote}${getAbsolutePublicUrl(path)}${quote}`,
+    )
+    .replace(
+      /url\(\s*(["']?)\/(?!\/)([^"')]+)\1\s*\)/g,
+      (_match: string, quote: string, path: string) =>
+        `url(${quote}${getAbsolutePublicUrl(path)}${quote})`,
+    );
+}
+
 function indent(code: string, spaces = 2) {
   const padding = " ".repeat(spaces);
   return code
@@ -272,7 +292,9 @@ const jsResources = computed(() => {
 });
 
 const css = computed(() => {
-  return (def.parts.Style || "").replace(/(<style.*?>|<\/style>)/g, "").trim();
+  return rewriteRootRelativeUrls(
+    (def.parts.Style || "").replace(/(<style.*?>|<\/style>)/g, "").trim(),
+  );
 });
 
 const cssPreprocessor = computed(() => {
@@ -300,7 +322,7 @@ const jsPreProcessor = computed(() => {
 });
 
 const html = computed(() => {
-  return (def.parts.Template || "")
+  const content = (def.parts.Template || "")
     .replace(/(<template>|<\/template>$)/g, "")
     .replace(/\n/g, "\n  ")
     .replace(/([\w]+=")([^"]*?)(")/g, function (match, p1, p2, p3) {
@@ -334,6 +356,8 @@ const html = computed(() => {
     .replace(/___TEMP_REPLACEMENT___/g, ">")
     .replace(/^\s{2}/gm, "")
     .trim();
+
+  return rewriteRootRelativeUrls(content);
 });
 
 const editors = computed(() => {
