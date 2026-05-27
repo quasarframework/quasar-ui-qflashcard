@@ -17,10 +17,15 @@ Install the [App Extension](../app-extension).
 Or install the UI package directly:
 
 ```bash
-pnpm add @quasar/quasar-ui-qflashcard
-# bun add @quasar/quasar-ui-qflashcard
-# yarn add @quasar/quasar-ui-qflashcard
-# npm install @quasar/quasar-ui-qflashcard
+pnpm add @quasar/quasar-ui-qflashcard@beta
+# or
+bun add @quasar/quasar-ui-qflashcard@beta
+# or
+yarn add @quasar/quasar-ui-qflashcard@beta
+# or
+npm install @quasar/quasar-ui-qflashcard@beta
+# or, in a Quasar CLI app
+quasar ext add @quasar/qflashcard@beta
 ```
 
 Then create and register a boot file:

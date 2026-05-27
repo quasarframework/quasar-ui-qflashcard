@@ -32,10 +32,13 @@ The QFlashcard v3 App Extension targets Quasar CLI Vite 3 and requires `@quasar/
 If you do not install through the App Extension, install the UI package directly:
 
 ```bash
-pnpm add @quasar/quasar-ui-qflashcard
-# bun add @quasar/quasar-ui-qflashcard
-# yarn add @quasar/quasar-ui-qflashcard
-# npm install @quasar/quasar-ui-qflashcard
+pnpm add @quasar/quasar-ui-qflashcard@beta
+# or
+bun add @quasar/quasar-ui-qflashcard@beta
+# or
+yarn add @quasar/quasar-ui-qflashcard@beta
+# or
+npm install @quasar/quasar-ui-qflashcard@beta
 ```
 
 Then create and register a boot file:
