@@ -26,13 +26,13 @@ The basic pattern is a front section and a back section. By default, users can r
 
 Use the `Show answer`, `Active`, or example-specific controls when you want to trigger the same transitions manually.
 
-<MarkdownExample title="Basic" file="Basic" no-github no-edit/>
+<MarkdownExample title="Basic" file="Basic"/>
 
 ## Transition Families
 
 Transitions are grouped by motion style so you can match the reveal to the content. A subtle fade works well for quiet supporting details, slides feel natural for drawer-like panels, and flips or rolls make sense when the card metaphor should be more playful.
 
-<MarkdownExample title="Transition Families" file="TransitionFamilies" no-github no-edit/>
+<MarkdownExample title="Transition Families" file="TransitionFamilies"/>
 
 ## Combo Example
 
@@ -40,7 +40,7 @@ Combo cards pair front and back sections with complementary transitions. This is
 
 The examples below show a classic image flip, a sliding content card, and a combined fade/zoom transition.
 
-<MarkdownExample title="Combo" file="Combo" no-github no-edit/>
+<MarkdownExample title="Combo" file="Combo"/>
 
 ## Mashups
 
@@ -48,7 +48,7 @@ Mashups combine multiple sections and transitions to create layered reveals. Thi
 
 These patterns are useful for marketing cards, image galleries, guided feature tours, and dashboard tiles where different pieces of content should enter at different moments.
 
-<MarkdownExample title="Mashups" file="Mashups" no-github no-edit/>
+<MarkdownExample title="Mashups" file="Mashups"/>
 
 ## Quasar Components
 
@@ -56,6 +56,6 @@ QFlashcard sections can contain regular Quasar components, forms, buttons, and l
 
 Use this pattern when the back side should help the user do something immediately, such as subscribe, choose a mode, confirm an option, or open more details.
 
-<MarkdownExample title="Quasar Components" file="QuasarComponents" no-github no-edit/>
+<MarkdownExample title="Quasar Components" file="QuasarComponents"/>
 
 Photos by [Jeremy Bishop](https://unsplash.com/@jeremybishop) on Unsplash.
