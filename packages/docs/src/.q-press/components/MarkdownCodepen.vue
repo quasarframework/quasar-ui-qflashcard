@@ -63,9 +63,35 @@ function rewriteRootRelativeUrls(content: string) {
 
 function indent(code: string, spaces = 2) {
   const padding = " ".repeat(spaces);
+  let isInsideTemplateLiteral = false;
+
   return code
     .split("\n")
-    .map((line) => (line.trim().length > 0 ? padding + line : line))
+    .map((line) => {
+      const shouldIndent = line.trim().length > 0 && isInsideTemplateLiteral === false;
+
+      for (let index = 0; index < line.length; index++) {
+        if (line[index] !== "`") {
+          continue;
+        }
+
+        let escapeCount = 0;
+
+        for (
+          let escapeIndex = index - 1;
+          escapeIndex >= 0 && line[escapeIndex] === "\\";
+          escapeIndex--
+        ) {
+          escapeCount++;
+        }
+
+        if (escapeCount % 2 === 0) {
+          isInsideTemplateLiteral = !isInsideTemplateLiteral;
+        }
+      }
+
+      return shouldIndent ? padding + line : line;
+    })
     .join("\n");
 }
 
@@ -178,7 +204,7 @@ function getSetupReturnNames(content: string) {
   const declarationRe =
     /(?:^|\n)\s*(?:const|let|var)\s+([\s\S]*?)(?=\n\s*(?:const|let|var|function|interface|type|class)\s+|\s*$)/g;
   const variableNameRe = /(?:^|\n)\s*([A-Za-z_$][\w$]*)\s*(?:[:=,]|$)/g;
-  const functionRe = /(?:^|\n)\s*function\s+([A-Za-z_$][\w$]*)/g;
+  const functionRe = /(?:^|\n)\s*(?:async\s+)?function\s+([A-Za-z_$][\w$]*)/g;
   let match: RegExpExecArray | null;
 
   while ((match = declarationRe.exec(topLevelContent)) !== null) {

@@ -4,6 +4,7 @@ desc: What is QFlashcard
 keys: Getting Started
 related:
   - /getting-started/installation-types
+  - /other/upgrade-guide
   - /developing/using-qflashcard
 ---
 
@@ -12,6 +13,8 @@ related:
 QFlashcard is a small Quasar component package for building CSS-driven flashcard transitions. It provides a wrapper component, `QFlashcard`, and transition panels, `QFlashcardSection`, that can react to hover state or an explicit `active` model.
 
 Use it for compact reveal cards, onboarding snippets, promotional panels, before/after effects, or any place where a lightweight animated content swap is useful.
+
+If you are moving from QFlashcard v1 or v2, start with the [Upgrade Guide](/other/upgrade-guide). It covers the Quasar CLI Vite 3 baseline, package changes, and boot-file import updates.
 
 ## Components
 

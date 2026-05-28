@@ -31,7 +31,7 @@ quasar ext add @quasar/qflashcard@beta
 Then create and register a boot file:
 
 ```js
-import { defineBoot } from "@quasar/app-vite";
+import { defineBoot } from "#q-app";
 import VuePlugin from "@quasar/quasar-ui-qflashcard";
 import "@quasar/quasar-ui-qflashcard/dist/index.css";
 

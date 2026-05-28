@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-qflashcard",
-  "version": "3.0.0-beta.0",
+  "version": "3.0.0-beta.1",
   "description": "A Quasar App Extension for @quasar/quasar-ui-qflashcard",
   "keywords": [
     "animation",
@@ -41,10 +41,10 @@
     "vue-router": "^5.1.0"
   },
   "peerDependencies": {
-    "@quasar/app-vite": ">=3.0.0-beta.30"
+    "@quasar/app-vite": ">=3.0.0-beta.32"
   },
   "engines": {
     "node": ">=22.13",
-    "pnpm": ">=11.3.0"
+    "pnpm": ">=11.4.0"
   }
 }

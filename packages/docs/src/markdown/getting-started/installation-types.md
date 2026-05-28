@@ -4,6 +4,7 @@ desc: How to install QFlashcard
 keys: Getting Started
 related:
   - /getting-started/introduction
+  - /other/upgrade-guide
   - /developing/using-qflashcard
 ---
 
@@ -44,7 +45,7 @@ npm install @quasar/quasar-ui-qflashcard@beta
 Then create and register a boot file:
 
 ```js
-import { defineBoot } from "@quasar/app-vite";
+import { defineBoot } from "#q-app";
 import Plugin from "@quasar/quasar-ui-qflashcard";
 import "@quasar/quasar-ui-qflashcard/dist/index.css";
 
