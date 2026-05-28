@@ -1,7 +1,7 @@
 ---
 title: Releases
-desc: Release notes
+desc: The latest QFlashcard releases
 keys: other
 ---
 
-<Releases />
+<Releases class="q-mt-sm" />

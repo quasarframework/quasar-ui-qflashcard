@@ -3,7 +3,7 @@
     <q-input
       v-model="search"
       dense
-      quare
+      square
       borderless
       color="white"
       placeholder="Search..."
