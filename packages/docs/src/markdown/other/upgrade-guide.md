@@ -82,8 +82,16 @@ export default defineBoot(({ app }) => {
 
 Compiled package imports are the recommended path:
 
-```ts
+```ts [twoslash]
 import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
+
+QFlashcardSection
+// ^?
+```
+
+Import the component stylesheet alongside the components:
+
+```ts
 import "@quasar/quasar-ui-qflashcard/dist/index.css";
 ```
 
