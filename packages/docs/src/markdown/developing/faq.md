@@ -26,6 +26,19 @@ css: [
 
 :::
 
+:::details Q. Can I inspect the component API from the CLI?
+
+Yes. After the App Extension is installed, run:
+
+```bash
+quasar describe QFlashcard
+quasar describe QFlashcardSection
+```
+
+The same generated API is shown on the [Using QFlashcard](/developing/using-qflashcard) page.
+
+:::
+
 :::details Q. Can QFlashcard be controlled without hover?
 
 Yes. Use `no-hover` on `QFlashcard`, then control each `QFlashcardSection` with its `active` prop.
