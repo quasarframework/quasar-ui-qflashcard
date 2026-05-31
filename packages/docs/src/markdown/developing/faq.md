@@ -4,6 +4,28 @@ desc: Frequently asked questions
 keys: developing
 ---
 
+:::details Q. Do I need to import QFlashcard CSS myself?
+
+The App Extension adds the stylesheet for you.
+
+If you install the UI package directly, import the stylesheet in your boot file or app entry:
+
+```ts
+import "@quasar/quasar-ui-qflashcard/dist/index.css";
+```
+
+Quasar CLI projects can also centralize the stylesheet in `quasar.config.ts`:
+
+```ts
+// Note: using ~ tells Quasar the file resides in node_modules
+css: [
+  "app.scss",
+  "~@quasar/quasar-ui-qflashcard/dist/index.css",
+],
+```
+
+:::
+
 :::details Q. Can QFlashcard be controlled without hover?
 
 Yes. Use `no-hover` on `QFlashcard`, then control each `QFlashcardSection` with its `active` prop.
