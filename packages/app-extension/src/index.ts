@@ -18,7 +18,7 @@ export default defineIndexScript((api) => {
   );
 
   api.extendQuasarConf(() => ({
-    boot: ["~@quasar/quasar-app-extension-qflashcard/src/boot/vite-register.ts"],
+    boot: ["~@quasar/quasar-app-extension-qflashcard/dist/boot/vite-register.js"],
     css: ["~@quasar/quasar-ui-qflashcard/src/index.scss"],
   }));
 });
