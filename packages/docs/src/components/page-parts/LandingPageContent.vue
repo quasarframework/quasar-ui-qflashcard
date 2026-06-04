@@ -85,18 +85,16 @@
                 <p>{{ previewBody }}</p>
               </div>
 
-              <div
-                class="preview-stack"
-                :class="{ 'preview-stack--single': previewImages.length === 1 }"
-              >
-                <div
-                  v-for="(image, index) in previewImages"
-                  :key="image.src"
-                  class="preview-card"
-                  :class="index === 0 ? 'preview-card--primary' : 'preview-card--secondary'"
+              <div class="preview-capability-grid">
+                <article
+                  v-for="card in previewCards"
+                  :key="card.label"
+                  class="preview-capability-card"
                 >
-                  <q-img :src="image.src" :alt="image.alt" fit="contain" />
-                </div>
+                  <div class="preview-capability-card__value">{{ card.value }}</div>
+                  <h3>{{ card.label }}</h3>
+                  <p>{{ card.body }}</p>
+                </article>
               </div>
             </div>
           </div>
@@ -206,14 +204,21 @@ const sectionText =
 
 const heroPills = ["Hover", "Controlled", "Front / Back", "Transitions", "Media"];
 
-const previewImages = [
+const previewCards = [
   {
-    src: "/1.webp",
-    alt: "QFlashcard preview front",
+    value: "2",
+    label: "Interaction Models",
+    body: "Use quick hover reveals for light moments, or drive the active face from your own app state.",
   },
   {
-    src: "/2.webp",
-    alt: "QFlashcard preview back",
+    value: "CSS",
+    label: "Transition Surface",
+    body: "Keep the motion layer small and focused instead of introducing a larger animation system.",
+  },
+  {
+    value: "Slots",
+    label: "Content Freedom",
+    body: "Put text, media, buttons, forms, or Quasar controls on either face of the card.",
   },
 ];
 
@@ -548,48 +553,44 @@ const supportItems = [
   line-height: 1.68;
 }
 
-.preview-stack {
-  position: relative;
-  min-height: clamp(250px, 30vw, 310px);
-  padding: 10px 14px 6px;
+.preview-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
-.preview-stack--single {
-  min-height: auto;
-}
-
-.preview-card {
-  position: absolute;
-  overflow: hidden;
-  border: 1px solid rgba(245, 245, 220, 0.12);
+.preview-capability-card {
+  min-height: 190px;
+  padding: 22px;
+  border: 1px solid var(--landing-preview-card-border);
   border-radius: 22px;
-  background: rgba(245, 245, 220, 0.08);
-  box-shadow: 0 22px 38px rgba(18, 10, 7, 0.2);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 245, 0.12), rgba(255, 255, 245, 0.03)),
+    var(--landing-preview-card-bg);
+  box-shadow: var(--landing-preview-card-shadow);
 }
 
-.preview-card :deep(.q-img) {
-  display: block;
-  width: 100%;
+.preview-capability-card__value {
+  color: var(--landing-chip-text);
+  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1;
 }
 
-.preview-card--primary {
-  top: 10px;
-  left: 10px;
-  width: min(82%, 300px);
-  transform: rotate(-2deg);
+.preview-capability-card h3 {
+  margin: 18px 0 10px;
+  color: var(--landing-heading);
+  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
-.preview-card--secondary {
-  right: 6px;
-  bottom: 4px;
-  width: min(56%, 220px);
-  transform: rotate(4deg);
-}
-
-.preview-stack--single .preview-card--primary {
-  position: relative;
-  width: 100%;
-  transform: none;
+.preview-capability-card p {
+  margin: 0;
+  color: var(--landing-text-soft);
+  font-size: 0.96rem;
+  line-height: 1.6;
 }
 
 .feature-section,
@@ -732,8 +733,8 @@ const supportItems = [
     grid-template-columns: 1fr;
   }
 
-  .preview-stack {
-    min-height: 320px;
+  .preview-capability-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -761,23 +762,9 @@ const supportItems = [
     justify-content: center;
   }
 
-  .preview-stack {
-    min-height: 260px;
-    padding: 6px 0 0;
-  }
-
-  .preview-card--primary {
-    position: relative;
-    width: 100%;
-    transform: none;
-  }
-
-  .preview-card--secondary {
-    right: auto;
-    bottom: auto;
-    left: 18px;
-    width: calc(100% - 36px);
-    transform: translateY(-24px);
+  .preview-capability-card {
+    min-height: 0;
+    padding: 20px;
   }
 
   .feature-card,
@@ -940,12 +927,6 @@ body.body--dark .landing-page {
       var(--landing-panel-gradient-bottom)
     ),
     var(--landing-panel-bg);
-}
-
-.preview-card {
-  border-color: var(--landing-preview-card-border);
-  background: var(--landing-preview-card-bg);
-  box-shadow: var(--landing-preview-card-shadow);
 }
 
 .feature-card::before {
