@@ -20,7 +20,7 @@ QFlashcard v3 prepares the package for Quasar CLI Vite 3 and the shared app-exte
 
 Important changes:
 
-- The app extension is Vite-only and requires `@quasar/app-vite` v3 beta.
+- The app extension is Vite-only and requires `@quasar/app-vite` >=3.0.0-beta.41.
 - The webpack app-extension path is no longer supported.
 - The package now uses ESM-first exports for Quasar/Vite consumers.
 - UMD bundles remain available for CDN and CodePen examples.
@@ -30,14 +30,14 @@ Important changes:
 
 ## Requirements
 
-| Area                          | QFlashcard v3 beta         |
-| ----------------------------- | -------------------------- |
-| Vue                           | Vue 3                      |
-| Quasar                        | Quasar 2                   |
-| Quasar CLI                    | `@quasar/app-vite` v3 beta |
-| App extension                 | Vite only                  |
-| Node.js for this repo and CI  | `>=22.13`                  |
-| Package manager for this repo | `pnpm >=11.4.0`            |
+| Area                          | QFlashcard v3 beta                 |
+| ----------------------------- | ---------------------------------- |
+| Vue                           | Vue 3                              |
+| Quasar                        | Quasar 2                           |
+| Quasar CLI                    | `@quasar/app-vite` >=3.0.0-beta.41 |
+| App extension                 | Vite only                          |
+| Node.js for this repo and CI  | `>=22.13`                          |
+| Package manager for this repo | `pnpm >=11.4.0`                    |
 
 ## Installing The Beta
 
@@ -62,7 +62,7 @@ When QFlashcard v3 is released as stable, remove the `@beta` tag from those comm
 
 The QFlashcard app extension now targets Quasar CLI Vite only.
 
-- Install it only in apps using `@quasar/app-vite`.
+- Install it only in apps using `@quasar/app-vite` >=3.0.0-beta.41.
 - The extension registers the Vite boot file and stylesheet.
 - The extension remains the recommended install path for Quasar apps because it handles plugin registration for you.
 
