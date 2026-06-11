@@ -1,7 +1,7 @@
 # QFlashcard
 
-![@quasar/quasar-ui-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard/beta?label=@quasar/quasar-ui-qflashcard)
-![@quasar/quasar-app-extension-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qflashcard/beta?label=@quasar/quasar-app-extension-qflashcard)
+![@quasar/quasar-ui-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard?label=@quasar/quasar-ui-qflashcard)
+![@quasar/quasar-app-extension-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qflashcard?label=@quasar/quasar-app-extension-qflashcard)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9e50f4ba-d3b2-4885-a631-8278786b648c/deploy-status)](https://app.netlify.com/projects/qflashcard/deploys)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/quasar-ui-qflashcard)]()
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/quasar-ui-qflashcard)]()
@@ -12,7 +12,7 @@
 
 QFlashcard is a [Quasar](https://quasar.dev) component that provides CSS transition flashcards for Vue and Quasar applications.
 
-## QFlashcard v3.0.0 Beta
+## QFlashcard v3.0.0 Release Candidate
 
 QFlashcard v3 prepares the project for Quasar CLI Vite 3. The app extension is Vite-only, requires `@quasar/app-vite` >=3.0.0-rc.1, and no longer supports webpack-based Quasar apps.
 

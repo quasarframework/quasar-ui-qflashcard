@@ -2,7 +2,7 @@
 
 QFlashcard is a Quasar component that provides CSS transition flashcards for Vue and Quasar applications.
 
-[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard/beta?label=@quasar/quasar-ui-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
+[![npm](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard?label=@quasar/quasar-ui-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-ui-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-ui-qflashcard)
 
 [![Discord](https://img.shields.io/badge/discord-join%20server-738ADB?style=for-the-badge&logo=discord&logoColor=738ADB)](https://chat.quasar.dev)
@@ -17,15 +17,15 @@ Install the [App Extension](../app-extension).
 Or install the UI package directly:
 
 ```bash
-pnpm add @quasar/quasar-ui-qflashcard@beta
+pnpm add @quasar/quasar-ui-qflashcard
 # or
-bun add @quasar/quasar-ui-qflashcard@beta
+bun add @quasar/quasar-ui-qflashcard
 # or
-yarn add @quasar/quasar-ui-qflashcard@beta
+yarn add @quasar/quasar-ui-qflashcard
 # or
-npm install @quasar/quasar-ui-qflashcard@beta
+npm install @quasar/quasar-ui-qflashcard
 # or, in a Quasar CLI app
-quasar ext add @quasar/qflashcard@beta
+quasar ext add @quasar/qflashcard
 ```
 
 Then create and register a boot file:

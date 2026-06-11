@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-qflashcard",
-  "version": "3.0.0-beta.4",
+  "version": "3.0.0-rc.0",
   "description": "A Quasar App Extension for @quasar/quasar-ui-qflashcard",
   "keywords": [
     "animation",
@@ -36,7 +36,7 @@
     "lint": "oxlint src",
     "lint-fix": "oxlint src --fix",
     "prepack": "pnpm build",
-    "release": "pnpm publish --tag beta"
+    "release": "pnpm publish --tag latest"
   },
   "dependencies": {
     "@quasar/quasar-ui-qflashcard": "workspace:^"

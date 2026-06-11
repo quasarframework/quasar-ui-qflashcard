@@ -20,12 +20,6 @@ To add QFlashcard to your Quasar application, run the following in your Quasar a
 quasar ext add @quasar/qflashcard
 ```
 
-While QFlashcard v3 is in beta, install with:
-
-```bash
-quasar ext add @quasar/qflashcard@beta
-```
-
 The QFlashcard v3 App Extension targets Quasar CLI Vite 3 and requires `@quasar/app-vite` >=3.0.0-rc.1. It does not support webpack-based Quasar applications.
 
 ### Manual Boot File
@@ -34,13 +28,13 @@ If you do not install through the App Extension, install the UI package directly
 
 ```tabs
 <<| bash pnpm |>>
-pnpm add @quasar/quasar-ui-qflashcard@beta
+pnpm add @quasar/quasar-ui-qflashcard
 <<| bash bun |>>
-bun add @quasar/quasar-ui-qflashcard@beta
+bun add @quasar/quasar-ui-qflashcard
 <<| bash yarn |>>
-yarn add @quasar/quasar-ui-qflashcard@beta
+yarn add @quasar/quasar-ui-qflashcard
 <<| bash npm |>>
-npm install @quasar/quasar-ui-qflashcard@beta
+npm install @quasar/quasar-ui-qflashcard
 ```
 
 Then create and register a boot file:
