@@ -10,7 +10,7 @@ The **QFlashcard App Extension** adds the [QFlashcard](../ui) components to a Qu
 
 ## QFlashcard v3.0.0 Release Candidate
 
-QFlashcard v3 prepares the app extension for Quasar CLI Vite 3. The app extension requires `@quasar/app-vite` >=3.0.0-rc.1 and no longer supports webpack-based Quasar apps. If your application is still using `@quasar/app-webpack`, migrate the application to Quasar CLI Vite before installing QFlashcard v3.
+QFlashcard v3 prepares the app extension for Quasar CLI Vite 3. The app extension requires `@quasar/app-vite` >=3.0.0-rc.2 and no longer supports webpack-based Quasar apps. If your application is still using `@quasar/app-webpack`, migrate the application to Quasar CLI Vite before installing QFlashcard v3.
 
 ## Install
 
