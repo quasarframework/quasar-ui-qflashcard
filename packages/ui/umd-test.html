@@ -60,17 +60,26 @@
     <script src="dist/index.umd.js"></script>
 
     <script>
+      const flashcardPlugin = globalThis.QFlashcard;
+      const bundleReady =
+        flashcardPlugin !== void 0 &&
+        typeof flashcardPlugin.install === "function" &&
+        flashcardPlugin.QFlashcard !== void 0 &&
+        flashcardPlugin.QFlashcardSection !== void 0;
+
       const app = Vue.createApp({
         setup() {
           return {
-            version: QFlashcard.version,
-          }
+            version: bundleReady === true ? flashcardPlugin.version : "bundle missing",
+          };
         },
-      })
+      });
 
-      app.use(Quasar)
-      app.use(QFlashcard)
-      app.mount("#q-app")
+      app.use(Quasar);
+      if (bundleReady === true) {
+        app.use(flashcardPlugin);
+      }
+      app.mount("#q-app");
     </script>
   </body>
 </html>
