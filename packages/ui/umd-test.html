@@ -61,16 +61,16 @@
 
     <script>
       const app = Vue.createApp({
-        data: function () {
+        setup() {
           return {
             version: QFlashcard.version,
-          };
+          }
         },
-      });
+      })
 
-      app.use(Quasar);
-      app.use(QFlashcard);
-      app.mount("#q-app");
+      app.use(Quasar)
+      app.use(QFlashcard)
+      app.mount("#q-app")
     </script>
   </body>
 </html>
