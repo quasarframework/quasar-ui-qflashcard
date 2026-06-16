@@ -67,13 +67,13 @@ The QFlashcard app extension now targets Quasar CLI Vite only.
 If you maintain your own boot file, import `defineBoot` from `#q-app`:
 
 ```ts
-import { defineBoot } from "#q-app";
-import Plugin from "@quasar/quasar-ui-qflashcard";
-import "@quasar/quasar-ui-qflashcard/dist/index.css";
+import { defineBoot } from '#q-app'
+import Plugin from '@quasar/quasar-ui-qflashcard'
+import '@quasar/quasar-ui-qflashcard/dist/index.css'
 
 export default defineBoot(({ app }) => {
-  app.use(Plugin);
-});
+  app.use(Plugin)
+})
 ```
 
 ## Direct UI Package Usage
@@ -81,23 +81,23 @@ export default defineBoot(({ app }) => {
 Compiled package imports are the recommended path:
 
 ```ts [twoslash]
-import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
+import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
 
-QFlashcardSection;
+QFlashcardSection
 // ^?
 ```
 
 Import the component stylesheet alongside the components:
 
 ```ts
-import "@quasar/quasar-ui-qflashcard/dist/index.css";
+import '@quasar/quasar-ui-qflashcard/dist/index.css'
 ```
 
 Direct `src/` imports are still available for advanced use cases. With Quasar CLI Vite 3, dependency transpilation is automatic, so no additional transpile-dependency configuration is needed.
 
 ```ts
-import Plugin from "@quasar/quasar-ui-qflashcard/src/index";
-import "@quasar/quasar-ui-qflashcard/src/index.scss";
+import Plugin from '@quasar/quasar-ui-qflashcard/src/index'
+import '@quasar/quasar-ui-qflashcard/src/index.scss'
 ```
 
 ## Transition Names
@@ -130,7 +130,7 @@ If you maintain custom CodePen or script-tag examples, load the QFlashcard CSS a
 Then register the plugin from the browser global:
 
 ```js
-app.use(QFlashcard);
+app.use(QFlashcard)
 ```
 
 Examples that reference public images should use absolute URLs in CodePen. The docs CodePen generator rewrites root-relative public asset paths to the current docs origin before submitting the playground.

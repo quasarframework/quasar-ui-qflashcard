@@ -84,13 +84,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
+import { ref } from 'vue'
+import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
 
-defineOptions({ name: "Combo" });
+defineOptions({ name: 'Combo' })
 
-const active = ref(false);
-const hoverDisabled = ref(false);
+const active = ref(false)
+const hoverDisabled = ref(false)
 </script>
 
 <style scoped>
@@ -100,13 +100,13 @@ const hoverDisabled = ref(false);
   padding: 10px;
   overflow: hidden;
   border: 10px solid white;
-  background-image: url("/bgimg.webp");
+  background-image: url('/bgimg.webp');
   background-size: cover;
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
 }
 
 .photo-card {
-  background-image: url("/bgimg.webp");
+  background-image: url('/bgimg.webp');
 }
 
 .combo-image {

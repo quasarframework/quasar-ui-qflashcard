@@ -104,8 +104,7 @@
                 </q-flashcard>
 
                 <div v-else class="text-negative">
-                  The QFlashcard UMD bundle did not load, so the components could not be
-                  registered.
+                  The QFlashcard UMD bundle did not load, so the components could not be registered.
                 </div>
               </q-card-section>
             </q-card>
@@ -119,31 +118,31 @@
     <script src="dist/index.umd.js?ae=qflashcard"></script>
 
     <script>
-      const { ref } = Vue;
-      const flashcardPlugin = globalThis.QFlashcard;
+      const { ref } = Vue
+      const flashcardPlugin = globalThis.QFlashcard
       const bundleReady =
         flashcardPlugin !== void 0 &&
-        typeof flashcardPlugin.install === "function" &&
+        typeof flashcardPlugin.install === 'function' &&
         flashcardPlugin.QFlashcard !== void 0 &&
-        flashcardPlugin.QFlashcardSection !== void 0;
+        flashcardPlugin.QFlashcardSection !== void 0
 
       const app = Vue.createApp({
         setup() {
-          const showAnswer = ref(false);
+          const showAnswer = ref(false)
 
           return {
-            version: bundleReady === true ? flashcardPlugin.version : "bundle missing",
+            version: bundleReady === true ? flashcardPlugin.version : 'bundle missing',
             bundleReady,
             showAnswer,
-          };
+          }
         },
-      });
+      })
 
-      app.use(Quasar);
+      app.use(Quasar)
       if (bundleReady === true) {
-        app.use(flashcardPlugin);
+        app.use(flashcardPlugin)
       }
-      app.mount("#q-app");
+      app.mount('#q-app')
     </script>
   </body>
 </html>

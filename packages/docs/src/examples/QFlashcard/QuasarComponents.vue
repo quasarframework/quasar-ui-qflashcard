@@ -73,20 +73,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
+import { ref } from 'vue'
+import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
 
-defineOptions({ name: "QuasarComponents" });
+defineOptions({ name: 'QuasarComponents' })
 
-const formActive = ref(false);
-const controlsActive = ref(false);
-const email = ref("");
-const mode = ref("preview");
+const formActive = ref(false)
+const controlsActive = ref(false)
+const email = ref('')
+const mode = ref('preview')
 const modeOptions = [
-  { label: "Preview", value: "preview" },
-  { label: "Edit", value: "edit" },
-  { label: "Share", value: "share" },
-];
+  { label: 'Preview', value: 'preview' },
+  { label: 'Edit', value: 'edit' },
+  { label: 'Share', value: 'share' },
+]
 </script>
 
 <style scoped>

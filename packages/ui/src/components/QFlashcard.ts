@@ -1,7 +1,7 @@
-import { defineComponent, h } from "vue";
+import { defineComponent, h } from 'vue'
 
 export default defineComponent({
-  name: "QFlashcard",
+  name: 'QFlashcard',
 
   props: {
     noHover: Boolean,
@@ -10,11 +10,11 @@ export default defineComponent({
   setup(props, { slots }) {
     return () =>
       h(
-        "div",
+        'div',
         {
-          class: ["q-flashcard", { "no-hover": props.noHover === true }],
+          class: ['q-flashcard', { 'no-hover': props.noHover === true }],
         },
         slots.default?.(),
-      );
+      )
   },
-});
+})

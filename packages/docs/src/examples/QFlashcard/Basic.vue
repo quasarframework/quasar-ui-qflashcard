@@ -23,12 +23,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
+import { ref } from 'vue'
+import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
 
-defineOptions({ name: "Basic" });
+defineOptions({ name: 'Basic' })
 
-const active = ref(false);
+const active = ref(false)
 </script>
 
 <style scoped>

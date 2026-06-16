@@ -182,93 +182,93 @@
 </template>
 
 <script setup lang="ts">
-import { fabGithub } from "@quasar/extras/fontawesome-v7";
-import { biArrowRightCircle } from "@quasar/extras/bootstrap-icons";
-import siteConfig from "../../siteConfig";
+import { fabGithub } from '@quasar/extras/fontawesome-v7'
+import { biArrowRightCircle } from '@quasar/extras/bootstrap-icons'
+import siteConfig from '../../siteConfig'
 
-const productName = "QFlashcard";
-const logoSrc = "/app-logo-128x128.png";
-const logoAlt = "QFlashcard Logo";
-const githubTreeUrl = "https://github.com/quasarframework/quasar-ui-qflashcard/tree/v3-beta";
-const githubRepoUrl = "https://github.com/quasarframework/quasar-ui-qflashcard";
-const heroEyebrow = "Vue 3 + Quasar 2";
+const productName = 'QFlashcard'
+const logoSrc = '/app-logo-128x128.png'
+const logoAlt = 'QFlashcard Logo'
+const githubTreeUrl = 'https://github.com/quasarframework/quasar-ui-qflashcard/tree/v3-beta'
+const githubRepoUrl = 'https://github.com/quasarframework/quasar-ui-qflashcard'
+const heroEyebrow = 'Vue 3 + Quasar 2'
 const heroLede =
-  "Create front/back card reveals and compact animated surfaces for learning tools, showcases, and playful UI moments without wiring every transition by hand.";
-const previewKicker = "Animated Surfaces";
-const previewTitle = "Flashcard-style motion for small, expressive interface moments";
+  'Create front/back card reveals and compact animated surfaces for learning tools, showcases, and playful UI moments without wiring every transition by hand.'
+const previewKicker = 'Animated Surfaces'
+const previewTitle = 'Flashcard-style motion for small, expressive interface moments'
 const previewBody =
-  "Use hover-driven or explicitly controlled flashcards to reveal alternate states, supporting media, or compact bits of detail while keeping the component footprint small.";
-const sectionTitle = "Card-flip interactions that stay focused on the reveal, not the setup";
+  'Use hover-driven or explicitly controlled flashcards to reveal alternate states, supporting media, or compact bits of detail while keeping the component footprint small.'
+const sectionTitle = 'Card-flip interactions that stay focused on the reveal, not the setup'
 const sectionText =
-  "QFlashcard is intentionally narrow in scope: front and back content, transition-friendly structure, and quick integration into Quasar layouts where a lightweight reveal is enough.";
+  'QFlashcard is intentionally narrow in scope: front and back content, transition-friendly structure, and quick integration into Quasar layouts where a lightweight reveal is enough.'
 
-const heroPills = ["Hover", "Controlled", "Front / Back", "Transitions", "Media"];
+const heroPills = ['Hover', 'Controlled', 'Front / Back', 'Transitions', 'Media']
 
 const previewCards = [
   {
-    value: "2",
-    label: "Interaction Models",
-    body: "Use quick hover reveals for light moments, or drive the active face from your own app state.",
+    value: '2',
+    label: 'Interaction Models',
+    body: 'Use quick hover reveals for light moments, or drive the active face from your own app state.',
   },
   {
-    value: "CSS",
-    label: "Transition Surface",
-    body: "Keep the motion layer small and focused instead of introducing a larger animation system.",
+    value: 'CSS',
+    label: 'Transition Surface',
+    body: 'Keep the motion layer small and focused instead of introducing a larger animation system.',
   },
   {
-    value: "Slots",
-    label: "Content Freedom",
-    body: "Put text, media, buttons, forms, or Quasar controls on either face of the card.",
+    value: 'Slots',
+    label: 'Content Freedom',
+    body: 'Put text, media, buttons, forms, or Quasar controls on either face of the card.',
   },
-];
+]
 
 const featureCards = [
   {
-    icon: "flip",
-    title: "Front and Back Faces",
-    body: "Render paired card states for learning tools, teasers, or compact layered content.",
+    icon: 'flip',
+    title: 'Front and Back Faces',
+    body: 'Render paired card states for learning tools, teasers, or compact layered content.',
   },
   {
-    icon: "touch_app",
-    title: "Hover or Controlled",
-    body: "Choose between quick hover interaction and explicit state control from your own app logic.",
+    icon: 'touch_app',
+    title: 'Hover or Controlled',
+    body: 'Choose between quick hover interaction and explicit state control from your own app logic.',
   },
   {
-    icon: "animation",
-    title: "Lightweight Motion",
-    body: "Add movement and reveal behavior without introducing a larger scene or animation system.",
+    icon: 'animation',
+    title: 'Lightweight Motion',
+    body: 'Add movement and reveal behavior without introducing a larger scene or animation system.',
   },
   {
-    icon: "perm_media",
-    title: "Media-Friendly",
-    body: "Mix images, copy, icons, and supporting detail into either face of the card surface.",
+    icon: 'perm_media',
+    title: 'Media-Friendly',
+    body: 'Mix images, copy, icons, and supporting detail into either face of the card surface.',
   },
   {
-    icon: "widgets",
-    title: "Small-Surface UX",
-    body: "Use flashcards in dashboards, learning experiences, feature showcases, and compact callouts.",
+    icon: 'widgets',
+    title: 'Small-Surface UX',
+    body: 'Use flashcards in dashboards, learning experiences, feature showcases, and compact callouts.',
   },
   {
-    icon: "palette",
-    title: "Themeable Presentation",
-    body: "Fit the component into branded Quasar layouts instead of treating it like a one-off animation demo.",
+    icon: 'palette',
+    title: 'Themeable Presentation',
+    body: 'Fit the component into branded Quasar layouts instead of treating it like a one-off animation demo.',
   },
-];
+]
 
 const supportItems = [
   {
-    title: "Introduction First",
-    body: "Start with the introduction to see when hover-driven cards are enough and when explicitly controlled state is the better fit.",
+    title: 'Introduction First',
+    body: 'Start with the introduction to see when hover-driven cards are enough and when explicitly controlled state is the better fit.',
   },
   {
-    title: "Upgrade Notes",
+    title: 'Upgrade Notes',
     body: "QFlashcard's current docs follow the Vue 3 + Quasar 2 line, so the upgrade guide should be the first stop when migrating older integrations.",
   },
   {
-    title: "Discussions + Issues",
-    body: "Questions, bugs, and API edge cases are easiest to track in the QFlashcard repo and GitHub Discussions.",
+    title: 'Discussions + Issues',
+    body: 'Questions, bugs, and API edge cases are easiest to track in the QFlashcard repo and GitHub Discussions.',
   },
-];
+]
 </script>
 
 <style lang="scss" scoped>
@@ -339,7 +339,7 @@ const supportItems = [
   border-radius: 999px;
   background: rgba(245, 245, 220, 0.08);
   color: #ffe5b6;
-  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', sans-serif;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -358,7 +358,7 @@ const supportItems = [
 
 .hero-title {
   margin: 0;
-  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', sans-serif;
   font-size: clamp(3.2rem, 8vw, 6rem);
   line-height: 0.95;
   font-weight: 800;
@@ -369,7 +369,7 @@ const supportItems = [
 .hero-subtitle {
   max-width: 620px;
   margin: 0;
-  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', sans-serif;
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.45;
   font-weight: 700;
@@ -442,7 +442,7 @@ const supportItems = [
   column-gap: 12px;
   min-width: 0;
   width: 100%;
-  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -529,7 +529,7 @@ const supportItems = [
 .section-heading__title,
 .feature-card__title,
 .resource-card__title {
-  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', sans-serif;
   color: $brand-light;
 }
 
@@ -567,7 +567,7 @@ const supportItems = [
 
 .preview-capability-card__value {
   color: var(--landing-chip-text);
-  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', sans-serif;
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 900;
   line-height: 1;
@@ -576,7 +576,7 @@ const supportItems = [
 .preview-capability-card h3 {
   margin: 18px 0 10px;
   color: var(--landing-heading);
-  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', sans-serif;
   font-size: 1rem;
   line-height: 1.25;
 }
@@ -627,7 +627,7 @@ const supportItems = [
 }
 
 .feature-card::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0 auto auto 0;
   width: 100%;
@@ -703,7 +703,7 @@ const supportItems = [
 
 .resource-list__title {
   margin-bottom: 6px;
-  font-family: "Montserrat", "Poppins", "Segoe UI", sans-serif;
+  font-family: 'Montserrat', 'Poppins', 'Segoe UI', sans-serif;
   font-size: 0.96rem;
   font-weight: 700;
   color: #ffe3b7;

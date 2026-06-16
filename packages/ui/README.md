@@ -31,27 +31,27 @@ quasar ext add @quasar/qflashcard
 Then create and register a boot file:
 
 ```js
-import { defineBoot } from "#q-app";
-import VuePlugin from "@quasar/quasar-ui-qflashcard";
-import "@quasar/quasar-ui-qflashcard/dist/index.css";
+import { defineBoot } from '#q-app'
+import VuePlugin from '@quasar/quasar-ui-qflashcard'
+import '@quasar/quasar-ui-qflashcard/dist/index.css'
 
 export default defineBoot(({ app }) => {
-  app.use(VuePlugin);
-});
+  app.use(VuePlugin)
+})
 ```
 
 ### Vue 3 Project
 
 ```js
-import { createApp } from "vue";
-import VuePlugin from "@quasar/quasar-ui-qflashcard";
-import "@quasar/quasar-ui-qflashcard/dist/index.css";
-import App from "./App.vue";
+import { createApp } from 'vue'
+import VuePlugin from '@quasar/quasar-ui-qflashcard'
+import '@quasar/quasar-ui-qflashcard/dist/index.css'
+import App from './App.vue'
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(VuePlugin);
-app.mount("#app");
+app.use(VuePlugin)
+app.mount('#app')
 ```
 
 ### Component Import
@@ -60,7 +60,7 @@ app.mount("#app");
 <style src="@quasar/quasar-ui-qflashcard/dist/index.css"></style>
 
 <script setup lang="ts">
-  import { QFlashcard, QFlashcardSection } from "@quasar/quasar-ui-qflashcard";
+  import { QFlashcard, QFlashcardSection } from '@quasar/quasar-ui-qflashcard'
 </script>
 ```
 
