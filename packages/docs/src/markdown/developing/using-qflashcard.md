@@ -47,7 +47,7 @@ The example above shows each motion family, not every individual direction. Buil
 | Roll   | `roll-left-in`, `roll-left-out`, `roll-right-in`, `roll-right-out`, `roll-top-in`, `roll-top-out`, `roll-bottom-in`, `roll-bottom-out`   |
 | Shake  | `shake-left`, `shake-right`, `shake-up`, `shake-down`                                                                                    |
 
-You can also provide your own transition names when you supply matching CSS classes. QFlashcard maps `my-reveal` to `.fc-my-reveal` and `.fc-my-reveal--active`.
+You can also provide your own transition names when you supply matching CSS classes. QFlashcard maps `my-reveal` to `.fc-my-reveal` and `.fc-my-reveal--active`. See [Advanced](/developing/advanced) for a custom transition example.
 
 ## Combo Example
 
