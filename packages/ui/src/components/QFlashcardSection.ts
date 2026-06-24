@@ -1,4 +1,4 @@
-import { computed, defineComponent, h, type PropType } from 'vue'
+import { computed, defineComponent, h, type PropType, type SlotsType, type VNode } from 'vue'
 
 import type { FlashcardTransition } from '../../types/types'
 
@@ -7,13 +7,36 @@ function getTransitionName(transition: string, active: boolean): string {
   return (transition.startsWith('fc-') ? transition : 'fc-' + transition) + postfix
 }
 
+export interface QFlashcardSectionSlots {
+  /**
+   * Anything can go into this slot.
+   */
+  default: () => VNode[]
+}
+
 export default defineComponent({
   name: 'QFlashcardSection',
 
   props: {
+    /**
+     * Use along with `no-hover` property to control the non-active/active state.
+     *
+     * @category model
+     */
     active: Boolean,
+    /**
+     * One or more transitions to be used.
+     *
+     * @category behavior
+     * @tsType FlashcardTransition
+     * @example transition="fade-in"
+     * @example transition="fade-in flip-left-in"
+     * @example :transition="['fade-in', 'flip-left-in']"
+     */
     transition: [String, Array] as PropType<FlashcardTransition>,
   },
+
+  slots: Object as SlotsType<QFlashcardSectionSlots>,
 
   setup(props, { slots }) {
     const classes = computed(() => {
