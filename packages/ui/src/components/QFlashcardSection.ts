@@ -25,10 +25,14 @@ export default defineComponent({
      */
     active: Boolean,
     /**
-     * One or more transitions to be used.
+     * One or more built-in or custom transition names to be used.
+     *
+     * Built-in names can be passed with or without the `fc-` prefix. Custom names can be used
+     * when matching `.fc-name` and `.fc-name--active` classes are supplied.
      *
      * @category behavior
      * @tsType FlashcardTransition
+     * @values fade-in, fade-out, zoom-in, zoom-out, spin-in, spin-out, nudge-in, nudge-out, slide-left-in, slide-left-out, slide-right-in, slide-right-out, slide-up-in, slide-up-out, slide-down-in, slide-down-out, flip-left-in, flip-left-out, flip-right-in, flip-right-out, flip-up-in, flip-up-out, flip-down-in, flip-down-out, roll-left-in, roll-left-out, roll-right-in, roll-right-out, roll-top-in, roll-top-out, roll-bottom-in, roll-bottom-out, shake-left, shake-right, shake-up, shake-down
      * @example transition="fade-in"
      * @example transition="fade-in flip-left-in"
      * @example :transition="['fade-in', 'flip-left-in']"

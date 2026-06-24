@@ -34,6 +34,21 @@ Transitions are grouped by motion style so you can match the reveal to the conte
 
 <MarkdownExample title="Transition Families" file="TransitionFamilies"/>
 
+The example above shows each motion family, not every individual direction. Built-in transition names can be passed with or without the `fc-` prefix.
+
+| Family | Built-in names                                                                                                                           |
+| ------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Fade   | `fade-in`, `fade-out`                                                                                                                    |
+| Zoom   | `zoom-in`, `zoom-out`                                                                                                                    |
+| Spin   | `spin-in`, `spin-out`                                                                                                                    |
+| Nudge  | `nudge-in`, `nudge-out`                                                                                                                  |
+| Slide  | `slide-left-in`, `slide-left-out`, `slide-right-in`, `slide-right-out`, `slide-up-in`, `slide-up-out`, `slide-down-in`, `slide-down-out` |
+| Flip   | `flip-left-in`, `flip-left-out`, `flip-right-in`, `flip-right-out`, `flip-up-in`, `flip-up-out`, `flip-down-in`, `flip-down-out`         |
+| Roll   | `roll-left-in`, `roll-left-out`, `roll-right-in`, `roll-right-out`, `roll-top-in`, `roll-top-out`, `roll-bottom-in`, `roll-bottom-out`   |
+| Shake  | `shake-left`, `shake-right`, `shake-up`, `shake-down`                                                                                    |
+
+You can also provide your own transition names when you supply matching CSS classes. QFlashcard maps `my-reveal` to `.fc-my-reveal` and `.fc-my-reveal--active`.
+
 ## Combo Example
 
 Combo cards pair front and back sections with complementary transitions. This is the sweet spot for most production use cases: a clean front state, a useful back state, and just enough motion to make the reveal feel designed.
