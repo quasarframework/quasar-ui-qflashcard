@@ -21,7 +21,7 @@ export default defineComponent({
     /**
      * Use along with `no-hover` property to control the non-active/active state.
      *
-     * @category model
+     * @category state
      */
     active: Boolean,
     /**

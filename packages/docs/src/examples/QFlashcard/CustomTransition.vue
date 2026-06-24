@@ -49,28 +49,40 @@ const active = ref(false)
   height: 220px;
   overflow: hidden;
   border-radius: 18px;
-  background: #101821;
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--qpress-border-subtle);
+  background: var(--qpress-surface-raised);
+  box-shadow: var(--qpress-card-shadow);
 }
 
 .custom-panel {
-  color: white;
+  border: 1px solid var(--qpress-border-subtle);
+  color: var(--qpress-text-primary);
+  background: var(--qpress-surface-raised);
 }
 
 .custom-panel--front {
   background:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.22), transparent 26%),
-    linear-gradient(135deg, #1f7a8c, #2ec4b6);
+    radial-gradient(circle at 20% 18%, rgb(var(--qpress-rgb-primary) / 0.14), transparent 34%),
+    linear-gradient(135deg, rgb(var(--qpress-rgb-primary) / 0.1), transparent),
+    var(--qpress-surface-raised);
 }
 
 .custom-panel--back {
   background:
-    radial-gradient(circle at 78% 22%, rgba(255, 255, 255, 0.22), transparent 28%),
-    linear-gradient(135deg, #5f2c82, #49a09d);
+    radial-gradient(circle at 78% 24%, rgb(var(--qpress-rgb-accent) / 0.14), transparent 34%),
+    linear-gradient(135deg, rgb(var(--qpress-rgb-primary) / 0.1), transparent),
+    var(--qpress-surface-raised);
 }
 
-.custom-card :deep(.fc-custom-pulse-in),
 .custom-card :deep(.fc-custom-pulse-out) {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+  transition:
+    opacity 0.28s ease,
+    transform 0.38s cubic-bezier(0.2, 0.9, 0.28, 1.2);
+}
+
+.custom-card :deep(.fc-custom-pulse-in) {
   opacity: 0;
   transform: scale(0.78) rotate(-5deg);
   transition:
@@ -78,8 +90,12 @@ const active = ref(false)
     transform 0.38s cubic-bezier(0.2, 0.9, 0.28, 1.2);
 }
 
-.custom-card :deep(.fc-custom-pulse-in--active),
 .custom-card :deep(.fc-custom-pulse-out--active) {
+  opacity: 0;
+  transform: scale(1.08) rotate(5deg);
+}
+
+.custom-card :deep(.fc-custom-pulse-in--active) {
   opacity: 1;
   transform: scale(1) rotate(0);
 }

@@ -15,7 +15,7 @@ The example below defines custom transition classes inside the example component
 
 <MarkdownExample title="Custom Transition" file="CustomTransition"/>
 
-Custom transitions can live in scoped component styles, app-level styles, or a design-system stylesheet. Use the same class shape for every custom transition:
+Custom transitions can live in scoped component styles, app-level styles, or a design-system stylesheet. Pass the transition value without the `fc-` prefix, then define matching CSS classes with the `fc-` prefix:
 
 ```scss
 .fc-my-reveal {
