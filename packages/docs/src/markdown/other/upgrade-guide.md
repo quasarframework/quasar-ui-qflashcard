@@ -8,7 +8,7 @@ related:
   - /other/releases
 ---
 
-Use this guide to migrate from QFlashcard v1.x or v2.x to QFlashcard v3.0.0-rc.0.
+Use this guide to migrate from QFlashcard v1.x or v2.x to QFlashcard v3.0.0-rc.1.
 
 > QFlashcard v3 targets Vue 3, Quasar 2, and Quasar CLI Vite 3. If your app still uses Vue 2 or `@quasar/app-webpack`, migrate the app before installing QFlashcard v3.
 
@@ -121,10 +121,10 @@ If you maintain custom CodePen or script-tag examples, load the QFlashcard CSS a
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@3.0.0-rc.0/dist/index.min.css"
+  href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@3.0.0-rc.1/dist/index.min.css"
   rel="stylesheet"
 />
-<script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@3.0.0-rc.0/dist/index.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@3.0.0-rc.1/dist/index.umd.min.js"></script>
 ```
 
 Then register the plugin from the browser global:
