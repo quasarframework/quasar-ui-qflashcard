@@ -14,7 +14,7 @@ QFlashcard is a [Quasar](https://quasar.dev) component that provides CSS transit
 
 ## QFlashcard v3.0.0 Release Candidate
 
-QFlashcard v3 prepares the project for Quasar CLI Vite 3. The app extension is Vite-only, requires `@quasar/app-vite` >=3.0.0-rc.3, and no longer supports webpack-based Quasar apps.
+QFlashcard v3 prepares the project for Quasar CLI Vite 3. The app extension is Vite-only, requires `@quasar/app-vite` >=3.0.0-rc.5, and no longer supports webpack-based Quasar apps.
 
 # Structure
 
