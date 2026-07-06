@@ -8,13 +8,13 @@ related:
   - /other/releases
 ---
 
-Use this guide to migrate from QFlashcard v1.x or v2.x to QFlashcard v3.0.0-rc.1.
+Use this guide to migrate from QFlashcard v1.x or v2.x to QFlashcard v3.0.0.
 
 > QFlashcard v3 targets Vue 3, Quasar 2, and Quasar CLI Vite 3. If your app still uses Vue 2 or `@quasar/app-webpack`, migrate the app before installing QFlashcard v3.
 
-> This guide focuses on the changes most likely to affect app code. Check the [Releases](/other/releases) page for the latest release candidate notes, and please open an issue or PR if something is missing.
+> This guide focuses on the changes most likely to affect app code. Check the [Releases](/other/releases) page for the latest release notes, and please open an issue or PR if something is missing.
 
-## QFlashcard v3.0.0 Release Candidate
+## QFlashcard v3.0.0
 
 QFlashcard v3 prepares the package for Quasar CLI Vite 3 and the shared app-extension workspace standard.
 
@@ -30,16 +30,16 @@ Important changes:
 
 ## Requirements
 
-| Area                          | QFlashcard v3 RC                |
-| ----------------------------- | ------------------------------- |
-| Vue                           | Vue 3                           |
-| Quasar                        | Quasar 2                        |
+| Area                          | QFlashcard v3              |
+| ----------------------------- | -------------------------- |
+| Vue                           | Vue 3                      |
+| Quasar                        | Quasar 2                   |
 | Quasar CLI                    | `@quasar/app-vite` >=3.0.0 |
-| App extension                 | Vite only                       |
-| Node.js for this repo and CI  | `>=22.13`                       |
-| Package manager for this repo | `pnpm >=11.5.0`                 |
+| App extension                 | Vite only                  |
+| Node.js for this repo and CI  | `>=22.13`                  |
+| Package manager for this repo | `pnpm >=11.5.0`            |
 
-## Installing The Release Candidate
+## Installing QFlashcard v3
 
 Install QFlashcard v3 from the default npm dist tag.
 
@@ -121,10 +121,10 @@ If you maintain custom CodePen or script-tag examples, load the QFlashcard CSS a
 
 ```html
 <link
-  href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@3.0.0-rc.1/dist/index.min.css"
+  href="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@3.0.0/dist/index.min.css"
   rel="stylesheet"
 />
-<script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@3.0.0-rc.1/dist/index.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@quasar/quasar-ui-qflashcard@3.0.0/dist/index.umd.min.js"></script>
 ```
 
 Then register the plugin from the browser global:
@@ -139,7 +139,7 @@ Examples that reference public images should use absolute URLs in CodePen. The d
 
 The QFlashcard repository now uses:
 
-- `pnpm@11.5.3`
+- `pnpm@11.10.0`
 - Node.js `>=22.13`
 - `oxlint` instead of ESLint
 - `oxfmt` instead of Prettier

@@ -35,8 +35,8 @@ Short user-facing summary of what changed for QFlashcard component/app-extension
 ## Compatibility
 
 - Node.js: `>=22.13`
-- Quasar: `^2.20.0`
-- Quasar App Vite target: `@quasar/app-vite@3.0.0-rc.3`
+- Quasar: `^2.21.1`
+- Quasar App Vite target: `@quasar/app-vite@3.0.0`
 - npm dist-tag: `latest`
 
 ## Installation
@@ -53,7 +53,7 @@ npm install @quasar/quasar-ui-qflashcard
 quasar ext add @quasar/qflashcard
 ```
 
-Add the appropriate prerelease tag, such as `@beta`, only when publishing under that dist-tag.
+Use the default `latest` dist-tag for stable releases. Add a prerelease tag, such as `@beta`, only when publishing under that dist-tag.
 
 ## Documentation
 

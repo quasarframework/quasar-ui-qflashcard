@@ -189,7 +189,7 @@ import siteConfig from '../../siteConfig'
 const productName = 'QFlashcard'
 const logoSrc = '/app-logo-128x128.png'
 const logoAlt = 'QFlashcard Logo'
-const githubTreeUrl = 'https://github.com/quasarframework/quasar-ui-qflashcard/tree/v3-beta'
+const githubTreeUrl = 'https://github.com/quasarframework/quasar-ui-qflashcard/tree/dev'
 const githubRepoUrl = 'https://github.com/quasarframework/quasar-ui-qflashcard'
 const heroEyebrow = 'Vue 3 + Quasar 2'
 const heroLede =
