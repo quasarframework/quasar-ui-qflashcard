@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"
+    />
+
+    <link rel="icon" href="data:," />
+    <title>UMD test</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/quasar@^2.0.0/dist/quasar.prod.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="dist/index.css?ae=qflashcard" rel="stylesheet" type="text/css" />
+    <style>
+      .flashcard-demo {
+        width: min(360px, 100%);
+        height: 220px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        background: #f4f8fb;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .flashcard-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .flashcard-front {
+        color: #173349;
+        background: linear-gradient(135deg, #f8fcff, #dcecf8);
+      }
+
+      .flashcard-back {
+        color: white;
+        background: linear-gradient(135deg, #176995, #2a9ab8);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="q-app">
+      <q-layout view="lHh Lpr fff">
+        <q-header class="glossy bg-primary">
+          <q-toolbar>
+            <q-toolbar-title> QFlashcard v{{ version }} </q-toolbar-title>
+
+            <div>Quasar v{{ $q.version }}</div>
+          </q-toolbar>
+        </q-header>
+
+        <q-page-container>
+          <q-page padding>
+            <q-card flat bordered class="q-pa-md" style="max-width: 520px">
+              <q-card-section class="row items-center q-col-gutter-md">
+                <div class="col">
+                  <div class="text-h6">UMD flashcard smoke test</div>
+                  <div class="text-body2 text-grey-7">
+                    Toggle the card state and confirm both UMD components render.
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <q-toggle v-model="showAnswer" label="Show answer"></q-toggle>
+                </div>
+              </q-card-section>
+
+              <q-separator></q-separator>
+
+              <q-card-section>
+                <q-flashcard v-if="bundleReady" no-hover class="flashcard-demo">
+                  <q-flashcard-section
+                    class="flashcard-panel flashcard-front"
+                    transition="fade-out"
+                    :active="showAnswer"
+                  >
+                    <div class="text-h6">Question</div>
+                    <div>What is being tested?</div>
+                  </q-flashcard-section>
+
+                  <q-flashcard-section
+                    class="flashcard-panel flashcard-back"
+                    transition="fade-in zoom-in"
+                    :active="showAnswer"
+                  >
+                    <div class="text-h6">Answer</div>
+                    <div>The UMD bundle registered QFlashcard and QFlashcardSection.</div>
+                  </q-flashcard-section>
+                </q-flashcard>
+
+                <div v-else class="text-negative">
+                  The QFlashcard UMD bundle did not load, so the components could not be registered.
+                </div>
+              </q-card-section>
+            </q-card>
+          </q-page>
+        </q-page-container>
+      </q-layout>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@^3.0.0/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@^2.0.0/dist/quasar.umd.prod.js"></script>
+    <script src="dist/index.umd.js?ae=qflashcard"></script>
+
+    <script>
+      const { ref } = Vue
+      const flashcardPlugin = globalThis.QFlashcard
+      const bundleReady =
+        flashcardPlugin !== void 0 &&
+        typeof flashcardPlugin.install === 'function' &&
+        flashcardPlugin.QFlashcard !== void 0 &&
+        flashcardPlugin.QFlashcardSection !== void 0
+
+      const app = Vue.createApp({
+        setup() {
+          const showAnswer = ref(false)
+
+          return {
+            version: bundleReady === true ? flashcardPlugin.version : 'bundle missing',
+            bundleReady,
+            showAnswer,
+          }
+        },
+      })
+
+      app.use(Quasar)
+      if (bundleReady === true) {
+        app.use(flashcardPlugin)
+      }
+      app.mount('#q-app')
+    </script>
+  </body>
+</html>
