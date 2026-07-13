@@ -42,7 +42,7 @@
     "@quasar/quasar-ui-qflashcard": "workspace:^"
   },
   "devDependencies": {
-    "@quasar/app-vite": "3.0.0",
+    "@quasar/app-vite": "3.0.1",
     "typescript": "~6.0.3",
     "vue-router": "^5.1.0"
   },
