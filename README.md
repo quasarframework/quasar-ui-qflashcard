@@ -3,8 +3,8 @@
 ![@quasar/quasar-ui-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-ui-qflashcard?label=@quasar/quasar-ui-qflashcard)
 ![@quasar/quasar-app-extension-qflashcard](https://img.shields.io/npm/v/@quasar/quasar-app-extension-qflashcard?label=@quasar/quasar-app-extension-qflashcard)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9e50f4ba-d3b2-4885-a631-8278786b648c/deploy-status)](https://app.netlify.com/projects/qflashcard/deploys)
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/quasar-ui-qflashcard)]()
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/quasar-ui-qflashcard)]()
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/quasarframework/quasar-ui-qflashcard)](https://github.com/quasarframework/quasar-ui-qflashcard)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/quasarframework/quasar-ui-qflashcard)](https://github.com/quasarframework/quasar-ui-qflashcard)
 [![npm](https://img.shields.io/npm/dt/@quasar/quasar-app-extension-qflashcard)](https://www.npmjs.com/package/@quasar/quasar-app-extension-qflashcard)
 
 <span class="badge-github-sponsors"><a href="https://github.com/sponsors/hawkeye64" title="Sponsor this project on GitHub"><img src="https://img.shields.io/badge/github-sponsors-ea4aaa.svg?logo=githubsponsors&logoColor=white" alt="GitHub Sponsors button" /></a></span>
