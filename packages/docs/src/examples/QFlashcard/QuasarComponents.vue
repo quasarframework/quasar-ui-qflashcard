@@ -64,7 +64,14 @@
               :options="modeOptions"
             />
             <q-space />
-            <q-btn flat round dense icon="close" @click="controlsActive = false" />
+            <q-btn
+              flat
+              round
+              dense
+              icon="close"
+              aria-label="Close controls"
+              @click="controlsActive = false"
+            />
           </q-toolbar>
         </q-flashcard-section>
       </q-flashcard>
