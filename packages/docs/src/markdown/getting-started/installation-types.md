@@ -48,13 +48,13 @@ The App Extension can register QFlashcard without an import from application sou
 If you do not install through the App Extension, install the UI package directly:
 
 ```tabs
-<<| bash pnpm |>>
+<<| bash [icon=pnpm] pnpm |>>
 pnpm add @quasar/quasar-ui-qflashcard
-<<| bash bun |>>
+<<| bash [icon=bun] bun |>>
 bun add @quasar/quasar-ui-qflashcard
-<<| bash yarn |>>
+<<| bash [icon=yarn] yarn |>>
 yarn add @quasar/quasar-ui-qflashcard
-<<| bash npm |>>
+<<| bash [icon=npm] npm |>>
 npm install @quasar/quasar-ui-qflashcard
 ```
 

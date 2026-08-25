@@ -46,13 +46,13 @@ Install QFlashcard v3 from the default npm dist tag.
 ```tabs
 <<| bash App Extension |>>
 quasar ext add @quasar/qflashcard
-<<| bash pnpm |>>
+<<| bash [icon=pnpm] pnpm |>>
 pnpm add @quasar/quasar-ui-qflashcard
-<<| bash bun |>>
+<<| bash [icon=bun] bun |>>
 bun add @quasar/quasar-ui-qflashcard
-<<| bash yarn |>>
+<<| bash [icon=yarn] yarn |>>
 yarn add @quasar/quasar-ui-qflashcard
-<<| bash npm |>>
+<<| bash [icon=npm] npm |>>
 npm install @quasar/quasar-ui-qflashcard
 ```
 
